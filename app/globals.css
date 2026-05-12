@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ─────────────────────────────────────────────────────────────
+   Summit Spine Centre — Design System
+   All tokens sourced from /styles/tokens.ts
+   Tailwind v4: @theme inline emits tokens as CSS vars on :root
+   ───────────────────────────────────────────────────────────── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* ── Fonts ─────────────────────────────────────────────── */
+  /* next/font sets --font-manrope and --font-inter on <html> */
+  --font-heading: var(--font-manrope);
+  --font-body: var(--font-inter);
+
+  /* ── Brand Colors ──────────────────────────────────────── */
+  --color-alabaster:   #EEEEE7;
+  --color-dun:         #CFC2AB;
+  --color-ebony:       #606141;
+  --color-eerie-black: #121F1B;
+  --color-cerulean:    #167287;
+
+  /* Hemlock scale */
+  --color-hemlock-50:  #EFEFEC;
+  --color-hemlock-100: #DFDFD9;
+  --color-hemlock-400: #8F907A;
+  --color-hemlock-500: #606141;
+  --color-hemlock-600: #4C4D34;
+  --color-hemlock-800: #26261A;
+  --color-hemlock-900: #1C1D13;
+
+  /* Cararra scale */
+  --color-cararra-50:  #FDFDFC;
+  --color-cararra-100: #FBFBFA;
+  --color-cararra-200: #F3F3EE;
+  --color-cararra-300: #EEEEE7;
+  --color-cararra-400: #BEBEB8;
+  --color-cararra-600: #5F5F5C;
+  --color-cararra-700: #474745;
+
+  /* Neutral scale */
+  --color-neutral-0:   #FFFFFF;
+  --color-neutral-100: #F2F2F2;
+  --color-neutral-200: #D9D9D9;
+  --color-neutral-300: #B4B4B3;
+  --color-neutral-400: #828281;
+  --color-neutral-500: #50504E;
+  --color-neutral-600: #1E1E1C;
+  --color-neutral-700: #050503;
+
+  /* Semantic aliases — used in component classes */
+  --color-background:     #EEEEE7;
+  --color-background-alt: #FFFFFF;
+  --color-text:           #121F1B;
+  --color-text-muted:     #606141;
+  --color-text-subtle:    #CFC2AB;
+  --color-accent:         #167287;
+  --color-border:         #CFC2AB;
+  --color-border-subtle:  rgba(5, 5, 3, 0.15);
+
+  /* Scheme backgrounds */
+  --color-scheme-1: #FFFFFF;
+  --color-scheme-2: #F2F2F2;
+  --color-scheme-3: #EFEFEC;
+  --color-scheme-4: #8F907A;
+
+  /* ── Typography ────────────────────────────────────────── */
+  --text-hero: 4.5rem;
+  --text-h1:   4rem;
+  --text-h2:   3rem;
+  --text-h3:   2.25rem;
+  --text-h4:   1.75rem;
+  --text-h5:   1.375rem;
+  --text-h6:   1.125rem;
+
+  /* ── Tracking ──────────────────────────────────────────── */
+  --tracking-tighter: -0.02em;
+  --tracking-tight:   -0.01em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.1em;
+
+  /* ── Border Radius ─────────────────────────────────────── */
+  --radius-sm:  4px;
+  --radius-md:  6px;
+  --radius-lg:  8px;
+  --radius-xl:  12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --shadow-sm:        0 1px 3px rgba(18, 31, 27, 0.08);
+  --shadow-md:        0 4px 12px rgba(18, 31, 27, 0.10);
+  --shadow-lg:        0 8px 24px rgba(18, 31, 27, 0.12);
+  --shadow-card:      0 2px 8px rgba(18, 31, 27, 0.08);
+  --shadow-card-hover:0 8px 24px rgba(18, 31, 27, 0.14);
+
+  /* ── Layout spacing ────────────────────────────────────── */
+  --spacing-section:    5rem;    /* 80px — min vertical section padding */
+  --spacing-section-lg: 7.5rem;  /* 120px */
+  --spacing-nav:        4.5rem;  /* 72px nav height */
+
+  /* ── Animations ────────────────────────────────────────── */
+  --animate-fade-up:    fade-up 300ms cubic-bezier(0.0, 0.0, 0.2, 1) both;
+  --animate-fade-in:    fade-in 300ms ease both;
+  --animate-hero-zoom:        hero-zoom-out 10s cubic-bezier(0.0, 0.0, 0.2, 1) both;
+  --animate-hero-scroll-fade: hero-scroll-fade linear both;
+
+  /* ── Easing ────────────────────────────────────────────── */
+  --ease-smooth:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-entrance: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Keyframes ────────────────────────────────────────────── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes hero-zoom-out {
+  from { transform: scale(1.08); }
+  to   { transform: scale(1.0); }
+}
+
+@keyframes hero-scroll-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Base styles ──────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-eerie-black);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-eerie-black);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
