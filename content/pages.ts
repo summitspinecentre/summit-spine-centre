@@ -882,10 +882,183 @@ const conditionDefaults = {
 
 export const conditionPages: Record<string, ConditionPage> = {
   'low-back-pain': {
-    meta: { slug: 'low-back-pain', title: 'Low Back Pain Airdrie | Summit Spine Centre', description: '', keywords: ['low back pain Airdrie', 'back pain chiropractor Airdrie'], published: true, priority: 'P1', type: 'condition', canonicalPath: '/conditions/low-back-pain' },
-    overview: '', relatedConditions: ['sciatica', 'disc-herniation'],
-    structuredData: { conditionName: 'Low Back Pain', description: '', possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'low-back-pain',
+      title:         'Low Back Pain Treatment Airdrie | Summit Spine Centre',
+      description:   'Expert low back pain treatment in Airdrie, Alberta. From chronic stiffness to disc problems and sciatica, Summit Spine Centre has served Airdrie families for 35+ years.',
+      keywords:      [
+        'low back pain Airdrie',
+        'back pain chiropractor Airdrie',
+        'low back pain treatment Airdrie',
+        'lumbar pain Airdrie Alberta',
+        'chiropractic back pain Airdrie',
+      ],
+      published:     true,
+      priority:      'P1',
+      type:          'condition',
+      canonicalPath: '/conditions/low-back-pain',
+    },
+
+    hero: {
+      headline:    'Back Pain Relief in Airdrie',
+      subheadline: 'Helping Airdrie families with back pain for over 35 years. From chronic stiffness to acute pain, disc problems and more, get expert chiropractic care for your specific needs.',
+      cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Low back pain refers to discomfort, stiffness, tension or pain felt between the bottom of the ribs and the hips — your lumbar spine. It can range from a mild ache to sharp, very severe pain and spasms that can be extremely debilitating. ' +
+      'Some people may experience pain only in the lower back, while others may notice symptoms travelling into the hips, buttocks, or legs. Low back pain can come on suddenly after a specific activity or injury, or it may gradually develop over time. ' +
+      'Because the lower back plays such an important role in supporting movement and absorbing stress throughout the day, many different structures can contribute to pain in this area. ' +
+      'The good news: most cases of low back pain improve with the right approach. Even when symptoms have been around for a long time, many people can reduce pain, improve mobility, and return to the activities they enjoy. ' +
+      'Low back pain does not always mean serious damage has been done. In many cases, your spine is still strong, adaptable, and capable of recovery when supported with appropriate movement, education, and care.',
+
+    symptoms: [
+      'Aching or stiffness in the lower back',
+      'Sharp pain with certain movements',
+      'Pain when bending, lifting, standing or sitting',
+      'Muscle tightness or spasms',
+      'Pain that travels into the hips, buttocks or legs',
+      'Difficulty standing up straight after sitting',
+      'Morning stiffness that improves with movement',
+      'Reduced mobility or flexibility',
+      'Pain that worsens after prolonged sitting or inactivity',
+    ],
+
+    causes: [
+      'Disc Problems — the discs between vertebrae can become irritated, bulged, or herniated, sometimes causing pain that travels into the leg (sciatica). Disc problems are usually worse with sitting and better with standing.',
+      'Muscle and Joint Strain — overuse, lifting, sudden movements, repetitive tasks, or prolonged positions can irritate muscles, ligaments, and spinal joints',
+      'Spinal Narrowing (Stenosis) — as we age, the tunnels our nerves pass through narrow, sometimes pinching the nerves and causing back pain, leg heaviness, or difficulty walking. Pain from stenosis is often worse with standing and better with sitting.',
+      'Spinal Joint Restrictions — when the joints in your lower back are not moving as well as they should, surrounding muscles and ligaments can become tight, irritated, or uncomfortable',
+      'Arthritis and Degeneration — normal age-related wear and tear can affect the joints and discs in your spine, causing stiffness, inflammation and reduced mobility. Think of it as "wrinkles on the inside."',
+      'Weak Core or Glute Muscles — when these muscles are weak, the lower back takes on extra stress with activities like walking, bending, or lifting. Over time, this added strain can contribute to discomfort or injury.',
+      'Tight Hamstrings or Hip Flexors — these muscles attach to the pelvis and affect the way you move. With limited mobility, the lower back may take on extra stress and cause discomfort.',
+      'Poor Movement and Posture Habits — long hours sitting, repetitive bending, reduced physical activity, and deconditioning place increased stress on the lower back over time',
+      'Stress and Lifestyle Factors — sleep quality, stress, physical inactivity, and overall health can all influence how your body experiences and recovers from pain',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Low Back Pain',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'First, we listen. We ask questions about your story, your day-to-day, and what may have led to your back pain. We then perform a thorough physical exam — orthopedic, neurological, and movement assessments — to determine what is actually causing your pain.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle, evidence-based technique used to decompress the spine and relieve pressure on nerves and discs. We can move the joints in a way that doesn\'t require the "crack" — making it ideal for sensitive or acute presentations.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'When joints are truly stuck, they need to move. Targeted adjustments restore spinal motion, reduce muscle guarding, and take pressure off irritated structures — sometimes with that satisfying pop.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Targeted Exercises',
+          body:  'Depending on the cause, we prescribe exercises to build core and glute strength, restore flexibility, and give your spine the support it needs to stay well — not just feel better for a few days.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Lifestyle Modifications',
+          body:  'Back pain is typically caused by many factors that accumulate over time. We look into your daily routine and suggest practical changes — posture, ergonomics, activity modification — to reduce what\'s loading your spine.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Back Pain',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years Serving Airdrie',
+          body:  'Decades of experience treating low back pain right here in Airdrie — from acute flare-ups to chronic, long-standing conditions. We\'ve helped patients across all ages and activity levels.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Specialized in Disc & Nerve Conditions',
+          body:  'Cox Flexion-Distraction is one of the most effective evidence-based techniques for disc-related back pain. We are among the few certified Cox practitioners in Alberta.',
+        },
+        {
+          icon:  'Users',
+          title: 'A Plan Built Around You',
+          body:  'Our goal is not just temporary relief but to equip you with the skills needed to return to the activities that matter most to you — with confidence and lasting results.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'Your first visit starts with a detailed conversation about your symptoms and health history. We want to understand what\'s going on, how it\'s impacting your life, and where you\'d like to be.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Thorough Assessment',
+          body:  'Orthopedic, neurological, and movement assessments help us understand the root cause of your back pain — not just where it hurts, but why.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Personalized Plan',
+          body:  'We explain our findings in plain language and recommend a care plan tailored to your goals and preferences. No guesswork, no pressure.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Progress',
+          body:  'We get to work — and we track your progress. If chiropractic care isn\'t the right fit, we\'ll connect you with another trusted provider in our community.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'Is low back pain common?',                                      answer: 'Yes. Low back pain is one of the most common health concerns worldwide and affects people of all ages.' },
+        { question: 'Should I keep moving if my back hurts?',                        answer: 'In many cases, staying active is helpful. Prolonged rest may actually slow recovery. The right type and amount of movement depends on the individual and cause of pain.' },
+        { question: 'When should I seek professional help for low back pain?',        answer: 'If your pain is severe, persistent, worsening, or affecting daily activities, or associated with symptoms like numbness, weakness or pain travelling into the leg. Even with mild problems, seeing a healthcare professional can help get you on the path to recovery faster.' },
+        { question: 'Can a disc bulge heal?',                                         answer: 'Many disc-related conditions improve over time, especially when combined with appropriate movement, activity modification, and care. Cox Flexion-Distraction therapy is a gentle and effective way to decompress the discs and help them recover.' },
+        { question: 'Is cracking or popping my back harmful?',                        answer: 'Not necessarily. Joint sounds are often simply changes in pressure within the joints. In most cases, occasional popping is normal and not harmful.' },
+        { question: 'Can chiropractic care help low back pain?',                      answer: 'Yes. In many cases chiropractic care is a very safe and effective way to manage low back pain.' },
+        { question: 'Do I need imaging for low back pain?',                           answer: 'Not always. Most cases of low back pain can be assessed and treated effectively without imaging. X-rays or MRI may be recommended in certain situations depending on your symptoms, history and exam findings.' },
+        { question: 'Can pregnancy cause lower back pain?',                           answer: 'Yes. Changes in weight, hormones, and posture may all contribute to low back pain during pregnancy.' },
+        { question: 'Can perimenopause cause low back pain?',                         answer: 'Yes. Reduced estrogen levels can cause joint pain, including in the lower back.' },
+        { question: 'Will low back pain go away on its own?',                         answer: 'Sometimes low back pain can improve with time, gentle stretching, movement, and therapies like ice or heat. However, if pain persists, worsens, or is impacting your day-to-day, we are here to help.' },
+        { question: 'How do I know if my back pain is from muscles or nerves?',       answer: 'Muscle-related pain often feels like a dull ache, tightness, or stiffness that stays in one spot. Nerve pain often feels more sharp, and can cause burning or tingling sensations that travel down the leg.' },
+        { question: 'Is it safe to get adjusted if I have arthritis?',                answer: 'In most cases, yes. There are many different treatment approaches our team can use to help you find relief. Many individuals with advanced arthritis benefit from Cox Flexion-Distraction therapy, which is gentle and helps improve movement while reducing pressure on spinal nerves and discs.' },
+        { question: 'Can a chiropractor help with low back pain?',                    answer: 'Yes! In most cases our team of chiropractors can help reduce tension, improve mobility, and get you on a path to recovery.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['sciatica', 'disc-herniation'],
+
+    structuredData: {
+      conditionName:     'Low Back Pain',
+      description:       'Low back pain refers to discomfort, stiffness, tension or pain felt in the lumbar spine, between the bottom of the ribs and the hips. It can range from a mild ache to severe pain and spasms.',
+      possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction',
+    },
   },
   'sciatica': {
     meta: {
@@ -1037,16 +1210,354 @@ export const conditionPages: Record<string, ConditionPage> = {
     },
   },
   'disc-herniation': {
-    meta: { slug: 'disc-herniation', title: 'Disc Herniation & Bulges Airdrie | Summit Spine Centre', description: '', keywords: ['disc herniation Airdrie', 'bulging disc chiropractor Airdrie'], published: true, priority: 'P1', type: 'condition', canonicalPath: '/conditions/disc-herniation' },
-    overview: '', relatedConditions: ['low-back-pain', 'sciatica'],
-    structuredData: { conditionName: 'Disc Herniation', description: '', possibleTreatment: 'Cox Flexion-Distraction, Chiropractic Care' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'disc-herniation',
+      title:         'Disc Herniation & Bulging Disc Treatment Airdrie | Summit Spine Centre',
+      description:   'Non-surgical disc herniation and bulging disc treatment in Airdrie. Cox Flexion-Distraction gently decompresses discs and relieves nerve pain. Book today.',
+      keywords:      [
+        'disc herniation Airdrie',
+        'bulging disc chiropractor Airdrie',
+        'disc bulge treatment Airdrie',
+        'Cox Flexion-Distraction disc Airdrie',
+        'slipped disc Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P1',
+      type:          'condition',
+      canonicalPath: '/conditions/disc-herniation',
+    },
+
+    hero: {
+      headline:    'Disc Bulge & Herniation Treatment in Airdrie',
+      subheadline: 'Non-surgical treatment for disc bulges, herniations, and pain, numbness or tingling radiating from your back or neck.',
+      cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Your spine is made up of bones called vertebrae. Between each vertebra are spinal discs that act as shock absorbers. When they\'re healthy, they give your spine strength and flexibility to help you handle everyday activities like tying your shoes and swinging a golf club. ' +
+      'When a disc is damaged, the squishy material in the middle pushes outwards, causing a bulge, rupture, or internal derangement. This can cause a range of symptoms from mild aching in the centre of your back to severe, sharp, shooting pain. If the disc begins to push on nearby nerves or the spinal cord, it can cause numbness, tingling, or weakness. ' +
+      'Disc injuries occur most commonly in the lower back and neck, and occasionally in the mid-back. It is important to know that not all disc bulges are painful — many people have disc changes on an MRI without any symptoms at all. Disc injuries often improve over time with appropriate care, and your spine is strong and adaptable. ' +
+      'The majority of disc injuries improve without surgery. With proper guidance you can learn how to manage your problem and how to prevent it from recurring — even if your symptoms have been around for a long time.',
+
+    symptoms: [
+      'Lower back pain, neck pain, or mid-back pain',
+      'Pain travelling into the buttock or leg (sciatica)',
+      'Pain travelling down between the shoulder blades, or down the arm',
+      'Numbness or tingling in the arms or legs',
+      'Muscle weakness such as reduced grip strength or foot drop',
+      'Burning, sharp, or electric-type pain',
+      'Pain with sitting, bending, lifting, coughing, or sneezing',
+      'Stiffness or reduced mobility',
+      'Difficulty standing fully upright, especially after sitting for a while',
+    ],
+
+    causes: [
+      'Repetitive Bending and Lifting — frequent bending, twisting, or being flexed forward for extended periods places increased stress on the discs',
+      'Prolonged Sitting — long periods of sitting, especially with poor posture and limited movement, increases the pressure inside the disc',
+      'Sudden Heavy Strain — heavy lifting, awkward movements, sports injuries, or unexpected strain can irritate a disc (we\'re talking to you, snow-shovelers and powerlifters!)',
+      'Age-Related Changes — as we age, discs naturally lose some hydration and elasticity, which can lead to decreased mobility and stiffness',
+      'Deconditioning — when we\'re not physically active, supporting muscles become weaker, making the spine less tolerant to everyday activities',
+      'Previous Injuries — past back or neck injuries can increase sensitivity or contribute to recurring flare-ups',
+    ],
+
+    treatments: {
+      headline: 'Evidence-Based Disc Treatment at Summit Spine Centre',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'Why did your disc bulge or herniate? Was it an injury, wear and tear, or a problem that\'s been slowly building? We listen to your story and perform an assessment that tests your capacity and nerve integrity before treating.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle, evidence-based technique used to decompress and move your discs, relieving pressure on nerves while slowly stretching the tissues. This is a unique way to alleviate disc pressure without sudden movements that might cause increased pain.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'When the joints around a disc can\'t move properly, it places stress on the disc. Targeted adjustments restore movement, allow muscles to relax, and reduce the load on the affected area.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Targeted Exercises',
+          body:  'Disc injuries often require specific movements to take pressure off the discs. We base exercises on what positions are most comfortable for you so you can build strength and prevent future injuries.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Lifestyle Modifications',
+          body:  'Is most of your day spent sitting at a desk or in a driver\'s seat? We\'ll explore what daily activities may have contributed to your disc injury and offer practical advice to reduce ongoing stress on your spine.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Disc Treatment',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: 'One of Few Cox-Certified Clinics in Alberta',
+          body:  'Cox Flexion-Distraction is an evidence-based technique specifically designed to relieve pressure on discs. We are among the few certified practitioners of this method in Alberta.',
+        },
+        {
+          icon:  'Activity',
+          title: '35+ Years of Spinal Care Experience',
+          body:  'Disc-related conditions are among the most common concerns we treat. We\'ve helped hundreds of patients avoid surgery and return to the activities they love.',
+        },
+        {
+          icon:  'Users',
+          title: 'A Recovery Plan, Not Just Pain Relief',
+          body:  'Your body is capable of adapting and healing. With proper guidance you can learn how to manage your problem and prevent it from recurring — even if symptoms have been around for a long time.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Share Your Story',
+          body:  'We begin with a detailed conversation about your symptoms and health history — including what happened, how long it\'s been, and how it\'s affecting your daily life.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Nerve & Movement Assessment',
+          body:  'Orthopedic, neurological, and movement assessments help confirm the extent of disc involvement and guide the safest, most effective treatment approach.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Tailored Care Plan',
+          body:  'We explain our findings in plain language and build a plan around your goals and comfort level — including Cox Flexion-Distraction, adjustments, exercises, and lifestyle guidance as appropriate.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Recovery with Confidence',
+          body:  'We track your progress and adjust the plan as you improve. If your needs would be better met elsewhere, we\'ll refer you to the right provider.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'What is the difference between a disc bulge and a disc herniation?', answer: 'A disc bulge refers to when the disc begins to push outward toward the nerves without rupturing — the "jelly" inside the disc stays inside. A disc herniation occurs when the inner material leaks outside of the disc. Both can cause nerve pain, but herniated discs tend to cause more severe symptoms.' },
+        { question: 'Can a disc bulge or disc herniation heal on its own?',               answer: 'Most disc injuries will heal without surgery. With appropriate movement, activity modification, and conservative care, the body is often capable of adapting and calming sensitive tissues naturally.' },
+        { question: 'Does a disc bulge always cause pain?',                               answer: 'No. Many people have disc bulges visible on MRI without any pain or symptoms at all. Imaging findings do not always match symptom severity.' },
+        { question: 'What does nerve pain from a disc injury feel like?',                 answer: 'Nerve irritation may cause symptoms such as burning, sharp, electric, tingling, numb, or radiating pain into the arm or leg.' },
+        { question: 'Is walking good for a disc herniation?',                             answer: 'For many people, gentle walking can help improve circulation, reduce stiffness, and support recovery. The best activities depend on the individual and the stage of irritation.' },
+        { question: 'Can chiropractic care help sciatica caused by a disc injury?',       answer: 'Chiropractic care may help improve mobility, reduce irritation around sensitive structures, and support recovery in many cases of disc-related sciatica.' },
+        { question: 'When should I seek medical attention for a disc injury?',            answer: 'Immediate medical attention is important if symptoms involve loss of bowel or bladder control, significant or worsening weakness, severe numbness around the groin, or rapidly worsening neurological symptoms.' },
+        { question: 'Do all disc herniations require surgery?',                           answer: 'No. Most disc injuries improve with conservative care and do not require surgery. Surgical consultation may be appropriate in certain situations depending on symptom severity, neurological findings, and response to care.' },
+        { question: 'How long does recovery from a disc injury take?',                    answer: 'Recovery timelines vary depending on severity and individual factors. Some people improve within weeks, while others may require a longer rehabilitation approach. Severe symptoms may last a number of weeks, but the disc itself may require 3–6 months to fully heal.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['low-back-pain', 'sciatica'],
+
+    structuredData: {
+      conditionName:     'Disc Herniation / Bulging Disc',
+      description:       'A disc herniation or bulging disc occurs when the material inside a spinal disc pushes outward, potentially pressing on nearby nerves and causing pain, numbness, or weakness in the back, arms, or legs.',
+      possibleTreatment: 'Cox Flexion-Distraction, Chiropractic Care',
+    },
   },
   'neck-pain': {
-    meta: { slug: 'neck-pain', title: 'Neck Pain Relief Airdrie | Summit Spine Centre', description: '', keywords: ['neck pain Airdrie', 'neck pain chiropractor Airdrie'], published: true, priority: 'P1', type: 'condition', canonicalPath: '/conditions/neck-pain' },
-    overview: '', relatedConditions: ['tech-neck', 'headaches-migraines'],
-    structuredData: { conditionName: 'Neck Pain', description: '', possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'neck-pain',
+      title:         'Neck Pain Treatment Airdrie | Summit Spine Centre',
+      description:   'Neck pain treatment in Airdrie, Alberta. From stiffness and tech neck to disc problems and nerve pain, Summit Spine Centre provides personalized chiropractic care.',
+      keywords:      [
+        'neck pain Airdrie',
+        'neck pain chiropractor Airdrie',
+        'neck pain treatment Airdrie',
+        'stiff neck Airdrie Alberta',
+        'cervical pain chiropractor Airdrie',
+      ],
+      published:     true,
+      priority:      'P1',
+      type:          'condition',
+      canonicalPath: '/conditions/neck-pain',
+    },
+
+    hero: {
+      headline:    'Neck Pain Care in Airdrie',
+      subheadline: 'Hours of desk work or driving causing your neck to hurt? Maybe it\'s getting harder to shoulder check. You don\'t have to live with it — we assess and treat neck pain with different approaches.',
+      cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Neck pain refers to discomfort, stiffness, tension or pain felt in the cervical spine, which includes the muscles, joints, discs, nerves, and supporting structures of the neck. ' +
+      'Some people experience a dull ache or tightness, while others notice sharp pain, headaches, muscle tension, or symptoms traveling into the shoulders or arms. Neck pain may develop after an injury or awkward movement, but it can also build gradually from posture habits, repetitive stress, or age-related changes. ' +
+      'Because the neck supports the weight of the head while allowing a large amount of movement, it is especially vulnerable to irritation and strain. ' +
+      'The good news is that many cases of neck pain respond well to conservative care and appropriate movement. Even when symptoms have been present for a long time, we have helped many people improve their mobility, reduce discomfort, and begin living life fully again. ' +
+      'In many cases, neck pain does not mean serious damage is present. The neck is a strong and adaptable part of the body that often responds well to the right combination of movement, education, and supportive care.',
+
+    symptoms: [
+      'Stiffness or tightness in the neck',
+      'Pain when turning or tilting the head',
+      'Muscle tension or spasms',
+      'Headaches that begin in the neck or base of the skull',
+      'Pain between the shoulder blades',
+      'Pain that travels into the shoulder or arm',
+      'Numbness or tingling into the arm or hand',
+      'Reduced neck mobility',
+      'Difficulty finding a comfortable sleeping position',
+      'Increased discomfort after desk work or prolonged screen time',
+    ],
+
+    causes: [
+      'Muscle Strain and Tension — poor posture, stress, prolonged sitting, repetitive movements, or awkward sleeping positions can irritate muscles and soft tissues around the neck',
+      'Joint Restrictions — the joints of the cervical spine can become stiff or irritated, contributing to pain, reduced mobility, and muscle guarding',
+      'Disc Problems — discs in the neck can become irritated, bulged, or herniated, sometimes causing pain, numbness, tingling, or weakness into the shoulder or arm',
+      'Whiplash and Injuries — motor vehicle accidents, sports injuries, falls, or sudden movements can strain muscles, ligaments, and joints of the neck',
+      'Poor Posture and Ergonomics — long hours looking down at phones, working at computers, or sitting without proper support places increased stress on the neck over time',
+      'Arthritis and Degeneration — natural age-related changes can affect the joints and discs of the neck, sometimes leading to stiffness, irritation, or reduced mobility',
+      'Stress and Tension — emotional stress may contribute to increased muscle tension in the neck and shoulders, especially during busy or demanding periods',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Neck Pain',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'We want to know about you, your day-to-day, and what may have happened leading up to the neck pain. Was there an injury? Did it come on suddenly? We\'ll ask the right questions and then perform a thorough exam to figure out the "why" behind your neck pain. Once we know why, we can treat.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle, evidence-based technique used to decompress the neck and relieve pressure on nerves while stretching the tissues. We can move the joints in a way that doesn\'t require the "crack" — perfect if you prefer a gentler approach.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'Sometimes the joints are truly stuck and need to move. This treatment restores motion to restricted cervical joints and can provide fast, effective relief.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Targeted Exercises & Stretches',
+          body:  'Depending on why you\'re having neck pain, we\'ll choose exercises and stretches to mobilize and support the neck — and help keep the pain from coming back.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Lifestyle Modifications',
+          body:  'Maybe it\'s a non-optimal ergonomic setup at work, or driving with your head forward. We\'ll identify what\'s loading your neck in daily life and provide practical strategies to reduce that strain.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Neck Pain',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years Serving Airdrie',
+          body:  'Whether it\'s your first time or the tenth time dealing with neck pain, our goal is to understand why it keeps happening so we can treat appropriately and help prevent it from recurring.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Specialized Cervical Care',
+          body:  'We use multiple evidence-based approaches — including Cox Flexion-Distraction and targeted adjustments — to address the specific structures contributing to your neck pain.',
+        },
+        {
+          icon:  'Users',
+          title: 'Personal to You',
+          body:  'Our goal is not just temporary relief but to equip you with the skills needed to return to the activities that matter most — with confidence and lasting results.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'Your first visit starts with a detailed conversation about your symptoms and health history. We want to understand what\'s going on, how it\'s impacting your life, and where you\'d like to be.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Thorough Assessment',
+          body:  'Orthopedic, neurological, and movement assessments help us identify what is actually causing your neck pain — so we can treat the cause, not just the symptom.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Personalized Plan',
+          body:  'We explain our findings in plain language and recommend a plan tailored to your goals and comfort level.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Progress',
+          body:  'We get to work and track your progress. If chiropractic care isn\'t the right fit, we\'ll connect you with a trusted provider in our community.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'Is neck pain common?',                                          answer: 'Yes. Neck pain is extremely common and affects people of all ages and activity levels. It is especially common among people who spend long hours sitting, driving, using computers, or looking down at phones.' },
+        { question: 'What is the best way to relieve neck pain?',                    answer: 'The best approach depends on what may be contributing to your symptoms. Many people improve with a combination of gentle movement, posture changes, exercise, activity modification, and conservative care aimed at improving mobility and reducing irritation.' },
+        { question: 'Can poor posture cause neck pain?',                             answer: 'Poor posture may increase stress on the muscles and joints of the neck over time, particularly during prolonged sitting or screen use. Forward head posture and repetitive positions can contribute to muscle tension and stiffness.' },
+        { question: 'Why does neck pain sometimes cause headaches?',                 answer: 'The muscles, joints, and nerves of the upper neck are closely connected to the head. Irritation or tension in these structures may contribute to headaches that often begin near the base of the skull and spread toward the forehead or behind the eyes.' },
+        { question: 'How can I tell if my neck pain is muscular or nerve-related?',  answer: 'Muscular neck pain is often described as tight, sore, stiff, or achy and usually stays localized around the neck and shoulders. Nerve-related symptoms may feel sharp, burning, electric, or radiating into the shoulder, arm, or hand. Numbness, tingling, or weakness may also be present.' },
+        { question: 'What exercises may help neck pain?',                            answer: 'Gentle mobility and strengthening exercises are commonly recommended. Depending on the individual, exercises may focus on posture, flexibility, shoulder blade control, and improving the strength and endurance of supporting muscles.' },
+        { question: 'What sleeping position is best for neck pain?',                 answer: 'Many people find sleeping on their back or side more comfortable than sleeping on their stomach. Using a supportive pillow that keeps the neck in a more neutral position may also help reduce strain during sleep.' },
+        { question: 'When should I seek professional help for neck pain?',           answer: 'It may be helpful to seek an assessment if your neck pain is persistent, worsening, interfering with daily activities, or associated with symptoms such as numbness, tingling, weakness, headaches, dizziness, or pain traveling into the arm.' },
+        { question: 'How is neck pain usually treated?',                             answer: 'Treatment often focuses on improving movement, reducing irritation, and supporting recovery. Conservative care may include chiropractic care, mobility work, soft tissue therapy, strengthening exercises, ergonomic changes, and activity modification.' },
+        { question: 'Can a bulging disc in the neck heal?',                          answer: 'Many disc-related neck conditions improve over time with appropriate movement, activity modification, and conservative care. Recovery timelines vary depending on the individual and severity of the condition.' },
+        { question: 'Is it normal for my neck to crack or pop?',                    answer: 'In many cases, occasional cracking or popping sounds are harmless and related to pressure changes within the joints. These sounds are not always a sign of damage.' },
+        { question: 'How long does neck pain usually take to improve?',              answer: 'Recovery time varies depending on the cause and severity. Mild irritation may improve within days or weeks, while more persistent or complex conditions may take longer.' },
+        { question: 'Can chiropractic care help neck pain?',                         answer: 'Chiropractic care may help improve mobility, reduce muscle tension, support healthy movement patterns, and improve overall neck function. Treatment is tailored to the individual and their comfort level.' },
+        { question: 'Do I need imaging for neck pain?',                              answer: 'Not always. Many cases of neck pain can be assessed effectively through a detailed history and physical examination. Imaging such as X-rays or MRI may be recommended in certain situations depending on symptoms, history, and examination findings.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['tech-neck', 'headaches-migraines'],
+
+    structuredData: {
+      conditionName:     'Neck Pain',
+      description:       'Neck pain refers to discomfort, stiffness, tension or pain in the cervical spine. It can range from a dull ache to sharp pain and may travel into the shoulders, arms, or cause headaches.',
+      possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction',
+    },
   },
   'back-pain': {
     meta: { slug: 'back-pain', title: 'Back Pain Relief Airdrie | Summit Spine Centre', description: '', keywords: ['back pain Airdrie', 'back pain chiropractor Airdrie'], published: true, priority: 'P1', type: 'condition', canonicalPath: '/conditions/back-pain' },
@@ -1055,10 +1566,183 @@ export const conditionPages: Record<string, ConditionPage> = {
     ...conditionDefaults,
   },
   'headaches-migraines': {
-    meta: { slug: 'headaches-migraines', title: 'Headache & Migraine Relief Airdrie | Summit Spine Centre', description: '', keywords: ['headache chiropractor Airdrie', 'migraine relief Airdrie'], published: true, priority: 'P2', type: 'condition', canonicalPath: '/conditions/headaches-migraines' },
-    overview: '', relatedConditions: ['neck-pain', 'tech-neck'],
-    structuredData: { conditionName: 'Headache / Migraine', description: '', possibleTreatment: 'Chiropractic Care' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'headaches-migraines',
+      title:         'Headache & Migraine Treatment Airdrie | Summit Spine Centre',
+      description:   'Chiropractic headache and migraine treatment in Airdrie. We address tension headaches, cervicogenic headaches, and migraines at the source — not just the symptoms.',
+      keywords:      [
+        'headache chiropractor Airdrie',
+        'migraine relief Airdrie',
+        'tension headache treatment Airdrie',
+        'cervicogenic headache Airdrie',
+        'headache migraine Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P2',
+      type:          'condition',
+      canonicalPath: '/conditions/headaches-migraines',
+    },
+
+    hero: {
+      headline:    'Headache and Migraine Treatment in Airdrie',
+      subheadline: 'Stop dealing with headaches or migraines and treat the cause. We provide safe and effective treatment for many types of headaches, migraines, and neck-related pain.',
+      cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Headaches and migraines can range from mild to completely debilitating. They can affect much more than just your head, interfering with your relationships, productivity at work, sleep, and overall concentration. Understanding what may be causing them is an important step toward finding relief. ' +
+      'While all migraines are considered headaches, not all headaches are migraines. Many common headaches involve pressure, tightness, or aching pain around the head, neck, or forehead — often linked to muscle tension, stress, posture, fatigue, or irritation in the neck and upper back. ' +
+      'Migraines are typically more complex and may involve neurological symptoms in addition to head pain, including throbbing or pulsating pain, sensitivity to light or sound, nausea, dizziness, or visual disturbances called "auras." Migraines may last for hours or even days and can significantly interfere with daily life. ' +
+      'The good news is that many people experience significant improvement with the right combination of care, lifestyle modifications, and movement strategies. Identifying contributing factors can often help reduce the frequency, intensity, or duration of symptoms.',
+
+    symptoms: [
+      'Pressure or tightness around the head',
+      'Pain at the base of the skull',
+      'Throbbing or pulsating head pain',
+      'Pain behind the eyes',
+      'Neck stiffness or tension',
+      'Sensitivity to light or sound',
+      'Nausea or dizziness',
+      'Difficulty concentrating',
+      'Visual disturbances or "auras"',
+      'Pain that worsens with stress, screen time, or physical activity',
+      'Tenderness in the neck, shoulders, or scalp',
+    ],
+
+    causes: [
+      'Muscle Tension and Joint Restrictions — tension in the muscles and joints of the neck and upper back may contribute to headaches, particularly those that begin near the base of the skull',
+      'Stress and Fatigue — physical and emotional stress, poor sleep, and fatigue can all increase tension and sensitivity within the nervous system',
+      'Poor Posture and Screen Time — long hours at computers, looking down at phones, or prolonged sitting places increased strain on the neck and surrounding muscles',
+      'Jaw Tension and Clenching — grinding teeth or clenching the jaw may contribute to tension through the jaw, face, neck, and head',
+      'Dehydration and Lifestyle Factors — hydration, nutrition, caffeine intake, stress levels, and changes in routine may all influence headache frequency or intensity',
+      'Previous Injuries — concussions, whiplash injuries, and previous trauma may contribute to recurring headaches in some individuals',
+      'Sinus and Medical Causes — some headaches may be related to sinus irritation, illness, blood pressure changes, or other medical conditions that may require medical evaluation',
+      'Weather Changes and Chinooks — changes in barometric pressure, which are quite common in Southern Alberta, can cause changes in our body\'s systems that result in headaches and migraines',
+    ],
+
+    treatments: {
+      headline: 'Summit Spine Centre\'s Approach to Headaches and Migraines in Airdrie',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'We want to know the details about your headache. We\'ll listen to your story, ask follow-up questions, and then perform a thorough exam that allows us to figure out the "why" behind your headache. Once we know why, we can treat.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle, evidence-based technique used to decompress the spine and relieve pressure on nerves. We can move the joints in a way that doesn\'t require the "crack" — especially helpful for headaches originating from the neck and upper back.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'When cervical joints are stuck, they create inflammation and tension that can radiate into the head. Targeted adjustments restore movement and can significantly reduce headache frequency and severity.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Targeted Exercises',
+          body:  'Depending on what\'s causing your headaches, exercises can be used to support the neck and reduce both the frequency (how often) and severity (how bad) of your headaches.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Lifestyle Modifications',
+          body:  'If your headache type has typical triggers you may not be aware of, we\'ll discuss small changes you can implement into your day that over time will aid in relief.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Headache Treatment',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years Serving Airdrie',
+          body:  'Decades of experience treating headaches, migraines, and neck-related pain right here in Airdrie. We\'ve helped patients reduce the frequency, severity, and duration of their symptoms.',
+        },
+        {
+          icon:  'Search',
+          title: 'We Find the Cause',
+          body:  'There\'s just treating pain, and there\'s understanding why these headaches keep coming back. Knowing the root cause allows us to help you get rid of them — not just manage them.',
+        },
+        {
+          icon:  'Users',
+          title: 'Care Tailored to You',
+          body:  'Treatment is always tailored to the individual. Your symptoms, your triggers, and your comfort level all guide the plan we build together.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'Your first visit starts with a detailed conversation about your headaches — what they feel like, how often they occur, what seems to trigger them, and how they\'re affecting your daily life.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Thorough Assessment',
+          body:  'Orthopedic, neurological, and movement assessments help identify contributing factors — from neck joint restrictions to postural strain — so we can target care appropriately.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear Recommendations',
+          body:  'We explain our findings in plain language and recommend a care plan focused on reducing your headaches and the factors that drive them.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Ongoing Support',
+          body:  'We track your progress and adjust the plan as you improve. If your needs would be better met by another specialist, we\'ll make the referral.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'What is the difference between a headache and a migraine?',        answer: 'Headaches often involve pressure, tightness, or aching pain around the head, face, or neck. Migraines are typically more intense and may include throbbing pain, nausea, dizziness, sensitivity to light or sound, or visual disturbances called "auras." Migraines can also interfere more significantly with daily activities and may last for hours or even days.' },
+        { question: 'What are common migraine triggers?',                               answer: 'Migraine triggers can vary from person to person. Common triggers may include stress, poor sleep, dehydration, hormonal changes, skipped meals, certain foods, bright lights, strong smells, weather changes, or prolonged screen time.' },
+        { question: 'Can neck tension cause headaches?',                                answer: 'Yes. Tension or irritation in the muscles and joints of the neck and upper back may contribute to headaches, especially those that begin near the base of the skull and spread toward the head or behind the eyes.' },
+        { question: 'Can poor posture contribute to headaches?',                        answer: 'Poor posture may place increased strain on the muscles and joints of the neck and shoulders over time. Long periods spent at a computer, looking down at phones, or sitting without proper support can contribute to tension-related headaches.' },
+        { question: 'What does a tension headache feel like?',                          answer: 'Tension headaches are often described as a dull ache, pressure, or tight band around the head. Many people also notice tightness in the neck, shoulders, or jaw.' },
+        { question: 'What does a migraine feel like?',                                  answer: 'Migraines often involve throbbing or pulsating pain and may occur on one or both sides of the head. Some people also experience nausea, dizziness, visual changes, sensitivity to light or sound, or increased pain with movement.' },
+        { question: 'Can stress cause headaches or migraines?',                         answer: 'Stress is one of the most common contributors to headaches and migraines. Physical and emotional stress may increase muscle tension, nervous system sensitivity, and overall symptom intensity.' },
+        { question: 'When should I seek professional help for headaches or migraines?', answer: 'It may be helpful to seek an assessment if headaches are frequent, worsening, interfering with daily activities, or associated with symptoms such as numbness, weakness, dizziness, vision changes, balance problems, or persistent neck pain. Sudden severe headaches or headaches following trauma should also be medically evaluated.' },
+        { question: 'How are headaches and migraines usually treated?',                 answer: 'Treatment depends on the type and cause. Conservative care may include exercise, stress management, improving sleep and posture, hydration, ergonomic changes, soft tissue therapy, chiropractic care, and movement-based rehabilitation. Some people may also require medical management depending on the severity and frequency of symptoms.' },
+        { question: 'Can chiropractic care help headaches and migraines?',              answer: 'Chiropractic care may help some individuals by improving neck and upper back mobility, reducing muscle tension, addressing postural strain, and supporting overall spinal function. Treatment is always tailored to the individual and their comfort level.' },
+        { question: 'What exercises may help headaches?',                               answer: 'Exercises focused on posture, neck mobility, shoulder blade control, stretching, and strengthening the supporting muscles of the neck and upper back may help. The best exercises depend on the individual and the contributing factors involved.' },
+        { question: 'Do I need imaging for headaches or migraines?',                   answer: 'Not always. Many headaches and migraines can be assessed effectively through a detailed health history and physical examination. Imaging such as MRI or CT scans may be recommended in certain situations depending on symptoms, neurological findings, or medical history.' },
+        { question: 'How long does it take for headaches or migraines to improve?',    answer: 'Recovery timelines vary depending on the type and contributing factors. Some people notice improvement quickly, while others require a longer-term approach focused on managing triggers, improving movement, and reducing irritation over time.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['neck-pain', 'tech-neck'],
+
+    structuredData: {
+      conditionName:     'Headache / Migraine',
+      description:       'Headaches and migraines can range from mild to completely debilitating, affecting relationships, productivity, sleep, and concentration. Many are related to neck tension, posture, and lifestyle factors.',
+      possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction',
+    },
   },
   'spinal-stenosis': {
     meta: { slug: 'spinal-stenosis', title: 'Spinal Stenosis Airdrie | Summit Spine Centre', description: '', keywords: ['spinal stenosis Airdrie', 'spinal stenosis chiropractor'], published: true, priority: 'P2', type: 'condition', canonicalPath: '/conditions/spinal-stenosis' },

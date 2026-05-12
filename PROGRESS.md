@@ -79,12 +79,12 @@
 ### Conditions
 - [ ] `app/conditions/page.tsx` — Conditions Hub
 - [x] `app/conditions/[slug]/page.tsx` — Dynamic condition route
-- [ ] Content: `low-back-pain`
+- [x] Content: `low-back-pain`
 - [x] Content: `sciatica`
-- [ ] Content: `disc-herniation`
-- [ ] Content: `neck-pain`
+- [x] Content: `disc-herniation`
+- [x] Content: `neck-pain`
 - [ ] Content: `back-pain`
-- [ ] Content: `headaches-migraines`
+- [x] Content: `headaches-migraines`
 - [ ] Content: `spinal-stenosis`
 - [ ] Content: `tech-neck`
 - [ ] Content: `whiplash`
@@ -181,3 +181,4 @@
 | 2026-05-08 | Home page polish — iteration 2 | Hero.tsx: overlay changed from flat bg-eerie-black/55 to gradient (from-eerie-black/65 via-eerie-black/55 to-eerie-black/10) so photo bleeds through naturally at bottom; bottomFade height reduced h-48→h-20 (stops white climbing into photo); stats pt-8→pt-12 + label mb-1→mb-2 for more breathing room. DemographicTabBar.tsx: buttons enlarged py-4/px-5→py-5/px-6, text-base→text-lg; inactive = hemlock-50 bg + dun border; active = cerulean bg/border/shadow-lg; ChevronRight icon added (rotate-90 when active, translate-x-0.5 on hover); 0 TS errors. |
 | 2026-05-08 | Home page polish — Hero + Sound Familiar redesign | Hero.tsx: added bottomFade prop (Tailwind to-* class renders gradient overlay at bottom of bgImage heroes for smooth section transition); stats bar: mt-auto anchoring, pt-8 top padding, text-4xl numbers, mb-1 label gap, gap-x-8/gap-y-6 spacing; app/page.tsx: bottomFade="to-neutral-100" passed to Hero; types/content.ts: DemographicCondition interface added (label, slug?, description), DemographicTab replaced painPoints:DemographicPainMap with conditions:DemographicCondition[]; content/pages.ts: all 6 demographic tabs rewritten with 6 condition cards each + 1 "other" (no slug, welcoming copy), conditions link to /conditions/[slug] for 10 condition slugs; DemographicTabBar.tsx: full redesign — 2-col/3-col large button grid replaces thin tab strip, condition cards with Link (slug present) or div (other), other card styled with border-dashed + cerulean tint, initial state null (no tab selected) with prompt text; 0 TS errors. |
 | 2026-05-12 | Mobile layout fixes — Hero stats + Navbar accordion | Hero.tsx: changed py-10 → pt-10 pb-36 for hasBgImage content container on mobile, clearing the 112px mountain SVG silhouettes so stats bar is fully visible; Navbar.tsx: added activeMobileSection state, replaced always-visible mobile children lists with collapsible accordion — Services and Conditions are now ChevronDown toggle buttons (only one open at a time), plain links (About/Team/Contact) unchanged, activeMobileSection resets on menu close; 0 TS errors, 0 console errors, verified in browser at 375px. |
+| 2026-05-12 | Conditions Content — low-back-pain, disc-herniation, neck-pain, headaches-migraines | conditionPages: 4 stubs fully populated from uploaded source docs; each entry has meta (SEO title/desc/keywords), hero (H1+subheadline verbatim from source), overview, 9–11 symptoms, 6–9 causes, 5 treatments (Exam→Cox→Adjustments→Exercises→Lifestyle), 3 benefits (35yrs/Cox/personalized), 4-step howItWorks, 9–14 FAQs verbatim from source, CTA, relatedConditions, structuredData; 0 TS errors, 0 console errors, all 4 routes verified in browser. Arthritis.txt noted — maps to back-pain (next session). |
