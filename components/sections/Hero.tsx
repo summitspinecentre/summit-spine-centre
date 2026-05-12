@@ -208,7 +208,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
           hasImage || hasPullQuote
             ? 'grid grid-cols-1 items-center gap-12 py-section lg:py-section-lg md:grid-cols-2'
             : hasBgImage
-              ? 'flex flex-col py-10 md:py-16 lg:py-24 md:min-h-[calc(100vh-5rem)]'
+              ? 'flex flex-col pt-10 pb-36 md:py-16 lg:py-24 md:min-h-[calc(100vh-5rem)]'
               : 'flex flex-col items-center text-center py-section lg:py-section-lg',
         )}
       >

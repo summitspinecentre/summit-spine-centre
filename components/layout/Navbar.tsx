@@ -11,10 +11,11 @@ import Button from '@/components/ui/Button'
 import { useNavTheme } from './NavThemeProvider'
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen]         = useState(false)
-  const [scrolled, setScrolled]             = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const [logoError, setLogoError]           = useState(false)
+  const [mobileOpen, setMobileOpen]           = useState(false)
+  const [scrolled, setScrolled]               = useState(false)
+  const [activeDropdown, setActiveDropdown]   = useState<string | null>(null)
+  const [activeMobileSection, setActiveMobileSection] = useState<string | null>(null)
+  const [logoError, setLogoError]             = useState(false)
   const { variant } = useNavTheme()
   const navRef = useRef<HTMLDivElement>(null)
 
@@ -166,7 +167,7 @@ export default function Navbar() {
                 ? 'text-text hover:text-accent focus-visible:text-accent'
                 : 'text-neutral-0 hover:text-neutral-0/70 focus-visible:text-neutral-0/70',
             )}
-            onClick={() => setMobileOpen((prev) => !prev)}
+            onClick={() => { setMobileOpen((prev) => !prev); setActiveMobileSection(null) }}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-controls="mobile-menu"
@@ -191,26 +192,52 @@ export default function Navbar() {
           <nav aria-label="Mobile navigation" className="px-6 py-8 flex flex-col gap-1">
             {navConfig.items.map((item) => (
               <div key={item.href}>
-                <Link
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block py-3 text-lg font-medium text-text hover:text-accent border-b border-border/40 transition-colors duration-150"
-                >
-                  {item.label}
-                </Link>
-                {item.children && (
-                  <div className="pl-4 py-2 flex flex-col gap-1">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block py-2 text-base text-text-muted hover:text-accent transition-colors duration-150"
+                {item.children ? (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setActiveMobileSection((prev) => (prev === item.href ? null : item.href))
+                      }
+                      aria-expanded={activeMobileSection === item.href}
+                      aria-controls={`mobile-section-${item.href.replace(/\//g, '-')}`}
+                      className="flex w-full items-center justify-between py-3 text-lg font-medium text-text hover:text-accent border-b border-border/40 transition-colors duration-150"
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={cn(
+                          'w-5 h-5 transition-transform duration-200',
+                          activeMobileSection === item.href && 'rotate-180',
+                        )}
+                        aria-hidden="true"
+                      />
+                    </button>
+                    {activeMobileSection === item.href && (
+                      <div
+                        id={`mobile-section-${item.href.replace(/\//g, '-')}`}
+                        className="pl-4 py-2 flex flex-col gap-1 border-b border-border/40"
                       >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={() => { setMobileOpen(false); setActiveMobileSection(null) }}
+                            className="block py-2 text-base text-text-muted hover:text-accent transition-colors duration-150"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-3 text-lg font-medium text-text hover:text-accent border-b border-border/40 transition-colors duration-150"
+                  >
+                    {item.label}
+                  </Link>
                 )}
               </div>
             ))}
