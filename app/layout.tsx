@@ -5,6 +5,8 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import NavThemeProvider from '@/components/layout/NavThemeProvider'
+import StickyBookingBar from '@/components/ui/StickyBookingBar'
+import { navConfig } from '@/content/pages'
 
 const manrope = Manrope({
   subsets:  ['latin'],
@@ -52,6 +54,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-text font-body">
         <NavThemeProvider>
           <Navbar />
+          <StickyBookingBar label={navConfig.stickyCtaLabel ?? navConfig.cta.label} href={navConfig.cta.href} />
           <main className="flex-1">
             {children}
           </main>

@@ -457,4 +457,5 @@ export interface NavItem {
 export interface NavConfig {
   items: NavItem[]
   cta: CTAButton
+  stickyCtaLabel?: string
 }

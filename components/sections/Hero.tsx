@@ -260,8 +260,9 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
             </p>
           )}
 
-          {/* CTA row */}
+          {/* CTA row — id watched by StickyBookingBar */}
           <div
+            id="hero-cta"
             className={cn(
               'flex flex-wrap gap-4',
               !hasImage && !hasPullQuote && 'justify-center',
