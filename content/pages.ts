@@ -26,17 +26,21 @@ import type {
 // Used across Contact, Book, Footer, and structured data
 
 export const CLINIC_INFO: ContactInfo = {
-  address:     '',
+  address:     '214 Main St N',
   city:        'Airdrie',
-  province:    'Alberta',
-  postalCode:  '',
-  phone:       '',
-  email:       '',
-  mapEmbedUrl: '',
+  province:    'AB',
+  postalCode:  'T4B 0R6',
+  phone:       '403-948-4440',
+  email:       'info@summitspine.ca',
+  mapEmbedUrl: 'https://maps.google.com/maps?q=214+Main+St+N,+Airdrie,+AB+T4B+0R6,+Canada&output=embed',
   hours: [
-    { days: 'Monday – Friday', hours: '' },
-    { days: 'Saturday',        hours: '' },
-    { days: 'Sunday',          hours: '' },
+    { days: 'Monday',    hours: '8AM – 12PM', hours2: '2PM – 6PM' },
+    { days: 'Tuesday',   hours: '8AM – 7PM' },
+    { days: 'Wednesday', hours: '8AM – 12PM', hours2: '2PM – 6PM' },
+    { days: 'Thursday',  hours: '8AM – 7PM' },
+    { days: 'Friday',    hours: '8AM – 5PM' },
+    { days: 'Saturday',  hours: '9AM – 2PM' },
+    { days: 'Sunday',    hours: 'Closed' },
   ],
 }
 
@@ -1745,10 +1749,176 @@ export const conditionPages: Record<string, ConditionPage> = {
     },
   },
   'spinal-stenosis': {
-    meta: { slug: 'spinal-stenosis', title: 'Spinal Stenosis Airdrie | Summit Spine Centre', description: '', keywords: ['spinal stenosis Airdrie', 'spinal stenosis chiropractor'], published: true, priority: 'P2', type: 'condition', canonicalPath: '/conditions/spinal-stenosis' },
-    overview: '', relatedConditions: ['low-back-pain', 'disc-herniation'],
-    structuredData: { conditionName: 'Spinal Stenosis', description: '', possibleTreatment: 'Cox Flexion-Distraction, Chiropractic Care' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'spinal-stenosis',
+      title:         'Spinal Stenosis Treatment Airdrie | Summit Spine Centre',
+      description:   'Non-surgical spinal stenosis treatment in Airdrie. Cox Flexion-Distraction gently decompresses the spine, creating more space for nerves so you can walk farther and live more fully.',
+      keywords:      [
+        'spinal stenosis Airdrie',
+        'spinal stenosis chiropractor Airdrie',
+        'spinal stenosis treatment Airdrie',
+        'lumbar stenosis Airdrie Alberta',
+        'spinal canal narrowing Airdrie',
+      ],
+      published:     true,
+      priority:      'P2',
+      type:          'condition',
+      canonicalPath: '/conditions/spinal-stenosis',
+    },
+
+    hero: {
+      headline:    'Spinal Stenosis Treatment in Airdrie',
+      subheadline: 'Do you find that you can only walk so far before your back or legs start to ache, and when you sit down it goes away quite quickly? Don\'t let stenosis get in the way of living your life.',
+      cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Spinal stenosis refers to a narrowing of the tunnels within the spine that protect your nerves and spinal cord. When these spaces are narrowed, it can place pressure on the nerves and disrupt how they function, leading to pain, numbness, tingling and weakness. ' +
+      'Stenosis most commonly develops gradually over time as discs, joints, and surrounding tissues naturally change with age. In many cases, the body adapts well, and some people have stenosis on imaging without significant symptoms. However, in other cases it can cause a wide array of symptoms including numbness, burning, weakness, and challenges with balance. ' +
+      'Spinal stenosis is most common in the lower back (lumbar stenosis), though it can also occur in the neck (cervical stenosis). Many people with spinal stenosis notice symptoms during walking or standing that improve when sitting, leaning forward, or resting. ' +
+      'The good news is that many people with spinal stenosis improve without surgery. While the structural narrowing itself may not fully reverse, symptoms and function can often improve significantly — with the right combination of movement, education, exercise, and conservative care.',
+
+    symptoms: [
+      'Lower back or neck pain',
+      'Pain traveling into the buttocks or legs',
+      'Numbness or tingling into the legs or arms',
+      'Heaviness, fatigue, or weakness in the legs while walking',
+      'Cramping or burning pain with prolonged standing or walking',
+      'Symptoms that improve with sitting or bending forward',
+      'Reduced walking tolerance',
+      'Trouble with balance',
+      'Stiffness or reduced spinal mobility',
+    ],
+
+    causes: [
+      'Arthritis and Degeneration — changes involving the joints, discs, and surrounding tissues may gradually narrow the spaces around nearby nerves',
+      'Disc Bulges or Herniations — bulging or thickened discs may contribute to narrowing within the spinal canal or around nerve openings',
+      'Bone Spurs — the body may develop extra bone around arthritic joints over time, which can reduce the space available for nerves',
+      'Thickened Ligaments — supporting ligaments within the spine may thicken with age and contribute to narrowing',
+      'Degenerative Disc Disease — loss of disc height over time may change how forces move through the spine and reduce available space for nerves',
+      'Previous Injuries or Surgeries — past spinal injuries or surgeries may contribute to structural changes in some individuals',
+      'Congenital Narrowing — some people are naturally born with a narrower spinal canal, which may make symptoms more likely later in life',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Spinal Stenosis',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'We begin with a detailed conversation about your symptoms — how far you can walk, what makes it better or worse, and how it\'s affecting your daily life. A thorough orthopedic, neurological, and movement assessment helps us understand the extent of nerve involvement and guide treatment.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'Our primary approach for spinal stenosis. This gentle technique works by decompressing your spine, increasing the space for your spinal cord and nerves to function, reducing blood congestion, and improving mobility — without forceful movements or cracking.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'When appropriate, targeted adjustments help restore mobility to restricted spinal joints, reduce muscle guarding, and support the overall function of the spine alongside decompression therapy.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Flexibility, Mobility & Strengthening',
+          body:  'Specific exercises focused on improving posture, strengthening supporting muscles, and building walking tolerance — so you can stay active and independent long-term.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Activity & Lifestyle Guidance',
+          body:  'Practical recommendations on walking strategies, posture positions, activity modification, and daily habits that reduce nerve irritation and help you get more out of each day.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Spinal Stenosis',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: 'Cox FD — The Gold Standard for Stenosis',
+          body:  'Cox Flexion-Distraction is one of the most effective conservative treatments for spinal stenosis. We are among the few certified Cox practitioners in Alberta, making us uniquely equipped to treat this condition.',
+        },
+        {
+          icon:  'Activity',
+          title: '35+ Years Serving Airdrie',
+          body:  'We commonly work with patients experiencing spinal stenosis and nerve-related symptoms. Decades of experience means we\'ve helped many people walk farther, move better, and stay independent.',
+        },
+        {
+          icon:  'Users',
+          title: 'Care Tailored to Your Goals',
+          body:  'Your care is always tailored to your goals, your symptoms, and your comfort level. We want you walking farther, living more fully, and managing your stenosis with confidence.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'Your first visit starts with a detailed conversation about your symptoms and health history. We want to understand what\'s going on, how it\'s impacting your life, and where you\'d like to be.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Thorough Assessment',
+          body:  'Orthopedic, neurological, and movement assessments help us evaluate the degree of nerve involvement and identify the best, safest approach to care for your specific presentation.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Personalized Plan',
+          body:  'We explain our findings in plain language and recommend a plan tailored to your goals and preferences. No guesswork, no pressure.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Progress',
+          body:  'We get to work — tracking your walking tolerance, pain levels, and function as you improve. If your needs would be better met elsewhere, we\'ll connect you with the right provider.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'What does spinal stenosis mean?',                            answer: 'Spinal stenosis refers to a narrowing of the spaces within the spine that may place pressure or irritation on nearby nerves or the spinal cord.' },
+        { question: 'Is spinal stenosis a normal part of aging?',                 answer: 'Age-related spinal changes are very common, and some degree of narrowing may occur over time. Many people have stenosis visible on imaging without significant symptoms.' },
+        { question: 'What does spinal stenosis pain feel like?',                  answer: 'Symptoms may include aching, heaviness, numbness, tingling, weakness, or burning pain in the back, buttocks, or legs (lumbar stenosis) or in the neck, arms, or hands (cervical stenosis). Many people find symptoms improve when sitting or bending forward.' },
+        { question: 'Why do my symptoms improve when I sit down?',               answer: 'Many people with lumbar stenosis feel better when bending forward or sitting because these positions may temporarily create more space around irritated nerves, reducing pressure and discomfort.' },
+        { question: 'Can spinal stenosis improve without surgery?',               answer: 'Yes. Many people manage spinal stenosis successfully with conservative care, exercise, movement strategies, and lifestyle modifications. Surgery is typically considered when conservative approaches haven\'t provided adequate relief.' },
+        { question: 'Is walking good for spinal stenosis?',                       answer: 'For many people, walking is helpful, though tolerance may vary depending on symptom severity. Gradual and consistent movement is often beneficial. We can help you build a walking strategy that works for your current level.' },
+        { question: 'Can chiropractic care help spinal stenosis?',                answer: 'Chiropractic care — particularly Cox Flexion-Distraction — may help improve mobility, reduce stiffness, support walking tolerance, and improve overall function in some individuals with spinal stenosis.' },
+        { question: 'When should I seek medical attention for spinal stenosis?',  answer: 'Immediate medical attention is important if symptoms involve severe weakness, loss of bowel or bladder control, worsening balance problems, or rapidly progressing neurological symptoms.' },
+        { question: 'Do I need imaging for spinal stenosis?',                     answer: 'Imaging such as a CT scan or MRI may sometimes help confirm stenosis and evaluate the degree of narrowing, particularly if symptoms are persistent, progressive, or nerve-related. Many cases can be initially assessed through a detailed history and physical examination.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['low-back-pain', 'disc-herniation'],
+
+    structuredData: {
+      conditionName:     'Spinal Stenosis',
+      description:       'Spinal stenosis refers to a narrowing of the tunnels within the spine that protect the nerves and spinal cord. It commonly causes pain, heaviness, numbness, or weakness that worsens with walking or standing and improves with sitting.',
+      possibleTreatment: 'Cox Flexion-Distraction, Chiropractic Care',
+    },
   },
   'tech-neck': {
     meta: { slug: 'tech-neck', title: 'Tech Neck Treatment Airdrie | Summit Spine Centre', description: '', keywords: ['tech neck Airdrie', 'text neck chiropractor Airdrie'], published: true, priority: 'P2', type: 'condition', canonicalPath: '/conditions/tech-neck' },

@@ -34,7 +34,7 @@
 
 ### Layout
 - [x] `components/layout/Navbar.tsx` — fixed, scroll-aware, desktop dropdowns, mobile menu, WCAG aria
-- [x] `components/layout/Footer.tsx` — 4-col grid, contact info, legal links, Server Component
+- [x] `components/layout/Footer.tsx` — 4-col grid, contact info, legal links, Server Component; real clinic data populated (address, phone, email, 7-day hours with split sessions, Google Maps embed)
 
 ### Sections
 - [x] `components/sections/Hero.tsx`
@@ -85,7 +85,7 @@
 - [x] Content: `neck-pain`
 - [ ] Content: `back-pain`
 - [x] Content: `headaches-migraines`
-- [ ] Content: `spinal-stenosis`
+- [x] Content: `spinal-stenosis`
 - [ ] Content: `tech-neck`
 - [ ] Content: `whiplash`
 - [ ] Content: `upper-back-shoulder-pain`
@@ -182,3 +182,4 @@
 | 2026-05-08 | Home page polish — Hero + Sound Familiar redesign | Hero.tsx: added bottomFade prop (Tailwind to-* class renders gradient overlay at bottom of bgImage heroes for smooth section transition); stats bar: mt-auto anchoring, pt-8 top padding, text-4xl numbers, mb-1 label gap, gap-x-8/gap-y-6 spacing; app/page.tsx: bottomFade="to-neutral-100" passed to Hero; types/content.ts: DemographicCondition interface added (label, slug?, description), DemographicTab replaced painPoints:DemographicPainMap with conditions:DemographicCondition[]; content/pages.ts: all 6 demographic tabs rewritten with 6 condition cards each + 1 "other" (no slug, welcoming copy), conditions link to /conditions/[slug] for 10 condition slugs; DemographicTabBar.tsx: full redesign — 2-col/3-col large button grid replaces thin tab strip, condition cards with Link (slug present) or div (other), other card styled with border-dashed + cerulean tint, initial state null (no tab selected) with prompt text; 0 TS errors. |
 | 2026-05-12 | Mobile layout fixes — Hero stats + Navbar accordion | Hero.tsx: changed py-10 → pt-10 pb-36 for hasBgImage content container on mobile, clearing the 112px mountain SVG silhouettes so stats bar is fully visible; Navbar.tsx: added activeMobileSection state, replaced always-visible mobile children lists with collapsible accordion — Services and Conditions are now ChevronDown toggle buttons (only one open at a time), plain links (About/Team/Contact) unchanged, activeMobileSection resets on menu close; 0 TS errors, 0 console errors, verified in browser at 375px. |
 | 2026-05-12 | Conditions Content — low-back-pain, disc-herniation, neck-pain, headaches-migraines | conditionPages: 4 stubs fully populated from uploaded source docs; each entry has meta (SEO title/desc/keywords), hero (H1+subheadline verbatim from source), overview, 9–11 symptoms, 6–9 causes, 5 treatments (Exam→Cox→Adjustments→Exercises→Lifestyle), 3 benefits (35yrs/Cox/personalized), 4-step howItWorks, 9–14 FAQs verbatim from source, CTA, relatedConditions, structuredData; 0 TS errors, 0 console errors, all 4 routes verified in browser. Arthritis.txt noted — maps to back-pain (next session). |
+| 2026-05-12 | Footer — real clinic data + Google Maps embed | types/content.ts: added hours2?: string to ContactInfo.hours[] item for split-session days; content/pages.ts: CLINIC_INFO fully populated (214 Main St N, Airdrie AB T4B 0R6, 403-948-4440, info@summitspine.ca, all 7 days — Mon/Wed two-slot); Footer.tsx: Hours of Operation heading added, hours2 rendered when present, Google Maps iframe embed added below 4-col grid (lazy-loaded, accessible title, no API key); 0 TS errors, 0 console errors. |

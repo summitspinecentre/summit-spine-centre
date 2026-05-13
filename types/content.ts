@@ -338,7 +338,7 @@ export interface ContactInfo {
   phone: string
   email: string
   mapEmbedUrl: string
-  hours: Array<{ days: string; hours: string }>
+  hours: Array<{ days: string; hours: string; hours2?: string }>
 }
 
 export interface ContactPage {
