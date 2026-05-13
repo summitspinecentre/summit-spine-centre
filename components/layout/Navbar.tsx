@@ -59,7 +59,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-30 transition-all duration-700',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-700',
         scrolled
           ? 'bg-neutral-0 shadow-md h-16'
           : 'bg-transparent h-20',
@@ -91,14 +91,19 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav ref={navRef} aria-label="Main navigation" className="hidden lg:flex items-center gap-8">
           {navConfig.items.map((item) => (
-            <div key={item.href} className="relative">
+            <div
+              key={item.href}
+              className="relative"
+              onMouseEnter={() => item.children ? setActiveDropdown(item.href) : undefined}
+              onMouseLeave={() => item.children ? setActiveDropdown(null) : undefined}
+            >
               {item.children ? (
                 <>
-                  <button
-                    type="button"
-                    onClick={() => toggleDropdown(item.href)}
+                  <Link
+                    href={item.href}
                     aria-expanded={activeDropdown === item.href}
                     aria-haspopup="menu"
+                    onClick={() => setActiveDropdown(null)}
                     className={cn(
                       'flex items-center gap-1 text-base font-medium transition-colors duration-300 outline-none',
                       scrolled || !isHero
@@ -114,13 +119,13 @@ export default function Navbar() {
                       )}
                       aria-hidden="true"
                     />
-                  </button>
+                  </Link>
 
                   {activeDropdown === item.href && (
                     <div
                       role="menu"
                       aria-label={`${item.label} submenu`}
-                      className="absolute top-full left-0 mt-2 py-2 bg-neutral-0 rounded-lg shadow-lg border border-border min-w-[240px] z-20"
+                      className="absolute top-full left-0 mt-1 py-2 bg-neutral-0 rounded-lg shadow-lg border border-border min-w-[240px] z-20"
                     >
                       {item.children.map((child) => (
                         <Link

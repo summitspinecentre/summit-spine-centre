@@ -465,18 +465,59 @@ export const teamPage: TeamPage = {
 export const contactPage: ContactPage = {
   meta: {
     slug:          'contact',
-    title:         'Contact Us | Summit Spine Centre Airdrie',
-    description:   '',
-    keywords:      ['contact Summit Spine Centre', 'chiropractic Airdrie contact'],
+    title:         'Contact Us Airdrie | Summit Spine Centre',
+    description:   'Contact Summit Spine Centre in Airdrie, Alberta. Walk-ins welcome — no referral needed. Call 403-948-4440, email us, or book online. Located at 214 Main St N, Airdrie.',
+    keywords:      ['contact Summit Spine Centre', 'chiropractic Airdrie contact', 'chiropractor Airdrie phone', 'Summit Spine Centre location', 'chiropractic clinic Airdrie hours'],
     published:     true,
     priority:      'P1',
     type:          'contact',
     canonicalPath: '/contact',
   },
-  hero:    { headline: '', subheadline: '', scheme: 1, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
+  hero: {
+    headline:    'Find Us in Airdrie.',
+    subheadline: 'Walk-ins welcome. No referral needed.',
+    body:        "We're located in the heart of Airdrie at 214 Main St N. Come in and see us — or give us a call and we'll help you figure out the next step.",
+    cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    scheme:      1,
+  },
   contact: CLINIC_INFO,
-  cta:     { headline: '', scheme: 4, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
-  faqs:    { scheme: 1, items: [] },
+  cta: {
+    headline:     'Ready to Start Feeling Better?',
+    body:         "Take the first step. Book your visit online or call us directly — we'll get you in as soon as possible.",
+    cta:          { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    secondaryCta: { label: 'Call 403-948-4440', href: 'tel:4039484440', variant: 'ghost' },
+    scheme:       4,
+  },
+  faqs: {
+    headline: 'Common Questions',
+    scheme:   2,
+    items: [
+      {
+        question: 'Do I need a referral to see a chiropractor at Summit Spine Centre?',
+        answer:   'No referral is needed. You can book directly online or call us at 403-948-4440. We welcome walk-ins and are able to see most patients the same day or within a day or two.',
+      },
+      {
+        question: 'Do you accept walk-in patients?',
+        answer:   'Yes — walk-ins are welcome. We do our best to accommodate you the same day. If you have a preferred time, booking online is the fastest way to secure your spot.',
+      },
+      {
+        question: 'Where exactly are you located, and is there parking?',
+        answer:   'We are located at 214 Main St N, Airdrie, AB T4B 0R6 — in a convenient central location with free on-street parking and a parking lot nearby. Look for our signage on Main St.',
+      },
+      {
+        question: 'What should I bring to my first appointment?',
+        answer:   'Bring any relevant imaging (X-rays, MRI reports), a list of current medications, and your Alberta Health Care card. Wear comfortable, loose-fitting clothing so we can assess your range of motion easily.',
+      },
+      {
+        question: 'How long is the first appointment?',
+        answer:   'Your initial visit typically runs 45–60 minutes. This includes a thorough health history review, physical examination, discussion of your goals, and — in most cases — your first treatment.',
+      },
+      {
+        question: 'How do I cancel or reschedule my appointment?',
+        answer:   'You can cancel or reschedule by calling us at 403-948-4440 or emailing info@summitspine.ca. We ask for at least 24 hours notice when possible so we can offer your slot to someone on our wait list.',
+      },
+    ],
+  },
 }
 
 // ── BOOK NOW ─────────────────────────────────────────────────
@@ -484,19 +525,57 @@ export const contactPage: ContactPage = {
 export const bookPage: BookPage = {
   meta: {
     slug:          'book',
-    title:         'Book Your Visit | Summit Spine Centre Airdrie',
-    description:   '',
-    keywords:      ['book chiropractor Airdrie', 'walk-in chiropractic Airdrie'],
+    title:         'Book Your Visit Airdrie | Summit Spine Centre',
+    description:   'Book a chiropractic appointment at Summit Spine Centre in Airdrie, AB. Walk-ins welcome — no referral needed. Online booking available or call 403-948-4440.',
+    keywords:      ['book chiropractor Airdrie', 'chiropractic appointment Airdrie', 'walk-in chiropractor Airdrie', 'Summit Spine Centre booking', 'chiropractic online booking Airdrie'],
     published:     true,
     priority:      'P1',
     type:          'book',
     canonicalPath: '/book',
   },
-  hero:            { headline: '', subheadline: '', scheme: 1, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
+  hero: {
+    headline:    'Book Your Visit.',
+    subheadline: 'Quick, easy, and no referral needed.',
+    body:        'Select a time that works for you. Your first appointment includes a full assessment and — in most cases — your first treatment. Walk-ins are also welcome.',
+    cta:         { label: 'Book Online Now', href: 'https://summitspine.ca/booking/', external: true },
+    secondaryCta: { label: 'Call 403-948-4440', href: 'tel:4039484440', variant: 'ghost' },
+    scheme:      1,
+  },
   bookingEmbedUrl: 'https://summitspine.ca/booking/',
   contact:         CLINIC_INFO,
-  faqs:            { scheme: 1, items: [] },
-  cta:             { headline: '', scheme: 4, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
+  faqs: {
+    headline: 'Booking Questions',
+    scheme:   2,
+    items: [
+      {
+        question: 'How quickly can I get an appointment?',
+        answer:   'Most new patients are seen within 1–2 business days. Walk-ins are welcome — call ahead at 403-948-4440 to check same-day availability, or book online to secure your preferred time slot.',
+      },
+      {
+        question: 'Does Alberta Health Care cover chiropractic treatment?',
+        answer:   'Alberta Health Care (AHCIP) does not cover chiropractic services. However, most extended health benefit plans cover a portion of chiropractic care. We recommend checking your plan details. We provide a receipt after each visit that you can submit to your insurer.',
+      },
+      {
+        question: 'What if I need to cancel or reschedule?',
+        answer:   'Please call us at 403-948-4440 or email info@summitspine.ca at least 24 hours in advance. This allows us to offer your time to another patient who may be waiting. We understand that life happens — just reach out as soon as you can.',
+      },
+      {
+        question: 'Is there anything I need to do before my first appointment?',
+        answer:   'No paperwork to fill out in advance — we take care of that when you arrive. Just bring your Alberta Health Care card, any relevant imaging (X-rays, MRI), and wear or bring comfortable, loose-fitting clothing.',
+      },
+      {
+        question: 'Do you offer direct billing to insurance?',
+        answer:   'We do not currently offer direct billing. Payment is collected at each visit and we provide a detailed receipt for you to submit to your insurance provider for reimbursement.',
+      },
+    ],
+  },
+  cta: {
+    headline:     'Still Have Questions?',
+    body:         "Call us at 403-948-4440 or send us an email — we're happy to answer anything before you book.",
+    cta:          { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/', external: true },
+    secondaryCta: { label: 'Contact Us', href: '/contact', variant: 'ghost' },
+    scheme:       4,
+  },
 }
 
 // ── SERVICES HUB ─────────────────────────────────────────────
@@ -505,19 +584,55 @@ export const servicesPage: ServicesHubPage = {
   meta: {
     slug:          'services',
     title:         'Chiropractic Services Airdrie | Summit Spine Centre',
-    description:   '',
-    keywords:      ['chiropractic services Airdrie', 'Cox flexion distraction Airdrie'],
+    description:   'Chiropractic services in Airdrie, AB — Cox Flexion-Distraction, chiropractic adjustments, and the Summits of Recovery program. Gentle, evidence-informed care for back pain, disc issues, and more.',
+    keywords:      ['chiropractic services Airdrie', 'Cox flexion distraction Airdrie', 'chiropractic adjustments Airdrie', 'Summits of Recovery Airdrie', 'spine care Airdrie Alberta'],
     published:     true,
     priority:      'P1',
     type:          'service-hub',
     canonicalPath: '/services',
   },
-  hero:             { headline: '', subheadline: '', scheme: 1, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
-  featuresList:     { headline: '', scheme: 1, items: [] },
-  featureHighlight: { icon: '', title: '', body: '' },
-  services:         { headline: '', scheme: 1, items: [] },
-  testimonials:     { scheme: 1, items: [] },
-  cta:              { headline: '', scheme: 4, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
+  hero: {
+    headline:     'Care Built Around You.',
+    subheadline:  'Comprehensive chiropractic services in Airdrie — from gentle disc decompression to full-body recovery programs.',
+    body:         'At Summit Spine Centre, every service starts with one thing: a thorough understanding of what\'s actually going on with you. We don\'t apply generic treatments. We build a plan around your specific diagnosis, history, and goals.',
+    cta:          { label: 'Book Your Assessment', href: 'https://summitspine.ca/booking/' },
+    secondaryCta: { label: 'See Conditions We Treat', href: '/conditions', variant: 'ghost' },
+    scheme:       1,
+  },
+  featuresList: {
+    headline:    'What Makes Summit Spine Different',
+    subheadline: 'We\'ve been serving Airdrie families for over 35 years. Here\'s what that looks like in practice.',
+    scheme:      2,
+    items: [
+      { icon: 'ClipboardList', title: 'Assessment First',        body: 'Every care plan begins with a thorough assessment — your history, movement patterns, orthopedic tests, and goals. We don\'t guess.' },
+      { icon: 'Activity',      title: 'Diagnosis-Led Treatment', body: 'The treatment follows the diagnosis, not the other way around. We choose techniques based on what you actually need.' },
+      { icon: 'HandHeart',     title: 'Hands-On Expertise',      body: 'Our chiropractors are trained in advanced manual techniques, including Cox Flexion-Distraction — a specialty not every clinic offers.' },
+      { icon: 'TrendingUp',    title: 'Long-Term Results',       body: 'We\'re not just getting you out of pain. We\'re building the capacity for you to stay out of it — through movement, education, and a plan you can sustain.' },
+    ],
+  },
+  featureHighlight: {
+    icon:  'Award',
+    title: 'Specialized. Proven. Personalized.',
+    body:  'When you visit Summit Spine Centre, you\'re not getting a generic chiropractic visit. You\'re getting a clinician who knows your case, a team that knows your name, and a clinic that has been doing this — right here in Airdrie — for over 35 years.',
+  },
+  services: {
+    headline:    'Our Services',
+    subheadline: 'Each service is available as a standalone treatment or as part of a coordinated care plan.',
+    scheme:      1,
+    items: [
+      { icon: 'Activity',   title: 'Cox Flexion-Distraction',  body: 'Gentle, specialized disc decompression for herniated discs, sciatica, spinal stenosis, and nerve pain. The gold standard in non-surgical disc care.' },
+      { icon: 'HandHeart',  title: 'Chiropractic Adjustments', body: 'Targeted spinal adjustments to restore joint mobility, reduce nerve irritation, and improve the way your body moves and feels day to day.' },
+      { icon: 'TrendingUp', title: 'Summits of Recovery',      body: 'A structured, 4-pillar recovery program combining professional adjustments, targeted exercise, lifestyle wisdom, and ergonomic support.' },
+    ],
+  },
+  testimonials: { scheme: 4, items: [] },
+  cta: {
+    headline:     'Not Sure Which Service Is Right for You?',
+    body:         'Start with an assessment. We\'ll help you understand what\'s going on and build a care plan that actually fits your situation.',
+    scheme:       4,
+    cta:          { label: 'Book Your Assessment', href: 'https://summitspine.ca/booking/' },
+    secondaryCta: { label: 'Call Us', href: 'tel:4039484440', variant: 'ghost' },
+  },
 }
 
 // ── SERVICE: COX FLEXION-DISTRACTION ─────────────────────────
@@ -946,18 +1061,47 @@ export const conditionsPage: ConditionsHubPage = {
   meta: {
     slug:          'conditions',
     title:         'Conditions Treated Airdrie | Summit Spine Centre',
-    description:   '',
-    keywords:      ['conditions treated Airdrie chiropractor', 'back pain Airdrie'],
+    description:   'Chiropractic care for back pain, sciatica, disc herniation, neck pain, headaches, and more in Airdrie, AB. Summit Spine Centre has served the community for 35+ years.',
+    keywords:      ['conditions treated Airdrie chiropractor', 'back pain Airdrie', 'sciatica treatment Airdrie', 'neck pain Airdrie', 'chiropractic conditions Airdrie Alberta'],
     published:     true,
     priority:      'P1',
     type:          'condition-hub',
     canonicalPath: '/conditions',
   },
-  hero:             { headline: '', subheadline: '', scheme: 1, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
-  conditionsList:   { headline: '', scheme: 1, items: [] },
-  educationFeature: { title: '', body: '' },
-  faqs:             { scheme: 1, items: [] },
-  cta:              { headline: '', scheme: 4, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
+  hero: {
+    headline:     'We Treat the Cause. Not Just the Symptom.',
+    subheadline:  'Chiropractic care for spine, nerve, and musculoskeletal conditions in Airdrie — backed by 35+ years of hands-on experience.',
+    body:         'Pain and dysfunction show up in different ways for different people. We take the time to figure out what\'s actually driving yours — then build a treatment plan around that.',
+    cta:          { label: 'Book Your Assessment', href: 'https://summitspine.ca/booking/' },
+    secondaryCta: { label: 'See Our Services', href: '/services', variant: 'ghost' },
+    scheme:       1,
+  },
+  conditionsList: {
+    headline:    'Conditions We Treat',
+    subheadline: 'From common disc problems and nerve pain to chronic conditions and postural issues — if it involves your spine, muscles, or nerves, we\'ve seen it.',
+    scheme:      1,
+    items:       [],
+  },
+  educationFeature: {
+    title: 'Getting a Diagnosis You Can Actually Use',
+    body:  'Many patients come to us having been told their imaging is "normal" or their pain is something they\'ll just have to manage. We approach every case differently. A thorough chiropractic assessment often reveals functional problems — how you move, where you compensate, which structures are loaded — that don\'t show up on scans. Understanding what\'s actually happening is the first step to fixing it. We take the time to explain your diagnosis clearly so you can make informed decisions about your care.',
+  },
+  faqs: {
+    scheme: 1,
+    items: [
+      { question: 'Do I need a referral to see a chiropractor in Airdrie?',        answer: 'No referral is needed. You can book directly with Summit Spine Centre. If we feel you need imaging or a specialist referral, we\'ll guide you through that process.' },
+      { question: 'How do I know if chiropractic care is right for my condition?',  answer: 'The best way is to come in for an assessment. We\'ll tell you honestly whether chiropractic care is the right fit for what you\'re dealing with — and if it\'s not, we\'ll point you in the right direction. We don\'t take cases we can\'t help.' },
+      { question: 'What conditions do chiropractors treat?',                        answer: 'Chiropractors are trained to assess and treat a wide range of musculoskeletal and spinal conditions — including disc herniations, sciatica, neck and back pain, headaches, joint problems, nerve compression, and more. At Summit Spine Centre, we specialize in disc conditions and have advanced training in Cox Flexion-Distraction therapy.' },
+      { question: 'How many treatments will I need?',                               answer: 'It depends on your condition, how long you\'ve had it, and how your body responds to treatment. After your assessment, we\'ll give you a realistic timeline. We don\'t oversell care — we aim to get you better as efficiently as possible and give you the tools to stay that way.' },
+      { question: 'Will chiropractic care be covered by my insurance in Alberta?',  answer: 'Chiropractic care is not covered by Alberta Health Care (AHCIP), but most extended health benefit plans include chiropractic services. We recommend calling your provider before your first visit to confirm your coverage.' },
+    ],
+  },
+  cta: {
+    headline: 'Not Sure If We Can Help?',
+    body:     'Book an assessment and we\'ll give you a straight answer. We take the time to understand your case — and if chiropractic care is the right fit, we\'ll tell you exactly how we can help.',
+    scheme:   4,
+    cta:      { label: 'Book Your Assessment', href: 'https://summitspine.ca/booking/' },
+  },
 }
 
 // ── CONDITION PAGES ───────────────────────────────────────────
@@ -3200,26 +3344,153 @@ export const resourcesPage: ResourcesPage = {
 
 export const privacyPage: UtilityPage = {
   meta: {
-    slug: 'privacy', title: 'Privacy Policy | Summit Spine Centre', description: '', keywords: [],
-    published: true, priority: 'P3', type: 'utility', canonicalPath: '/privacy',
+    slug:          'privacy',
+    title:         'Privacy Policy | Summit Spine Centre',
+    description:   'Privacy Policy for Summit Spine Centre, Airdrie, AB. Learn how we collect, use, and protect your personal health information under Alberta PIPA and PIPEDA.',
+    keywords:      ['Summit Spine Centre privacy policy', 'chiropractic privacy Airdrie'],
+    published:     true,
+    priority:      'P3',
+    type:          'utility',
+    canonicalPath: '/privacy',
   },
-  title: 'Privacy Policy', lastUpdated: '', sections: [],
+  title:       'Privacy Policy',
+  lastUpdated: '2026-05-13',
+  sections: [
+    {
+      heading: 'Introduction',
+      body: 'Summit Spine Centre ("we," "us," or "our") is committed to protecting the privacy of your personal and health information. This policy explains what information we collect, how we use it, and the choices you have. We operate in accordance with Alberta\'s Personal Information Protection Act (PIPA) and Canada\'s Personal Information Protection and Electronic Documents Act (PIPEDA).',
+    },
+    {
+      heading: 'Information We Collect',
+      body: 'We collect personal and health information that is necessary to provide chiropractic care and communicate with you. This includes:\n\nContact details (name, phone number, email address, mailing address), health history and clinical notes gathered during assessments and treatments, insurance and billing information you provide, appointment records and correspondence with our clinic, and website usage data collected automatically through cookies and analytics tools.',
+    },
+    {
+      heading: 'How We Use Your Information',
+      body: 'We use your information to provide, coordinate, and follow up on chiropractic care; to process billing and insurance claims; to send appointment reminders and health updates you have consented to receive; to comply with our legal and regulatory obligations as a regulated health profession in Alberta; and to improve our website and services through anonymized analytics data.\n\nWe do not sell, rent, or trade your personal information to third parties for marketing purposes.',
+    },
+    {
+      heading: 'How We Protect Your Information',
+      body: 'Your information is stored in secure, access-controlled systems. Physical records are kept in locked storage accessible only to authorized clinic staff. Digital records are protected by password controls, encryption, and regular security reviews. Staff are trained on privacy obligations and bound by confidentiality agreements.',
+    },
+    {
+      heading: 'Sharing Your Information',
+      body: 'We share your information only when necessary: with other healthcare providers involved in your care (with your consent), with insurers or third-party payers as required to process claims, with regulatory bodies or law enforcement when required by law, and with trusted service providers (such as our booking system) who are bound by confidentiality agreements and may not use your data for any other purpose.',
+    },
+    {
+      heading: 'Your Rights',
+      body: 'You have the right to access the personal information we hold about you, request corrections to inaccurate or incomplete information, withdraw consent to certain uses of your information (subject to legal or contractual restrictions), and ask questions about how your information is handled.\n\nTo exercise these rights, contact our Privacy Officer at info@summitspine.ca or call 403-948-4440.',
+    },
+    {
+      heading: 'Cookies and Website Analytics',
+      body: 'Our website uses cookies and Google Analytics to understand how visitors use the site. This data is anonymized and does not identify individual users. You can disable cookies in your browser settings; doing so will not affect your ability to access our services.',
+    },
+    {
+      heading: 'Changes to This Policy',
+      body: 'We may update this policy from time to time. The most recent version will always be posted on this page with an updated date. Continued use of our services after any changes constitutes acceptance of the revised policy.',
+    },
+    {
+      heading: 'Contact Us',
+      body: 'For any privacy questions or concerns, please contact:\n\nSummit Spine Centre — Privacy Officer\n214 Main St N, Airdrie, AB T4B 0R6\nPhone: 403-948-4440\nEmail: info@summitspine.ca',
+    },
+  ],
 }
 
 export const termsPage: UtilityPage = {
   meta: {
-    slug: 'terms', title: 'Terms of Service | Summit Spine Centre', description: '', keywords: [],
-    published: true, priority: 'P3', type: 'utility', canonicalPath: '/terms',
+    slug:          'terms',
+    title:         'Terms of Service | Summit Spine Centre',
+    description:   'Terms of Service for Summit Spine Centre, Airdrie, AB. Appointment policies, payment terms, and important disclaimers for chiropractic care.',
+    keywords:      ['Summit Spine Centre terms', 'chiropractic clinic policies Airdrie'],
+    published:     true,
+    priority:      'P3',
+    type:          'utility',
+    canonicalPath: '/terms',
   },
-  title: 'Terms of Service', lastUpdated: '', sections: [],
+  title:       'Terms of Service',
+  lastUpdated: '2026-05-13',
+  sections: [
+    {
+      heading: 'Acceptance of Terms',
+      body: 'By booking an appointment, using our website, or receiving services at Summit Spine Centre, you agree to these Terms of Service. If you do not agree, please do not use our services or website. These terms apply to all patients, visitors, and anyone who accesses our site.',
+    },
+    {
+      heading: 'Our Services',
+      body: 'Summit Spine Centre provides chiropractic assessment and treatment services in Airdrie, Alberta. Services are delivered by or under the supervision of licensed Doctors of Chiropractic registered with the Alberta College and Association of Chiropractors (ACAC). We reserve the right to decline to provide services in our professional discretion.',
+    },
+    {
+      heading: 'Appointments and Cancellations',
+      body: 'We ask that you provide at least 24 hours notice if you need to cancel or reschedule an appointment. This allows us to offer your time to other patients who need care. Late cancellations or no-shows may result in a cancellation fee at our discretion.\n\nWalk-in appointments are welcome subject to availability. We cannot guarantee same-day walk-in availability without calling ahead.',
+    },
+    {
+      heading: 'Payment and Fees',
+      body: 'Payment is due at the time of each visit. We accept major debit and credit cards and cash. We do not offer direct billing to insurance plans — we provide a detailed receipt after each visit for you to submit to your insurer for reimbursement.\n\nAlberta Health Care (AHCIP) does not cover chiropractic services. Fees are set by our clinic and are available upon request.',
+    },
+    {
+      heading: 'Not a Medical Emergency Service',
+      body: 'Summit Spine Centre is not an emergency medical service. If you are experiencing a medical emergency, call 911 or go to your nearest emergency room immediately. Our services are not a substitute for emergency care, and nothing on this website should be interpreted as medical advice for acute or emergency conditions.',
+    },
+    {
+      heading: 'Website and Content Disclaimer',
+      body: 'The content on our website is provided for general informational purposes only. It does not constitute medical advice and should not be used as a substitute for professional healthcare guidance. Always consult a qualified healthcare provider for questions about your specific health condition.\n\nWe make reasonable efforts to keep website information accurate and up to date, but we make no warranty — express or implied — about the completeness, accuracy, or reliability of any content.',
+    },
+    {
+      heading: 'Limitation of Liability',
+      body: 'To the fullest extent permitted by law, Summit Spine Centre and its staff are not liable for any indirect, incidental, or consequential damages arising from your use of our website or services. Our total liability for any claim shall not exceed the amount paid by you for the specific service giving rise to the claim.',
+    },
+    {
+      heading: 'Changes to These Terms',
+      body: 'We may update these terms from time to time. The most recent version will be posted on this page with an updated date. Your continued use of our services after any changes constitutes acceptance of the revised terms.',
+    },
+    {
+      heading: 'Governing Law',
+      body: 'These terms are governed by the laws of the Province of Alberta and the federal laws of Canada applicable therein. Any disputes shall be resolved in the courts of Alberta.',
+    },
+    {
+      heading: 'Contact Us',
+      body: 'For questions about these terms, contact us at:\n\nSummit Spine Centre\n214 Main St N, Airdrie, AB T4B 0R6\nPhone: 403-948-4440\nEmail: info@summitspine.ca',
+    },
+  ],
 }
 
 export const accessibilityPage: UtilityPage = {
   meta: {
-    slug: 'accessibility', title: 'Accessibility | Summit Spine Centre', description: '', keywords: [],
-    published: true, priority: 'P3', type: 'utility', canonicalPath: '/accessibility',
+    slug:          'accessibility',
+    title:         'Accessibility | Summit Spine Centre',
+    description:   'Summit Spine Centre is committed to digital accessibility for all users. Learn about our WCAG 2.1 AA conformance and how to report accessibility issues.',
+    keywords:      ['Summit Spine Centre accessibility', 'accessible chiropractic website Airdrie'],
+    published:     true,
+    priority:      'P3',
+    type:          'utility',
+    canonicalPath: '/accessibility',
   },
-  title: 'Accessibility Statement', lastUpdated: '', sections: [],
+  title:       'Accessibility Statement',
+  lastUpdated: '2026-05-13',
+  sections: [
+    {
+      heading: 'Our Commitment',
+      body: 'Summit Spine Centre is committed to ensuring that our website is accessible to all people, including those with disabilities. We believe that everyone deserves equal access to healthcare information and the ability to book care online without barriers.',
+    },
+    {
+      heading: 'Standards We Follow',
+      body: 'We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. These guidelines explain how to make web content more accessible to people with disabilities, including those with visual, auditory, physical, speech, cognitive, and neurological disabilities.',
+    },
+    {
+      heading: 'Accessibility Features of This Website',
+      body: 'This website is built with the following accessibility practices:\n\nSemantic HTML5 structure with appropriate landmark regions for screen reader navigation. All images include descriptive alt text. Interactive elements include visible focus indicators and ARIA labels. Color contrast ratios meet or exceed WCAG 2.1 AA minimums. Navigation is fully operable by keyboard alone. The site does not use auto-playing media or time-limited interactions. Font sizes are responsive and can be scaled using browser zoom.',
+    },
+    {
+      heading: 'Known Limitations',
+      body: 'Our online booking calendar is provided by a third-party platform. While we have chosen a provider that prioritizes accessibility, we cannot fully control the accessibility of third-party content. If you experience difficulty booking online, please contact us directly by phone or email and we will be happy to assist.',
+    },
+    {
+      heading: 'Feedback and Contact',
+      body: 'We welcome your feedback on the accessibility of our website. If you encounter any barriers, experience difficulties, or have suggestions for improvement, please let us know:\n\nPhone: 403-948-4440\nEmail: info@summitspine.ca\n\nWe take all accessibility feedback seriously and will work to address issues promptly. If you need information in an alternative format, please contact us and we will do our best to accommodate your request.',
+    },
+    {
+      heading: 'Formal Complaints',
+      body: 'If you are not satisfied with our response to an accessibility concern, you may contact the Canadian Human Rights Commission at www.chrc-ccdp.gc.ca or the Alberta Human Rights Commission at www.albertahumanrights.ab.ca.',
+    },
+  ],
 }
 
 // ── NAV CONFIG ───────────────────────────────────────────────

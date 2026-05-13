@@ -65,11 +65,11 @@
 - [x] `app/page.tsx` — Home
 - [x] `app/about/page.tsx` — About Us
 - [x] `app/team/page.tsx` — Meet the Team
-- [ ] `app/contact/page.tsx` — Contact
-- [ ] `app/book/page.tsx` — Book Your Visit
+- [x] `app/contact/page.tsx` — Contact
+- [x] `app/book/page.tsx` — Book Your Visit
 
 ### Services
-- [ ] `app/services/page.tsx` — Services Hub
+- [x] `app/services/page.tsx` — Services Hub
 - [x] `app/services/[slug]/page.tsx` — cox, chiropractic-adjustments, summits-of-recovery (dynamic)
 - [x] `app/services/summits-of-recovery/[pillar]/page.tsx` — 4 pillar pages (dynamic)
 - [x] Content: `cox-flexion-distraction` — fully populated
@@ -78,7 +78,7 @@
 - [x] Content: `lifestyle-wisdom` (pillar) — fully populated
 
 ### Conditions
-- [ ] `app/conditions/page.tsx` — Conditions Hub
+- [x] `app/conditions/page.tsx` — Conditions Hub
 - [x] `app/conditions/[slug]/page.tsx` — Dynamic condition route
 - [x] Content: `low-back-pain`
 - [x] Content: `sciatica`
@@ -98,9 +98,9 @@
 
 ### Utility
 - [ ] `app/resources/page.tsx` *(draft — publish when ready)*
-- [ ] `app/privacy/page.tsx`
-- [ ] `app/terms/page.tsx`
-- [ ] `app/accessibility/page.tsx`
+- [x] `app/privacy/page.tsx`
+- [x] `app/terms/page.tsx`
+- [x] `app/accessibility/page.tsx`
 
 ---
 
@@ -186,5 +186,10 @@
 | 2026-05-12 | Footer — real clinic data + Google Maps embed | types/content.ts: added hours2?: string to ContactInfo.hours[] item for split-session days; content/pages.ts: CLINIC_INFO fully populated (214 Main St N, Airdrie AB T4B 0R6, 403-948-4440, info@summitspine.ca, all 7 days — Mon/Wed two-slot); Footer.tsx: Hours of Operation heading added, hours2 rendered when present, Google Maps iframe embed added below 4-col grid (lazy-loaded, accessible title, no API key); 0 TS errors, 0 console errors. |
 | 2026-05-12 | Feature — StickyBookingBar | components/ui/StickyBookingBar.tsx: new 'use client' component, IntersectionObserver on #hero-cta sentinel, opacity+translate transition (300ms), dark eerie-black/95 bar with cerulean pill button, CalendarCheck icon, pointer-events-none when hidden, aria-hidden synced to visibility; Hero.tsx: id="hero-cta" added to CTA row div (Server Component, no interactivity added); app/layout.tsx: StickyBookingBar mounted once in root layout, label+href from navConfig.cta; 0 TS errors, 0 console errors, verified in browser — hidden at top of page, visible and correctly positioned below navbar after scrolling past hero. |
 | 2026-05-13 | Service Hub — Summits of Recovery | summitsPage fully populated: meta, hero, featureHighlight, featuresList (4 pillars), howItWorks (4 steps), faqs (5 items), cta; 0 TS errors, all 6 sections verified in browser. |
+| 2026-05-13 | Hub Pages — Services + Conditions | app/services/page.tsx and app/conditions/page.tsx built; servicesPage and conditionsPage stubs fully populated; ServicesGrid (3 linked cards), FeaturesListSection (4 differentiators), CTASection on services hub; ConditionsGrid (14 published conditions from sitemap), education prose section, FAQSection (5 items), CTASection on conditions hub; 0 TS errors, 0 console errors, both routes verified in browser. |
 | 2026-05-13 | Conditions Content — 7 stubs populated | back-pain (Arthritis/DDD/DJD), tech-neck, whiplash, upper-back-shoulder-pain, sports-injuries, postpartum-back-pain, chronic-pain — all fully populated from source docs (meta, hero, overview, symptoms, causes, 5 treatments, 3 benefits, 4 howItWorks steps, 6 FAQs, CTA, relatedConditions, structuredData); 0 TS errors, routes verified in browser. Remaining stubs: tmj (no source doc), mva-whiplash (draft). Disc Bulge.txt and Summits of Recovery.txt flagged for separate sessions. |
 | 2026-05-13 | Lighthouse Performance Pass | Navbar.tsx: replaced window.scrollY scroll listener with IntersectionObserver on #nav-scroll-sentinel (eliminates scroll event overhead, fixes forced reflow flag); app/layout.tsx: added 1×1px aria-hidden sentinel div #nav-scroll-sentinel at top of body; Hero.tsx: added sizes="(max-width: 768px) 100vw, 50vw" to right-column image for correct srcset generation; confirmed Google Maps iframe already had loading="lazy" and GA4 already used strategy="afterInteractive" — no changes needed there; 0 TS errors, 0 console errors, IntersectionObserver verified in browser (header class confirms bg-neutral-0 shadow-md h-16 at scrollY=15). |
+| 2026-05-13 | Nav + Sticky Bar bug fixes | Navbar.tsx: raised header z-index z-30→z-50 (sticky bar at z-40 was painting over dropdown menus and mobile menu, blocking clicks — root cause of mobile "About" link not responding); desktop nav items with children (Services, Conditions) converted from click-only button to hover-triggered dropdown + clickable Link — onMouseEnter/onMouseLeave on wrapper div opens/closes dropdown, label is now a Next.js Link to the hub page (/services, /conditions), mt-2→mt-1 to reduce hover gap; StickyBookingBar.tsx: replaced unreliable scroll+getBoundingClientRect approach with IntersectionObserver on #hero-cta (same pattern as navbar sentinel — fires reliably on intersection change with no scroll event overhead); added immediate setVisible(true) fallback for pages without #hero-cta; replaced [animation:fade-in] with transition-all duration-300 ease-out + translate-y classes for reliable CSS transition every time; 0 TS errors, 0 console errors. |
+| 2026-05-13 | Page — Contact | contactPage stub fully populated (meta, hero, cta, 6 contact FAQs); app/contact/page.tsx: generateMetadata (title.absolute), LocalBusiness JSON-LD, Hero (scheme 1, eyebrow "Airdrie, Alberta"), two-col contact info section (Phone/Email/Address/Hours cards + Google Maps iframe with aria-label), FAQSection (scheme 2, 6 questions: referral, walk-ins, parking, first visit prep, appointment length, cancellation), CTASection (scheme 4, dual CTAs: Book + Call); 0 TS errors, all 4 sections verified in browser accessibility tree. |
+| 2026-05-13 | Page — Book Your Visit | bookPage stub fully populated (meta, hero with dual CTAs, 5 booking FAQs, cta); app/book/page.tsx: generateMetadata (title.absolute), LocalBusiness JSON-LD, Hero (scheme 1, "Book Your Visit.", Book Online Now + Call ghost CTA), booking section (scheme neutral-100) — 2-col lg: left=AtlasHub iframe in rounded card with header bar + "open in new tab" + fallback text, right=Phone card + Hours table + walk-in notice; FAQSection (scheme 2, 5 Qs: speed, AHC coverage, cancellation, first visit prep, direct billing); CTASection (scheme 4, Book + Contact Us); 0 TS errors, all sections verified in browser accessibility tree. |
+| 2026-05-13 | Pages — Utility (Privacy, Terms, Accessibility) | privacyPage (9 sections: PIPA/PIPEDA), termsPage (10 sections: Alberta law), accessibilityPage (6 sections: WCAG 2.1 AA) — all stubs fully populated; components/templates/UtilityPageTemplate.tsx: Server Component, centered max-w-3xl prose layout, H1 + last-updated <time>, section list (h2 + \n\n-split paragraphs, dividers); app/privacy, /terms, /accessibility: generateMetadata (title.absolute), each wraps UtilityPageTemplate; 0 TS errors, all 3 routes verified in browser. |
