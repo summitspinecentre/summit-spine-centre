@@ -22,9 +22,14 @@ export default function Navbar() {
   const isHero = variant === 'hero'
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const sentinel = document.getElementById('nav-scroll-sentinel')
+    if (!sentinel) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setScrolled(!entry.isIntersecting),
+      { threshold: 0 },
+    )
+    observer.observe(sentinel)
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {

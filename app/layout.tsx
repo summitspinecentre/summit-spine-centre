@@ -52,6 +52,7 @@ export default function RootLayout({
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-text font-body">
+        <div id="nav-scroll-sentinel" className="absolute top-2 left-0 w-px h-px pointer-events-none" aria-hidden="true" />
         <NavThemeProvider>
           <Navbar />
           <StickyBookingBar label={navConfig.stickyCtaLabel ?? navConfig.cta.label} href={navConfig.cta.href} />

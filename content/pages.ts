@@ -690,18 +690,107 @@ export const chiropracticPage: ServicePage = {
 export const summitsPage: ServicePage = {
   meta: {
     slug:          'summits-of-recovery',
-    title:         'Summits of Recovery Airdrie | Summit Spine Centre',
-    description:   '',
-    keywords:      ['summits of recovery', 'chiropractic wellness Airdrie'],
+    title:         'Summits of Recovery — Spine Health Guide Airdrie | Summit Spine Centre',
+    description:   'The Summit Spine Centre recovery guide — four pillars that get you out of pain and keep you there: Professional Adjustments, Targeted Exercise, Lifestyle Wisdom, and Ergonomic Support.',
+    keywords:      [
+      'summits of recovery Airdrie',
+      'chiropractic wellness Airdrie',
+      'spine health guide Airdrie',
+      'back pain recovery Airdrie',
+      'chiropractic home exercises Airdrie Alberta',
+    ],
     published:     true,
     priority:      'P2',
     type:          'service',
     canonicalPath: '/services/summits-of-recovery',
   },
-  hero:         { headline: '', subheadline: '', scheme: 1, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
-  featuresList: { headline: '', scheme: 1, items: [] },
-  howItWorks:   { headline: '', steps: [], scheme: 1 },
-  cta:          { headline: '', scheme: 4, cta: { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' } },
+
+  hero: {
+    headline:    'Your Path to Lasting Relief: The Summit Spine Recovery Guide',
+    subheadline: 'The work we do in our Airdrie clinic is only half the equation. Getting you to 100% — and keeping you there — means focusing on what happens outside the clinic too.',
+    scheme:      1,
+    cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+  },
+
+  featureHighlight: {
+    title: 'Clinic care gets you out of pain. Habits keep you there.',
+    body:  'At Summit Spine Centre, we know that the best results come from combining what we do in the clinic with what you do at home. That\'s why Summits of Recovery is built around four pillars: Professional Adjustments, Targeted Exercise, Lifestyle Wisdom, and Ergonomic Support. Each one plays a specific role in your recovery — and together, they form the complete picture.',
+  },
+
+  featuresList: {
+    headline: 'The Four Pillars of Recovery',
+    scheme:   1,
+    items: [
+      {
+        icon:  'HandHeart',
+        title: 'Pillar 1: Professional Adjustments',
+        body:  'The foundation of your recovery. Restoring proper joint mechanics allows your nervous system to communicate without interference — reducing inflammation, unlocking stiff joints, and resetting muscle tension. We use a variety of techniques, from traditional adjustments to the gentle Cox Flexion-Distraction, tailored to your comfort level.',
+      },
+      {
+        icon:  'Dumbbell',
+        title: 'Pillar 2: Targeted Home Exercises',
+        body:  'Adjustments get you moving. Exercises keep you moving. We don\'t believe in busy work — we prescribe specific movements designed to stabilize your unique injury. Core stability work protects your discs. Mobility drills prevent scar tissue and keep your joints lubricated.',
+      },
+      {
+        icon:  'Leaf',
+        title: 'Pillar 3: Lifestyle Wisdom',
+        body:  'Small daily choices either fuel inflammation or fight it. We provide guidance on sleep positions that support your spine, the role of hydration in disc health, and the power of micro-breaks — getting up every 30 minutes to reset your posture and reduce cumulative spinal load throughout the day.',
+      },
+      {
+        icon:  'Armchair',
+        title: 'Pillar 4: Ergonomic Support',
+        body:  'If you spend eight hours a day at a desk that strains your neck, a 15-minute adjustment can only do so much. We help you spine-proof your workstation — monitor height, seat position, lumbar support, driving posture — so your environment works with your recovery, not against it.',
+      },
+    ],
+  },
+
+  howItWorks: {
+    headline: 'What Your Recovery Looks Like',
+    scheme:   1,
+    steps: [
+      {
+        step:  1,
+        icon:  'MessageCircle',
+        title: 'Comprehensive Assessment',
+        body:  'We start by understanding the specific cause of your pain — not just the symptom. This guides every pillar of the recovery plan we build together.',
+      },
+      {
+        step:  2,
+        icon:  'HandHeart',
+        title: 'Professional Care in the Clinic',
+        body:  'Targeted adjustments and Cox Flexion-Distraction restore motion to restricted joints, reduce nerve irritation, and give your body the structural foundation it needs to recover and stay recovered.',
+      },
+      {
+        step:  3,
+        icon:  'Dumbbell',
+        title: 'Your Exercise & Lifestyle Plan',
+        body:  'We send you home with a clear, simple exercise program and practical lifestyle guidance — not a generic handout, but a plan built for your specific problem and daily life.',
+      },
+      {
+        step:  4,
+        icon:  'TrendingUp',
+        title: 'Progress Checks & Ongoing Support',
+        body:  'We track your recovery at every visit. As you improve, the plan evolves. When you\'re ready, we set you up to stay well independently — with the tools to manage your own spinal health long-term.',
+      },
+    ],
+  },
+
+  faqs: {
+    scheme: 1,
+    items: [
+      { question: 'How soon can I start exercising after an adjustment?',   answer: 'Generally, we recommend waiting 24 hours after a significant adjustment before heavy lifting or intense exercise. Gentle mobility work, however, is usually encouraged right away — movement is part of the recovery, not something to avoid.' },
+      { question: 'Should I use ice or heat at home?',                      answer: 'As a general rule: ice for new, acute injuries to reduce swelling and calm inflammation in the first 48 to 72 hours; heat for chronic, tight muscles to encourage blood flow and relax tension. When in doubt, ask at your next visit — the right choice depends on what\'s happening in your specific case.' },
+      { question: 'Do I need to follow all four pillars?',                  answer: 'The more pillars you engage with, the faster and more durable your recovery tends to be. That said, we always start with what\'s most relevant to your situation and build from there. Not everyone needs the same combination — that\'s what the assessment is for.' },
+      { question: 'How long before I see results?',                         answer: 'Many patients notice meaningful improvement within the first 2 to 3 visits. How quickly you progress depends on the nature of your problem, how long it has been present, and how consistently you apply the lifestyle and exercise recommendations between visits. We track this together.' },
+      { question: 'Can I use this guide even if I\'m not a current patient?', answer: 'Absolutely. The lifestyle and ergonomic guidance on this page is evidence-informed advice that applies to most people dealing with spinal pain. If you want a plan built specifically for your situation, book an assessment and we\'ll take it from there.' },
+    ],
+  },
+
+  cta: {
+    headline: 'Ready for your progress check-up?',
+    scheme:   4,
+    cta:      { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+  },
 }
 
 // ── PILLAR: PROFESSIONAL ADJUSTMENTS ─────────────────────────
@@ -1564,10 +1653,179 @@ export const conditionPages: Record<string, ConditionPage> = {
     },
   },
   'back-pain': {
-    meta: { slug: 'back-pain', title: 'Back Pain Relief Airdrie | Summit Spine Centre', description: '', keywords: ['back pain Airdrie', 'back pain chiropractor Airdrie'], published: true, priority: 'P1', type: 'condition', canonicalPath: '/conditions/back-pain' },
-    overview: '', relatedConditions: ['low-back-pain', 'disc-herniation'],
-    structuredData: { conditionName: 'Back Pain', description: '', possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'back-pain',
+      title:         'Arthritis & Degenerative Disc Disease Airdrie | Summit Spine Centre',
+      description:   'Chiropractic care for arthritis, degenerative disc disease, and degenerative joint disease in Airdrie. Stay active and mobile with the right combination of movement, education, and supportive care.',
+      keywords:      [
+        'arthritis chiropractor Airdrie',
+        'degenerative disc disease Airdrie',
+        'DDD treatment Airdrie',
+        'DJD chiropractor Airdrie',
+        'back pain Airdrie',
+        'spinal arthritis Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P1',
+      type:          'condition',
+      canonicalPath: '/conditions/back-pain',
+    },
+
+    hero: {
+      headline:    'Arthritis & Degenerative Disc Disease Treatment in Airdrie',
+      subheadline: 'Arthritis and age-related spinal changes are extremely common and often become more noticeable over time. While these terms can sound scary, these problems can be well-managed — you can stay active, mobile, and independent.',
+      cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Arthritis is a general term used to describe changes involving the joints of the body. In the spine, these changes often involve the discs, joints, cartilage, and surrounding tissues. ' +
+      'Degenerative Disc Disease (DDD) refers to age-related changes in the spinal discs, including reduced hydration and disc height over time. Degenerative Joint Disease (DJD), sometimes called osteoarthritis or spinal arthritis, refers to wear-and-tear changes involving the joints of the spine. ' +
+      'These changes are a normal part of aging and are extremely common, especially as people get older. As we increase in wisdom, we gain wrinkles on our skin — and we may also develop "wrinkles on the inside." ' +
+      'It is important to know that many people with arthritis have little or no pain, imaging findings do not always match symptom severity, "degeneration" does not necessarily mean damage or disability, and movement and activity are often very helpful for managing symptoms. ' +
+      'Many people continue to live active, healthy lives despite having these changes.',
+
+    symptoms: [
+      'Stiffness in the neck or back',
+      'Aching pain with prolonged sitting or standing',
+      'Reduced flexibility or mobility',
+      'Morning stiffness that improves with movement',
+      'Joint tenderness or soreness',
+      'Muscle tightness or tension',
+      'Pain during certain movements or activities',
+      'Clicking, grinding, or cracking sensations',
+      'Pain travelling into the hips, shoulders, arms, or legs in some cases',
+      'Symptoms that gradually worsen over time or flare periodically',
+    ],
+
+    causes: [
+      'Natural Age-Related Changes — the discs and joints of the spine naturally change over time, similar to wrinkles or grey hair. Over time, discs reduce their ability to hold water and begin to flatten and stiffen',
+      'Repetitive Stress and Wear — years of bending, lifting, repetitive movement, or physical labour may increase stress on spinal joints and discs',
+      'Previous Injuries — past injuries or trauma may contribute to changes in joint mechanics or spinal loading over time',
+      'Reduced Mobility and Deconditioning — limited movement, weakness, or reduced physical activity may contribute to stiffness and reduced spinal support',
+      'Posture and Movement Habits — poor movement patterns or prolonged positions may place increased stress on certain joints over time',
+      'Genetics — some people inherit an increased likelihood of developing arthritic or degenerative changes, similar to the colour of hair and eyes',
+      'Inflammation and Lifestyle Factors — sleep quality, stress, activity levels, smoking, and overall health all influence development; even small improvements in any category can help',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Arthritis & Degenerative Disc Disease',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'We want to know about your story — how long you\'ve been experiencing symptoms, what makes them better or worse, and how they\'re affecting your daily life. A thorough orthopedic, neurological, and movement assessment helps us understand the degree of change and guide your care appropriately.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle, evidence-based technique that helps decompress the spine and reduce pressure on arthritic joints and irritated nerves. This approach is especially beneficial for those with DDD or DJD as it doesn\'t require forceful movements — making it comfortable even for sensitive spines.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'Targeted adjustments help restore mobility to restricted spinal joints, reduce muscle guarding, and improve overall spinal function. Treatment is always tailored to your comfort level and the specific joints involved.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Mobility & Strengthening Exercises',
+          body:  'Movement is medicine for arthritic joints. We\'ll prescribe specific exercises focused on improving flexibility, building strength in the supporting muscles, and helping you stay active and independent long-term.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Lifestyle & Activity Guidance',
+          body:  'Practical recommendations on posture, activity modification, ergonomics, and daily habits that reduce joint irritation and help you get more out of each day — without working against your body.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Arthritis & Degenerative Disc Disease',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years of Spinal Care Experience',
+          body:  'Arthritis and degenerative disc disease are among the most common conditions we see. Decades of experience means we\'ve helped many people stay active, reduce flare-ups, and maintain their independence.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox FD — Gentle Care for Sensitive Spines',
+          body:  'Cox Flexion-Distraction is one of the most effective and gentle conservative treatments for arthritic and degenerative spinal conditions. We use it to decompress the spine without forceful movements.',
+        },
+        {
+          icon:  'Users',
+          title: 'Care Tailored to Your Goals',
+          body:  'Your symptoms, your pace, and your goals guide the plan we build together. Whether you want to walk farther, sleep better, or simply move without pain — we\'re here to help you get there.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'Your first visit starts with a detailed conversation about your symptoms and health history. We want to understand what\'s going on, how it\'s impacting your daily life, and where you\'d like to be.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Thorough Assessment',
+          body:  'Orthopedic, neurological, and movement assessments help us understand the degree of arthritic change and identify the most appropriate approach to care for your situation.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Personalized Plan',
+          body:  'We explain our findings in plain language and recommend a care plan tailored to your goals, comfort level, and the specific nature of your condition.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Ongoing Support',
+          body:  'We track your progress over time and adjust the plan as you improve. If your needs are better met elsewhere, we\'ll connect you with a trusted provider in the community.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'What is the difference between arthritis, DDD, and DJD?',    answer: 'These terms all describe age-related changes in the spine or joints. DDD refers primarily to changes involving the spinal discs, while DJD refers more to changes involving the joints. Arthritis is a broader term often used to describe joint degeneration and inflammation.' },
+        { question: 'Is arthritis a normal part of aging?',                        answer: 'Some degree of change in our joints is very common as we age. Many people develop arthritic changes over time. It can sometimes be accelerated through lifestyle, genetics, or previous injury.' },
+        { question: 'Does arthritis always get worse?',                            answer: 'Not necessarily. Symptoms may fluctuate over time, and many people are very successful at managing their symptoms with movement, exercise, and healthy lifestyle habits.' },
+        { question: 'Can arthritis cause nerve pain?',                             answer: 'In some cases, arthritic or degenerative changes may narrow the spaces around nearby nerves, potentially contributing to numbness, tingling, weakness, or radiating pain — a condition called spinal stenosis.' },
+        { question: 'Should I avoid exercise if I have arthritis?',                answer: 'In many cases, movement and exercise are some of the best things for arthritic joints. Appropriate exercise may help improve strength, flexibility, circulation, and overall function. Motion is lotion!' },
+        { question: 'Is cracking or grinding in my joints dangerous?',             answer: 'Not always. Clicking, cracking, or grinding sounds are common and do not necessarily mean damage is occurring.' },
+        { question: 'Can chiropractic care help arthritis?',                       answer: 'Chiropractic care may help improve mobility, reduce stiffness, support movement, and improve overall function in some individuals with arthritic changes.' },
+        { question: 'Do I need imaging for arthritis or DDD?',                    answer: 'Not always. Many cases can be assessed through a detailed history and physical examination. Imaging may sometimes help confirm degenerative changes or rule out other conditions depending on the situation.' },
+        { question: 'Can disc degeneration heal?',                                answer: 'Age-related disc changes are generally not reversible, but symptoms can often improve significantly. Many people are able to function well and remain active despite degenerative changes.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['low-back-pain', 'spinal-stenosis'],
+
+    structuredData: {
+      conditionName:     'Arthritis / Degenerative Disc Disease',
+      description:       'Arthritis, DDD, and DJD describe age-related changes in spinal discs and joints that can cause stiffness, aching pain, and reduced mobility. Many people manage these conditions well with movement, exercise, and conservative care.',
+      possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction',
+    },
   },
   'headaches-migraines': {
     meta: {
@@ -1921,22 +2179,499 @@ export const conditionPages: Record<string, ConditionPage> = {
     },
   },
   'tech-neck': {
-    meta: { slug: 'tech-neck', title: 'Tech Neck Treatment Airdrie | Summit Spine Centre', description: '', keywords: ['tech neck Airdrie', 'text neck chiropractor Airdrie'], published: true, priority: 'P2', type: 'condition', canonicalPath: '/conditions/tech-neck' },
-    overview: '', relatedConditions: ['neck-pain', 'headaches-migraines'],
-    structuredData: { conditionName: 'Tech Neck', description: '', possibleTreatment: 'Chiropractic Care, Ergonomic Support' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'tech-neck',
+      title:         'Tech Neck Treatment Airdrie | Summit Spine Centre',
+      description:   'Chiropractic treatment for tech neck in Airdrie. We restore cervical alignment, relieve muscle tension, and correct forward head posture caused by prolonged screen use.',
+      keywords:      [
+        'tech neck Airdrie',
+        'text neck chiropractor Airdrie',
+        'forward head posture Airdrie',
+        'neck pain screen Airdrie',
+        'tech neck treatment Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P2',
+      type:          'condition',
+      canonicalPath: '/conditions/tech-neck',
+    },
+
+    hero: {
+      headline:    'Tech Neck Treatment in Airdrie',
+      subheadline: 'Your devices shouldn\'t dictate your posture. Whether scrolling your phone, working from home, or catching up on emails — let\'s un-hunch your spine.',
+      cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Tech neck describes the repetitive strain injury caused by prolonged forward head posture — most commonly from looking down at screens for extended periods. ' +
+      'Your head weighs roughly 11 pounds in neutral alignment. Tilting it forward at just 60 degrees increases the effective load on your neck to up to 60 pounds of pressure. This constant strain causes joint irritation, muscle fatigue, and structural changes in the cervical spine over time. ' +
+      'The good news is that tech neck is highly treatable. Up to 75% of young adults experience some form of digital posture strain, and targeted care can quickly restore movement to restricted joints and help your natural neck curve return. ' +
+      'Whether you\'re a remote worker, a student, or anyone who spends significant time looking at a screen — this is a modern postural challenge we help people overcome every day.',
+
+    symptoms: [
+      'Persistent soreness across the upper back and shoulders',
+      'Intense, localized ache at the base of the skull',
+      'Stiffness when turning the head',
+      'Frequent upper trapezius muscle spasms',
+      'Dull tension headaches',
+      'Numbness or tingling down the arms',
+      'Reduced grip strength',
+      'Rounded shoulders and forward posture',
+    ],
+
+    causes: [
+      'Forward Head Posture Loading — for every inch the head shifts forward, the effective weight it places on the neck increases significantly. Sustained screen use holds the head in this position for hours',
+      'Ligament Overstretch — sustained downward or forward head positioning stretches the ligaments that support the cervical spine. Over time, they lose their natural elasticity',
+      'Loss of Cervical Curve — the neck requires a healthy "C-shaped" curve to absorb shock. Chronic forward hunching gradually flattens this natural curve and accelerates joint degeneration',
+      'Nerve Root Compression — altered posture narrows the spaces where nerves exit the spine, causing symptoms that can travel into the hands and mimic carpal tunnel syndrome',
+      'Muscle Fatigue and Imbalance — the posterior neck muscles must work continuously to support the forward-shifted head, while the deep cervical flexors weaken from underuse',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Tech Neck',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'We map your posture and assess your cervical spine to identify the exact areas of restriction and muscle imbalance. Understanding why your neck is struggling is the first step to fixing it.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle technique that decompresses the cervical spine, reduces nerve pressure, and helps restore the natural curve of the neck — without any forceful movements.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'Gentle cervical adjustments safely unlock stiff spinal segments, restore joint motion, and relieve the muscle tension that builds from prolonged forward head positioning.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Targeted Exercises & Posture Retraining',
+          body:  'Specific movements to strengthen the deep neck flexors, improve posture, and encourage the natural cervical curve to return. We\'ll also give you daily movement strategies to keep pain from coming back.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Workstation & Ergonomic Advice',
+          body:  'If your setup is driving your neck forward all day, we\'ll show you how to optimize it. Practical changes to your monitor height, chair position, and movement habits can make a significant difference.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Tech Neck',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years Serving Airdrie',
+          body:  'We treat tech neck and postural strain daily. Our experience across decades of practice means we\'ve helped many people restore their cervical alignment and move comfortably again.',
+        },
+        {
+          icon:  'Activity',
+          title: 'We Address Root Causes',
+          body:  'Rather than just treating soreness, we identify which joints are restricted, which muscles are overworked, and what in your daily environment is loading your neck — then we fix it.',
+        },
+        {
+          icon:  'Users',
+          title: 'Care Tailored to You',
+          body:  'Whether you\'re a student, office worker, or tradesperson, your care plan is built around your posture, your symptoms, and your goals. Not a one-size-fits-all approach.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'We start with a detailed conversation about your symptoms, your daily screen habits, and how your neck is affecting your life.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Postural & Cervical Assessment',
+          body:  'We assess your cervical range of motion, posture, joint mobility, and muscle function to identify the exact structures contributing to your tech neck.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Personalized Plan',
+          body:  'We explain our findings in plain language and recommend a plan that addresses both your in-clinic treatment and the everyday habits driving your symptoms.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Progress',
+          body:  'We work on restoring joint motion and posture while tracking your progress. We\'ll know we\'re winning when you can look up comfortably again.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'What exactly causes tech neck?',                    answer: 'Tech neck is caused by holding the head forward and down while viewing screens for extended periods. This strains the muscles, loads the joints, and weakens the ligaments that support the cervical spine.' },
+        { question: 'Can a chiropractor fix tech neck?',                 answer: 'Chiropractic care can help restore joint motion, relieve muscle tension, and address the structural causes of tech neck. Studies show that customized cervical care can successfully support the return of a healthy neck curve.' },
+        { question: 'What does tech neck pain feel like?',               answer: 'It usually feels like a deep ache across the upper back and shoulders, a stiff or sore neck, tension headaches, or a localized ache at the base of the skull. Some people also notice tingling into the arms.' },
+        { question: 'Can tech neck cause dizziness or arm tingling?',    answer: 'Yes. Significant postural strain can irritate nerve roots and muscles. This may cause arm tingling, hand numbness, or mild dizziness depending on which structures are affected.' },
+        { question: 'How should I set up my desk to prevent tech neck?', answer: 'Raise your primary screen so your eyes hit the top third of the monitor. Keep elbows at roughly 90 degrees. Take a brief movement break every 20 to 30 minutes to reset your posture.' },
+        { question: 'Will tech neck go away if I just rest?',            answer: 'Rest may provide temporary relief but does not correct the underlying structural changes or postural habits. Professional assessment and targeted care are usually needed to resolve it fully.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['neck-pain', 'headaches-migraines'],
+
+    structuredData: {
+      conditionName:     'Tech Neck',
+      description:       'Tech neck is a repetitive strain injury caused by prolonged forward head posture during screen use. It causes neck pain, upper back soreness, headaches, and structural changes to the cervical spine over time.',
+      possibleTreatment: 'Chiropractic Care, Ergonomic Support',
+    },
   },
   'whiplash': {
-    meta: { slug: 'whiplash', title: 'Whiplash Treatment Airdrie | Summit Spine Centre', description: '', keywords: ['whiplash Airdrie', 'whiplash chiropractor Airdrie'], published: true, priority: 'P2', type: 'condition', canonicalPath: '/conditions/whiplash' },
-    overview: '', relatedConditions: ['neck-pain', 'upper-back-shoulder-pain'],
-    structuredData: { conditionName: 'Whiplash', description: '', possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'whiplash',
+      title:         'Whiplash Treatment Airdrie | Summit Spine Centre',
+      description:   'Chiropractic whiplash treatment in Airdrie. We evaluate cervical soft-tissue damage and use gentle, low-force techniques to restore motion and support recovery after a neck injury.',
+      keywords:      [
+        'whiplash Airdrie',
+        'whiplash chiropractor Airdrie',
+        'neck injury treatment Airdrie',
+        'car accident neck pain Airdrie',
+        'whiplash treatment Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P2',
+      type:          'condition',
+      canonicalPath: '/conditions/whiplash',
+    },
+
+    hero: {
+      headline:    'Whiplash Treatment in Airdrie',
+      subheadline: 'Whiplash can disrupt your entire life in a fraction of a second — whether from a rear-end collision, a sports hit, or a slip on ice. Let\'s steady your spine and calm the pain.',
+      cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Whiplash is a traumatic neck injury caused by a rapid, forceful back-and-forth movement of the head — similar to the crack of a whip. This sudden acceleration-deceleration force damages the soft tissues of the cervical spine, including ligaments, muscles, and joints. ' +
+      'Symptoms frequently begin as a dull neck ache before developing into intense, restricted stiffness — and they often take 24 to 48 hours to fully manifest following the trauma. ' +
+      'The good news is that whiplash is highly treatable with conservative care. Up to 88% of patients see significant symptom resolution within two months. Early, controlled movement prevents long-term scar tissue buildup, and gentle chiropractic techniques can support your healing alignment without forceful twisting. ' +
+      'At Summit Spine Centre, we specialize in evaluating accident-related spine conditions and work alongside you to restore safe, pain-free range of motion.',
+
+    symptoms: [
+      'Severe, localized neck pain',
+      'Deep shoulder or upper back soreness',
+      'Persistent tension headaches starting at the base of the skull',
+      'Radiating numbness or tingling into the arms',
+      'Unexplained dizziness or loss of balance',
+      'Muscle spasms across the upper trapezius',
+      'Cognitive fatigue, brain fog, or sleep disturbances',
+      'Neck stiffness or restricted range of motion',
+    ],
+
+    causes: [
+      'Rear-End Motor Vehicle Collisions — the most frequent cause of whiplash. Even a low-speed impact transfers significant kinetic energy through your seat into your neck',
+      'Contact Sports Injuries — football tackles, hockey checks, or martial arts training simulate high-impact forces that violently hyper-extend and flex the cervical spine',
+      'Sudden Slips and Falls — losing footing on winter ice can cause the head to snap backward violently, with the protective muscle bracing that follows often worsening the soft-tissue strain',
+      'Physical Assault or Trauma — forceful shaking or impact inflicts rapid motion that can damage delicate spinal support structures, clinically classified under Whiplash-Associated Disorders (WAD)',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Whiplash',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Detailed Neurological & Structural Screening',
+          body:  'We begin by mapping your specific injury — asking the right questions about mechanism, onset, and symptoms, then performing a thorough neurological and orthopedic examination to evaluate the full extent of the injury.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle, low-force technique that reduces joint inflammation, decompresses the cervical spine, and restores movement without any aggressive twisting. Ideal for the sensitive, inflamed tissues common after whiplash.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Gentle Chiropractic Care',
+          body:  'We prioritize low-force techniques to restore joint mobility and support nervous system recovery — protecting your healing alignment while reducing muscle spasm and guarding.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Progressive Stability Exercises',
+          body:  'Isometric and progressive neck stability exercises to gently rebuild your cervical support system, prevent scar tissue accumulation, and restore your natural movement patterns.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Activity & Recovery Guidance',
+          body:  'Practical advice on movement strategies, positioning, and daily activity modification — because early, controlled movement is one of the most important factors in whiplash recovery.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Whiplash',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years of Cervical Spine Care',
+          body:  'We have extensive experience evaluating and treating whiplash and accident-related neck injuries. Early intervention with the right care significantly improves long-term outcomes.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Gentle Techniques First',
+          body:  'We never use aggressive or forceful techniques on an acutely injured spine. Our approach prioritizes gentle, low-force care that works with your body\'s healing process — not against it.',
+        },
+        {
+          icon:  'Users',
+          title: 'Personalized Recovery Plan',
+          body:  'Your injury, your symptoms, and your recovery timeline are unique. We tailor every aspect of care to your specific presentation and comfort level so you heal as efficiently as possible.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us What Happened',
+          body:  'We want to understand the full picture — the mechanism of injury, when symptoms started, what they feel like, and how they\'re affecting your daily life.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Thorough Neurological Assessment',
+          body:  'We perform detailed orthopedic and neurological testing to evaluate the extent of soft-tissue damage and identify any nerve involvement before beginning treatment.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Personalized Plan',
+          body:  'We explain our findings in plain language and recommend a recovery plan based on your injury severity, symptoms, and goals.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Monitored Recovery',
+          body:  'We begin gentle care and monitor your progress carefully, adjusting the plan as you heal. If your needs require additional specialists, we\'ll connect you with the right providers.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'How long does it take for whiplash to heal?',                      answer: 'Mild whiplash cases often resolve within 2 to 6 weeks with appropriate care. More severe soft-tissue injuries may take several months to fully stabilize. Early intervention with controlled movement significantly improves recovery timelines.' },
+        { question: 'Can a chiropractor help with whiplash?',                           answer: 'Yes. Chiropractic care can help restore motion to restricted cervical joints, reduce muscle spasm, and support soft-tissue healing. Early multimodal care has been shown to significantly improve functional recovery after whiplash.' },
+        { question: 'Why do whiplash symptoms sometimes take days to appear?',          answer: 'Adrenaline and delayed inflammatory responses often mask symptoms initially. The muscles surrounding the injury tighten to protect the area, with deeper pain surfacing once that guarding begins to ease over the following 24 to 48 hours.' },
+        { question: 'What happens if whiplash goes untreated?',                         answer: 'Untreated whiplash may leave disorganized scar tissue in the injured structures. Over time, this can increase the risk of chronic neck pain, persistent headaches, premature joint degeneration, and long-term loss of flexibility.' },
+        { question: 'Is it better to rest or keep moving after a whiplash injury?',     answer: 'Gentle, pain-free active movement is generally recommended over rigid immobilization. Prolonged use of a hard neck collar can weaken supporting muscles and slow the natural healing process.' },
+        { question: 'Can whiplash cause headaches or dizziness?',                       answer: 'Yes. Damage to the upper cervical joints and deep suboccipital muscles can irritate local nerve pathways, contributing to tension headaches and disrupting spatial orientation signals — which may cause dizziness or balance disturbances.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['neck-pain', 'upper-back-shoulder-pain'],
+
+    structuredData: {
+      conditionName:     'Whiplash',
+      description:       'Whiplash is a traumatic neck injury caused by rapid back-and-forth movement of the head, most commonly from motor vehicle collisions or sports injuries. It damages the soft tissues of the cervical spine and can cause neck pain, headaches, stiffness, and nerve symptoms.',
+      possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction',
+    },
   },
   'upper-back-shoulder-pain': {
-    meta: { slug: 'upper-back-shoulder-pain', title: 'Upper Back & Shoulder Pain Airdrie | Summit Spine Centre', description: '', keywords: ['upper back pain Airdrie', 'shoulder pain chiropractor Airdrie'], published: true, priority: 'P2', type: 'condition', canonicalPath: '/conditions/upper-back-shoulder-pain' },
-    overview: '', relatedConditions: ['neck-pain', 'whiplash'],
-    structuredData: { conditionName: 'Upper Back & Shoulder Pain', description: '', possibleTreatment: 'Chiropractic Care' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'upper-back-shoulder-pain',
+      title:         'Upper Back & Shoulder Pain Airdrie | Summit Spine Centre',
+      description:   'Chiropractic treatment for upper back and shoulder blade pain in Airdrie. We address thoracic joint restrictions, rib dysfunction, and postural strain to relieve the knot between your shoulder blades.',
+      keywords:      [
+        'upper back pain Airdrie',
+        'shoulder blade pain Airdrie',
+        'shoulder pain chiropractor Airdrie',
+        'thoracic spine Airdrie',
+        'upper back pain treatment Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P2',
+      type:          'condition',
+      canonicalPath: '/conditions/upper-back-shoulder-pain',
+    },
+
+    hero: {
+      headline:    'Upper Back & Shoulder Pain Treatment in Airdrie',
+      subheadline: 'That nagging ache between your shoulders shouldn\'t dictate your day. Whether you\'re hunching over a desk, driving your commute, or carrying your children — let\'s release the knot and restore your posture.',
+      cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Upper back pain, clinically known as thoracic spine pain, refers to discomfort anywhere between the base of the neck and the bottom of the rib cage — most frequently concentrating right between the shoulder blades in the interscapular region. ' +
+      'The thoracic spine is uniquely designed for stability, connecting directly to the rib cage to protect vital organs. Because this area is built to be sturdy, when joints lock up or muscles become overworked, the pain can feel deep, restrictive, and incredibly stubborn. ' +
+      'The good news is that mid-back and rib pain respond very well to specific manual care. Restoring joint motion quickly reduces the tight muscle "knot" feeling many people describe, and proper thoracic alignment instantly unburdens both the neck and the lower back. ' +
+      'Simple ergonomic changes can also help prevent this pain from returning — a fact we\'ll make sure you walk away with after your first visit.',
+
+    symptoms: [
+      'A constant, dull burn or sudden, sharp catch when rotating the torso',
+      'An intense, pinpoint "knot" that feels tight to the touch between the shoulder blades',
+      'Sharp, catching pain when taking a deep breath',
+      'Stiffness that spreads upward into the lower neck',
+      'A deep ache that worsens after prolonged sitting',
+      'Radiating discomfort that wraps around the ribs',
+      'Inability to comfortably pull the shoulders back',
+    ],
+
+    causes: [
+      'Postural Exhaustion (Upper Crossed Syndrome) — slouching forward forces the rhomboids and mid-trapezius to stay stretched and tense for hours, creating a chronic, burning ache between the shoulder blades',
+      'Rib Joint Dysfunction (Costovertebral Joints) — ribs attach to the spine at small joints; if one becomes restricted from a sudden twist or cough, it can cause sharp, stabbing pain right beside the shoulder blade',
+      'Thoracic Joint Restrictions — individual vertebrae in the mid-back can lose their natural tracking and become "locked," limiting rotation and causing local inflammation and protective muscle spasms',
+      'Repetitive Overhead Strain — reaching overhead repeatedly during home renovations, lifting, or racket sports can strain the supportive muscle tendons around the shoulder blade',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Upper Back & Shoulder Pain',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive History & Exam',
+          body:  'We look closely at how your neck, mid-back, and rib cage are moving together to identify exactly what is triggering your symptoms — whether it\'s a postural issue, a joint restriction, or rib dysfunction.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A gentle decompression technique that helps relieve pressure on thoracic joints and nerves. Particularly useful for postural fatigue and mid-back tension that has been building over time.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'Targeted thoracic adjustments open restricted joints and take immediate mechanical stress off overworked back muscles. For restricted rib joints, we use highly specific, low-force techniques — often providing immediate relief with breathing.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Targeted Exercises',
+          body:  'Exercises to break up stubborn muscle tension and retrain the postural muscles — the ones that should keep your shoulders back but have been stretched out and weakened from long hours of forward positioning.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Ergonomic & Postural Guidance',
+          body:  'Simple desk exercises and workstation changes to help you maintain a healthy upright posture automatically throughout your day. We give you the tools to stop this from coming back.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Upper Back & Shoulder Pain',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years Serving Airdrie',
+          body:  'Upper back and shoulder blade pain are among the most common conditions we treat. Decades of experience means we quickly identify what\'s causing your specific pain pattern and address it directly.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Rib & Thoracic Spine Specialists',
+          body:  'Rib joint dysfunction is often missed or misunderstood. We are skilled at identifying and treating this common but frequently overlooked cause of upper back and breathing-related pain.',
+        },
+        {
+          icon:  'Users',
+          title: 'Care Tailored to Your Lifestyle',
+          body:  'Whether your pain comes from a desk job, driving, nursing, or overhead work — we build your plan around the demands of your life so the relief you get actually lasts.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'We start with a detailed conversation about your symptoms — what triggers them, what makes them better, and how they\'re impacting your posture and daily activities.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Spinal & Rib Assessment',
+          body:  'We assess how your thoracic spine, ribs, neck, and shoulder blades are moving together. This helps us identify the specific structures contributing to your pain.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Personalized Plan',
+          body:  'We explain our findings and recommend a plan that addresses your symptoms, your posture, and the habits in your daily life that may be perpetuating the problem.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Progress',
+          body:  'We work to restore joint motion and muscular balance while tracking your progress. Most acute joint and rib issues improve significantly within a few treatments.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'Why does the pain between my shoulder blades hurt when I breathe?', answer: 'This is frequently caused by restriction in a costovertebral joint — where a rib attaches to the spine. When your lungs expand, the ribs must move; if a rib joint is restricted, that expansion causes a sharp, pinching sensation.' },
+        { question: 'Can a chiropractor fix the knot between my shoulder blades?',       answer: 'Yes. Those stubborn "knots" are often trigger points caused by muscles staying chronically tight to protect a stiff, restricted joint underneath. Adjusting the joint and addressing the soft tissue allows the overlying muscle to finally relax.' },
+        { question: 'Is upper back pain usually connected to neck posture?',             answer: 'Absolutely. The lower neck and upper back form a functional unit. A forward-head posture pulls directly on the muscle groups anchoring into the mid-back, which can make upper back pain a secondary symptom of neck strain.' },
+        { question: 'How long does it take for upper back pain to heal?',                answer: 'Most acute joint restrictions and rib issues improve significantly within 2 to 4 treatments. Chronic postural strains may take a few weeks of consistent care and ergonomic adjustments to fully stabilize.' },
+        { question: 'What can I do at home to relieve mid-back stiffness?',              answer: 'Using a foam roller to gently extend your mid-back can help open a hunched spine. Taking a movement break every 45 minutes at work to stretch your chest and squeeze your shoulder blades together helps prevent postural fatigue.' },
+        { question: 'Can upper back pain wrap around to the front of my chest?',         answer: 'Yes. Because intercostal nerves travel along your ribs from the spine to the front of the body, irritation in a thoracic or rib joint can mimic chest wall pain. Any sudden, unexplained chest pain or shortness of breath should always be medically evaluated first to rule out cardiac causes.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['neck-pain', 'whiplash'],
+
+    structuredData: {
+      conditionName:     'Upper Back & Shoulder Pain',
+      description:       'Upper back and shoulder blade pain, or thoracic spine pain, often involves joint restrictions, rib dysfunction, or postural strain. It can cause a deep, stubborn ache between the shoulder blades that worsens with sitting, breathing, or rotation.',
+      possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction',
+    },
   },
   'tmj': {
     meta: { slug: 'tmj', title: 'TMJ Treatment Airdrie | Summit Spine Centre', description: '', keywords: ['TMJ Airdrie', 'jaw pain chiropractor Airdrie'], published: true, priority: 'P3', type: 'condition', canonicalPath: '/conditions/tmj' },
@@ -1945,22 +2680,493 @@ export const conditionPages: Record<string, ConditionPage> = {
     ...conditionDefaults,
   },
   'sports-injuries': {
-    meta: { slug: 'sports-injuries', title: 'Sports Injuries Airdrie | Summit Spine Centre', description: '', keywords: ['sports injury chiropractor Airdrie', 'sports rehab Airdrie'], published: true, priority: 'P3', type: 'condition', canonicalPath: '/conditions/sports-injuries' },
-    overview: '', relatedConditions: ['low-back-pain', 'upper-back-shoulder-pain'],
-    structuredData: { conditionName: 'Sports Injury', description: '', possibleTreatment: 'Chiropractic Care, Targeted Exercise' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'sports-injuries',
+      title:         'Sports Injury Treatment Airdrie | Summit Spine Centre',
+      description:   'Chiropractic sports injury treatment in Airdrie. We address the biomechanical root cause of your injury and build a recovery plan that gets you back to full performance — not just out of pain.',
+      keywords:      [
+        'sports injury chiropractor Airdrie',
+        'sports rehab Airdrie',
+        'athletic injury treatment Airdrie',
+        'sports injury Airdrie Alberta',
+        'chiropractic sports care Airdrie',
+      ],
+      published:     true,
+      priority:      'P3',
+      type:          'condition',
+      canonicalPath: '/conditions/sports-injuries',
+    },
+
+    hero: {
+      headline:    'Sports Injury Treatment in Airdrie',
+      subheadline: 'An injury shouldn\'t keep you on the sidelines forever. Whether you\'re a weekend warrior, competitive athlete, or active parent staying fit — let\'s rebuild your strength and get you back in the game.',
+      cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'A sports injury refers to musculoskeletal damage sustained during athletic training, competitive sports, or fitness activities — whether from a single traumatic event or the cumulative stress of repetitive movement. ' +
+      'Physical activity pushes muscles, tendons, ligaments, and joints to their limits. When the demands exceed what those structures can handle, the resulting tissue damage triggers localized inflammation, protective muscle guarding, and restricted mobility. ' +
+      'The good news is that sports injuries respond exceptionally well to conservative care. Early therapeutic intervention cuts recovery times significantly, most athletic conditions resolve completely without surgery, and targeted rehabilitation prevents scar tissue from creating chronic performance limitations. ' +
+      'At Summit Spine Centre, we help athletes of all skill levels overcome setbacks every day — identifying the biomechanical cause of pain and building a path back to peak performance.',
+
+    symptoms: [
+      'Localized swelling, bruising, or heat around a joint',
+      'Sharp, stabbing pain during explosive movements',
+      'A deep, persistent ache that worsens with activity',
+      'Joint instability, clicking, or a feeling of giving way',
+      'Severe stiffness and reduced range of motion',
+      'Compensatory pain in neighbouring joints or muscles',
+    ],
+
+    causes: [
+      'Sudden Macro-Trauma — high-velocity impacts, awkward landings, or rapid changes of direction place extreme force on joints, causing immediate structural issues like sprains, strains, or tears',
+      'Repetitive Overuse — performing identical movements thousands of times without adequate rest creates micro-trauma that accumulates into chronic conditions like tennis elbow, shin splints, or tendinitis',
+      'Biomechanical Faults and Muscle Imbalances — when certain muscle groups are weak or tight, the body compensates by overloading other areas, altering joint mechanics and increasing injury risk',
+      'Suboptimal Training Parameters — increasing intensity too quickly, skipping warm-ups, using improper footwear, or training with poor form strains tissues and accelerates joint wear',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Sports Injuries',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Full Kinetic Chain Assessment',
+          body:  'We look beyond the site of pain to evaluate your entire kinetic chain. Understanding how your body moves as a whole helps us identify the biomechanical root cause — not just the symptom — of your injury.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'For spinal or nerve-related sports injuries, Cox Flexion-Distraction gently decompresses the affected structures and restores movement without forceful loading — ideal for athletes whose injuries involve disc or nerve irritation.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'Precise, targeted adjustments to correct restricted joint tracking, reduce nervous system irritation, and restore the full range of motion needed for athletic performance.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Corrective Exercises & Rehabilitation',
+          body:  'Custom corrective exercises designed to resolve muscle imbalances, rebuild strength through the injured area, and retrain movement patterns that protect you from reinjury.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Performance & Injury Prevention Advice',
+          body:  'Practical guidance on training load, warm-up strategies, and movement habits that protect your body long-term — so you can keep doing what you love without the setbacks.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Sports Injuries',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years of Musculoskeletal Experience',
+          body:  'We have extensive experience treating both spinal and extremity sports injuries — from weekend hockey players to competitive athletes. We understand how the body moves under athletic demand.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Root Cause Focus',
+          body:  'We don\'t just treat the painful spot — we analyze the full biomechanical picture to find out why the injury happened and correct the underlying patterns that led to it.',
+        },
+        {
+          icon:  'Users',
+          title: 'Care Built for Your Sport',
+          body:  'Your recovery plan is built around the specific demands of your sport, your fitness goals, and your timeline. We want to get you back — and keep you there.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us What Happened',
+          body:  'We start with a detailed conversation about the injury — how it occurred, how it\'s progressed, and how it\'s impacting your training or daily activity.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Movement & Biomechanical Assessment',
+          body:  'We evaluate your functional movement patterns, joint mobility, and muscle balance to accurately pinpoint the affected structures and contributing factors.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear Recovery Plan',
+          body:  'We explain our findings and lay out a clear plan — what we\'re treating, why, and what you need to do between visits to get back to full performance as efficiently as possible.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Performance Tracking',
+          body:  'We work through the recovery progressively — from pain reduction to movement restoration to performance optimization — tracking your progress at every stage.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'How long does a typical sports injury take to heal?',  answer: 'Mild muscle strains or ligament sprains often resolve within 2 to 4 weeks. Chronic overuse injuries or more significant structural damage may require 6 to 12 weeks of structured rehabilitation to achieve full stability and return to sport.' },
+        { question: 'Can a chiropractor help treat sports injuries?',       answer: 'Yes. Chiropractors are trained to assess and treat both spinal and non-spinal extremity injuries. Integrating chiropractic care into sports recovery has been shown to improve recovery timelines and enhance athletic function.' },
+        { question: 'Should I apply ice or heat to a fresh injury?',        answer: 'Apply ice to acute injuries in the first 48 to 72 hours to manage inflammation and limit swelling. Transition to heat afterward to improve circulation, relax tight muscles, and promote tissue recovery.' },
+        { question: 'What happens if I play through the pain?',             answer: 'Ignoring pain signals forces other joints to compensate, which alters mechanics and can turn a simple strain into a chronic or secondary injury. Early assessment usually means a faster, more complete recovery.' },
+        { question: 'Is gentle movement helpful during recovery?',          answer: 'Yes. Pain-free active recovery — like light walking or gentle mobility work — keeps joints lubricated and improves circulation. Avoid any movement that provokes sharp pain or causes you to compensate in your gait or form.' },
+        { question: 'Can chiropractic care improve athletic performance?',  answer: 'Correcting joint restrictions and muscle imbalances allows your body to move through its full, natural range of motion. This can improve power output, movement efficiency, and overall injury resilience.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t let the injury win — book today.',
+      scheme:   4,
+      cta:      { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['low-back-pain', 'upper-back-shoulder-pain'],
+
+    structuredData: {
+      conditionName:     'Sports Injury',
+      description:       'Sports injuries involve musculoskeletal damage from athletic training or competition — whether from acute trauma or repetitive overuse. They can affect joints, muscles, tendons, ligaments, and the spine, limiting athletic performance and daily function.',
+      possibleTreatment: 'Chiropractic Care, Targeted Exercise',
+    },
   },
   'postpartum-back-pain': {
-    meta: { slug: 'postpartum-back-pain', title: 'Postpartum Back Pain Airdrie | Summit Spine Centre', description: '', keywords: ['postpartum back pain Airdrie', 'postnatal chiropractor Airdrie'], published: true, priority: 'P3', type: 'condition', canonicalPath: '/conditions/postpartum-back-pain' },
-    overview: '', relatedConditions: ['low-back-pain', 'upper-back-shoulder-pain'],
-    structuredData: { conditionName: 'Postpartum Back Pain', description: '', possibleTreatment: 'Chiropractic Care' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'postpartum-back-pain',
+      title:         'Postpartum Back Pain Airdrie | Summit Spine Centre',
+      description:   'Gentle chiropractic care for postpartum back pain in Airdrie. We help new moms recover from lower back, pelvic, and mid-back pain with safe, low-force techniques designed for postpartum bodies.',
+      keywords:      [
+        'postpartum back pain Airdrie',
+        'postnatal chiropractor Airdrie',
+        'postpartum pelvic pain Airdrie',
+        'new mom back pain Airdrie',
+        'postpartum chiropractic Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P3',
+      type:          'condition',
+      canonicalPath: '/conditions/postpartum-back-pain',
+    },
+
+    hero: {
+      headline:    'Postpartum Back Pain Treatment in Airdrie',
+      subheadline: 'Your body just completed an incredible journey — but the physical demands are far from over. Whether navigating night feedings, lifting car seats, or soothing a newborn. Let\'s help you heal, rebuild, and move comfortably again.',
+      cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Postpartum back pain refers to the persistent lower back, pelvic girdle, or mid-back discomfort experienced by mothers following childbirth — affecting up to 50% of new mothers in the months after delivery. ' +
+      'During pregnancy, the body undergoes massive biomechanical shifts. The centre of gravity moves forward, the abdominal muscles stretch significantly, and the hormone relaxin softens ligaments in preparation for birth. Once the baby arrives, those stretched muscles and loose ligaments do not instantly recover — leaving spinal joints vulnerable to mechanical strain during everyday baby care. ' +
+      'The good news is that postpartum back pain is highly treatable with gentle, targeted conservative care. Addressing structural issues early prevents long-term chronic problems, gentle treatments are entirely safe while breastfeeding and recovering from birth, and simple postural changes can dramatically speed up recovery. ' +
+      'At Summit Spine Centre, we help new moms find relief and regain their physical footing every day — so they can focus on enjoying their growing families.',
+
+    symptoms: [
+      'A deep ache in the lower back that worsens after prolonged standing or walking',
+      'Sharp pain in the buttocks or pelvis (SI joints) when rolling over in bed',
+      'Burning tension between the shoulder blades from nursing or rocking',
+      'A feeling of core weakness or instability when lifting a child',
+      'Morning stiffness that takes time to loosen up',
+      'Radiating discomfort or a pulling sensation into the hips or thighs',
+    ],
+
+    causes: [
+      'Lingering Ligament Laxity — relaxin remains in the system for several months after birth (and longer while breastfeeding), keeping ligaments loose and spinal joints less supported than usual',
+      'Altered Posture and Muscle Imbalances — the stretched abdominal muscles lose their ability to support the spine postpartum; the lower back and hip muscles compensate by tightening and pulling the pelvis out of alignment',
+      'Newborn Biomechanics Strain — bending over a crib hundreds of times daily, lifting car seats, and hunching forward during nursing place repetitive, asymmetrical stress on the spine',
+      'Core Separation (Diastasis Recti) — when the front abdominal muscles separate during pregnancy, it weakens the body\'s natural support system, forcing the lower back to do extra work',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Postpartum Back Pain',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Gentle, Postpartum-Focused Assessment',
+          body:  'We recognize that a postpartum body requires a uniquely careful approach. We begin with a thorough but gentle assessment of your pelvic alignment, lower back, and mid-back to understand exactly what is contributing to your pain.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'A low-force decompression technique that gently addresses lumbar and thoracic joint irritation without any aggressive twisting or force — appropriate for the sensitive, recovering postpartum spine.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Low-Force Pelvic & Spinal Adjustments',
+          body:  'Specific, gentle adjustments to safely realign the pelvis and lower back, restore normal joint mobility, and relieve the muscle tension that builds from the physical demands of newborn care.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Safe Core Rebuilding Exercises',
+          body:  'Guided exercises to safely reactivate and rebuild the core muscles — without aggravating diastasis recti or placing inappropriate load on healing tissues.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Postpartum Lifestyle & Ergonomic Coaching',
+          body:  'Ergonomic advice on how to lift your baby and car seat, support your spine during feeding sessions, and set up your nursing station — practical tools that make a real difference in your daily comfort.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Postpartum Back Pain',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years Serving Airdrie Families',
+          body:  'We have helped many new mothers in Airdrie recover from postpartum back pain and return to the physical demands of motherhood with confidence and comfort.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Gentle Techniques for Recovering Bodies',
+          body:  'We use highly modified, low-force techniques specifically appropriate for postpartum tissue recovery. There is no aggressive twisting, no forceful adjusting — just careful, effective care.',
+        },
+        {
+          icon:  'Users',
+          title: 'A Plan That Fits Your Life',
+          body:  'We understand that new motherhood is demanding, unpredictable, and often exhausting. Your care plan is built to be realistic, efficient, and centred on getting you feeling your best as quickly as possible.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Story',
+          body:  'We want to understand your delivery experience, when your symptoms started, and how they\'re affecting your daily life as a new parent.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Gentle Postpartum Assessment',
+          body:  'We evaluate your pelvic alignment, spinal mobility, and core function with a careful, modified examination appropriate for the postpartum body.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Clear, Realistic Plan',
+          body:  'We explain our findings in plain language and recommend a recovery plan that is safe, effective, and designed around the realities of new parenthood.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Treatment & Progress',
+          body:  'We begin gentle care and track your progress — adjusting the plan as your body recovers and your capacity to participate in rehabilitation increases.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'How long does back pain usually last after giving birth?',       answer: 'For many women, mild structural strain resolves naturally within 6 weeks. However, due to lingering ligament looseness and the physical demands of childcare, it is common for back pain to persist for several months if the underlying alignment issues are not addressed.' },
+        { question: 'Is it safe to see a chiropractor after having a baby?',          answer: 'Yes. Chiropractic care is safe and beneficial postpartum. Chiropractors use highly modified, gentle techniques tailored specifically for postpartum tissues. Conservative care is an effective, non-pharmacological option for managing postpartum musculoskeletal pain.' },
+        { question: 'Why does my mid-back hurt so much when nursing?',                answer: 'This is often called "nursing back," caused by rounding the shoulders and looking down at the baby for extended periods. This sustained posture overstretches the upper back muscles and locks the spinal joints of the thoracic spine.' },
+        { question: 'Can a chiropractor help if I had a C-section or an epidural?',   answer: 'Absolutely. We completely bypass the abdominal incision area and use gentle, specific techniques to address pelvic and lower back mechanics. We can also assess the joints near the epidural site, as local muscle guarding can occur there following delivery.' },
+        { question: 'What can I do at home to ease postpartum back pain?',            answer: 'Use pillows to bring your baby up to breast or bottle level so you don\'t have to hunch over. When lifting your baby or car seat, bend at the knees and keep your child close to your chest rather than reaching forward with your arms.' },
+        { question: 'Should I use ice or heat on my back after delivery?',            answer: 'If your back feels sharp, inflamed, or sore after a long day of carrying your baby, apply ice for 15 to 20 minutes to calm the area. If your muscles feel tight and overworked, use a heating pad to encourage blood flow and relaxation.' },
+      ],
+    },
+
+    cta: {
+      headline: 'You deserve to feel good — book today.',
+      scheme:   4,
+      cta:      { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['low-back-pain', 'upper-back-shoulder-pain'],
+
+    structuredData: {
+      conditionName:     'Postpartum Back Pain',
+      description:       'Postpartum back pain affects up to 50% of new mothers in the months following childbirth. It involves lower back, pelvic girdle, or mid-back discomfort caused by lingering ligament laxity, postural changes, core weakness, and the physical demands of newborn care.',
+      possibleTreatment: 'Chiropractic Care, Postural Rehabilitation',
+    },
   },
   'chronic-pain': {
-    meta: { slug: 'chronic-pain', title: 'Chronic Pain Relief Airdrie | Summit Spine Centre', description: '', keywords: ['chronic pain Airdrie', 'chronic pain chiropractor Airdrie'], published: true, priority: 'P3', type: 'condition', canonicalPath: '/conditions/chronic-pain' },
-    overview: '', relatedConditions: ['low-back-pain', 'sciatica'],
-    structuredData: { conditionName: 'Chronic Pain', description: '', possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction' },
-    ...conditionDefaults,
+    meta: {
+      slug:          'chronic-pain',
+      title:         'Chronic Pain Relief Airdrie | Summit Spine Centre',
+      description:   'Chiropractic care for chronic pain in Airdrie. We identify the mechanical and structural causes keeping your nervous system in overdrive and provide gentle, effective care to help you regain control.',
+      keywords:      [
+        'chronic pain Airdrie',
+        'chronic pain chiropractor Airdrie',
+        'long-term back pain Airdrie',
+        'chronic spine pain Airdrie',
+        'chronic pain treatment Airdrie Alberta',
+      ],
+      published:     true,
+      priority:      'P3',
+      type:          'condition',
+      canonicalPath: '/conditions/chronic-pain',
+    },
+
+    hero: {
+      headline:    'Chronic Pain Treatment in Airdrie',
+      subheadline: 'Pain that sticks around for months or years doesn\'t just hurt your body — it rewrites how you live your life. Whether missing out on family walks or fighting through the workday. Let\'s quiet the alarm system and restore your path forward.',
+      cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+      scheme:      1,
+    },
+
+    overview:
+      'Chronic pain is clinically defined as pain that persists continuously or keeps coming back for longer than three months. Unlike acute pain — which acts as a temporary warning signal from a fresh injury — chronic pain shifts into a complex condition of its own. ' +
+      'When structural problems are left unaddressed, the central nervous system can undergo a process called central sensitization. The spinal cord and brain become hypersensitive, keeping the body\'s alarm system active even long after an initial injury has healed — like a volume knob stuck at maximum. ' +
+      'The good news is that your body retains the ability to change, adapt, and heal at any age. Chiropractic care has been shown to significantly reduce long-standing pain scores, and targeted manual therapies can directly influence how the brain processes pain signals. Conservative management also helps many patients reduce their reliance on pain medications. ' +
+      'At Summit Spine Centre, we understand that your pain is real, frustrating, and entirely unique to you. We focus on identifying the physical, mechanical root causes keeping your system stuck — so you can gradually regain control.',
+
+    symptoms: [
+      'A deep, persistent ache or burning sensation in specific joints',
+      'Progressive muscle tightness and widespread physical tension',
+      'Disrupted sleep patterns and profound daily fatigue',
+      'Shooting or electric discomfort that travels down the limbs',
+      'Brain fog, irritability, or elevated everyday stress',
+      'Loss of joint flexibility and fear of simple movements',
+    ],
+
+    causes: [
+      'Advanced Joint Degeneration — over time, protective cartilage inside joints wears down, creating localized inflammation, stiff bone-on-bone friction, and a persistent ache that limits everyday movement',
+      'Untreated Old Injuries — poorly healed soft tissues from past strains, accidents, or collisions leave behind weak, disorganized scar tissue that limits movement and continually irritates surrounding nerves',
+      'Ongoing Mechanical Nerve Compression — long-standing disc herniations or spinal stenosis put continuous pressure on nerve roots, keeping local tissues highly inflamed month after month',
+      'Central Nervous System Sensitization — when pain signals travel through the spinal cord for too long, the brain adapts by building more "pain pathways," causing the body to misinterpret normal movement or light touch as severe discomfort',
+    ],
+
+    treatments: {
+      headline: 'How Summit Spine Centre Treats Chronic Pain',
+      scheme:   1,
+      items: [
+        {
+          icon:  'ClipboardList',
+          title: 'Comprehensive Structural Evaluation',
+          body:  'We perform thorough evaluations to understand the specific mechanical sources that may be keeping your pain system activated — separating old scar tissue restrictions from active nervous system irritation.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Cox Flexion-Distraction',
+          body:  'We use the Cox Flexion-Distraction table to provide exceptionally gentle, low-force decompression to compressed spinal joints and irritated nerves. This targeted approach introduces safe movement back into restricted areas without any forceful twisting or cracking.',
+        },
+        {
+          icon:  'HandHeart',
+          title: 'Chiropractic Adjustments',
+          body:  'Precise spinal adjustments help restore lost joint mechanics, reduce nervous system irritation, and gradually work to lower the overall volume of your pain signals.',
+        },
+        {
+          icon:  'Dumbbell',
+          title: 'Graduated Therapeutic Exercise',
+          body:  'Gentle home exercise routines designed to progressively rebuild movement tolerance and support sensitive joints — helping your nervous system recalibrate without pushing through pain that aggravates the system.',
+        },
+        {
+          icon:  'Heart',
+          title: 'Lifestyle & Nervous System Guidance',
+          body:  'Customized advice on activity pacing, sleep, stress, and movement strategies that help reduce central sensitization over time — building toward a life where pain no longer runs the show.',
+        },
+      ],
+    },
+
+    benefits: {
+      headline: 'Why Choose Summit Spine Centre for Chronic Pain',
+      scheme:   4,
+      items: [
+        {
+          icon:  'Award',
+          title: '35+ Years of Complex Case Experience',
+          body:  'Chronic pain is one of the most challenging conditions we treat — and one of the most rewarding when we get it right. Decades of experience means we understand the long-term mechanical patterns that underlie persistent pain.',
+        },
+        {
+          icon:  'Activity',
+          title: 'Gentle, Targeted Decompression',
+          body:  'Cox Flexion-Distraction allows us to treat sensitive, irritated spines without force. For people in chronic pain, this gentleness is not a compromise — it\'s often the most effective approach available.',
+        },
+        {
+          icon:  'Users',
+          title: 'We See You as a Person, Not a Pain Score',
+          body:  'Chronic pain changes lives. We approach every patient with that understanding — building plans that acknowledge your full situation and work toward what matters most to you.',
+        },
+      ],
+    },
+
+    howItWorks: {
+      headline: 'What to Expect at Summit Spine Centre',
+      scheme:   1,
+      steps: [
+        {
+          step:  1,
+          icon:  'MessageCircle',
+          title: 'Tell Us Your Full Story',
+          body:  'Chronic pain has history. We take the time to understand your full timeline — what started the pain, what has been tried, and what your life looks like now. This context shapes everything we do.',
+        },
+        {
+          step:  2,
+          icon:  'Search',
+          title: 'Thorough Structural Assessment',
+          body:  'We evaluate joint mobility, nerve function, and movement patterns to identify the specific mechanical contributors to your ongoing pain.',
+        },
+        {
+          step:  3,
+          icon:  'ClipboardList',
+          title: 'Honest, Personalized Plan',
+          body:  'We explain our findings clearly and set realistic expectations. Our goal is meaningful progress — a path toward a life where you have more good days than bad.',
+        },
+        {
+          step:  4,
+          icon:  'TrendingUp',
+          title: 'Gradual Treatment & Progress',
+          body:  'We begin gently and build progressively. Chronic pain responds best to consistency and patience — and we track your progress carefully at every stage.',
+        },
+      ],
+    },
+
+    testimonials: {
+      scheme: 4,
+      items:  [],
+    },
+
+    faqs: {
+      scheme: 1,
+      items: [
+        { question: 'When does pain officially become chronic?',                         answer: 'Pain is considered chronic when it persists continuously or recurs frequently for more than three months, outlasting the normal biological healing timeline for most tissue injuries.' },
+        { question: 'Can a chiropractor help with long-standing chronic pain?',          answer: 'Yes. Chiropractic care can help manage chronic pain by restoring movement to restricted joints, reducing local muscle guarding, and supporting the nervous system. Spinal manipulation and manual therapies are recommended as effective non-pharmacological options for chronic musculoskeletal conditions.' },
+        { question: 'Why does my pain flare up during times of high stress?',            answer: 'The brain uses shared pathways to process psychological stress and physical pain. When stress levels increase, the nervous system releases chemicals that amplify central sensitization — making the body more sensitive to pain signals.' },
+        { question: 'Will I need adjustments forever for chronic conditions?',           answer: 'Not necessarily. While some chronic structural conditions require periodic maintenance care, many people are able to reduce the frequency of care significantly as they improve. The goal is always greater independence.' },
+        { question: 'Is walking safe when dealing with chronic back pain?',              answer: 'Yes. Gentle, controlled walking is beneficial for most chronic conditions. It stimulates blood circulation, provides safe movement to stiff joints, and helps prevent the muscular deconditioning associated with reduced activity.' },
+        { question: 'Can chiropractic adjustments affect how my brain processes pain?', answer: 'Research suggests that spinal manipulation may directly influence the central nervous system and how the brain receives and processes pain signals. This can contribute to improved pain regulation over time.' },
+      ],
+    },
+
+    cta: {
+      headline: 'Don\'t live with it — book today.',
+      scheme:   4,
+      cta:      { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    },
+
+    relatedConditions: ['low-back-pain', 'spinal-stenosis'],
+
+    structuredData: {
+      conditionName:     'Chronic Pain',
+      description:       'Chronic pain is defined as persistent or recurring pain lasting longer than three months. It involves central sensitization, structural degeneration, and mechanical nerve compression that keeps the nervous system in a heightened state of alert.',
+      possibleTreatment: 'Chiropractic Care, Cox Flexion-Distraction',
+    },
   },
   'mva-whiplash': {
     meta: { slug: 'mva-whiplash', title: 'MVA & Whiplash Airdrie | Summit Spine Centre', description: '', keywords: ['MVA whiplash Airdrie', 'motor vehicle accident chiropractor'], published: false, priority: 'P3', type: 'condition', canonicalPath: '/conditions/mva-whiplash' },

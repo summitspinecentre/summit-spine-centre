@@ -303,6 +303,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
               width={image.width}
               height={image.height}
               priority={image.priority ?? true}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="w-full object-cover"
             />
           </div>

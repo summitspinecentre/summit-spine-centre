@@ -3,7 +3,7 @@
 **Project:** Summit Spine Centre Website
 **Stack:** Next.js (App Router) · TypeScript · Tailwind CSS
 **Location:** Airdrie, Alberta
-**Last Updated:** 2026-05-12
+**Last Updated:** 2026-05-13
 
 ---
 
@@ -74,6 +74,7 @@
 - [x] `app/services/summits-of-recovery/[pillar]/page.tsx` — 4 pillar pages (dynamic)
 - [x] Content: `cox-flexion-distraction` — fully populated
 - [x] Content: `chiropractic-adjustments` — fully populated
+- [x] Content: `summits-of-recovery` (hub) — fully populated
 - [x] Content: `lifestyle-wisdom` (pillar) — fully populated
 
 ### Conditions
@@ -83,16 +84,16 @@
 - [x] Content: `sciatica`
 - [x] Content: `disc-herniation`
 - [x] Content: `neck-pain`
-- [ ] Content: `back-pain`
+- [x] Content: `back-pain` (Arthritis / DDD / DJD)
 - [x] Content: `headaches-migraines`
 - [x] Content: `spinal-stenosis`
-- [ ] Content: `tech-neck`
-- [ ] Content: `whiplash`
-- [ ] Content: `upper-back-shoulder-pain`
-- [ ] Content: `tmj`
-- [ ] Content: `sports-injuries`
-- [ ] Content: `postpartum-back-pain`
-- [ ] Content: `chronic-pain`
+- [x] Content: `tech-neck`
+- [x] Content: `whiplash`
+- [x] Content: `upper-back-shoulder-pain`
+- [ ] Content: `tmj` *(no source doc yet)*
+- [x] Content: `sports-injuries`
+- [x] Content: `postpartum-back-pain`
+- [x] Content: `chronic-pain`
 - [ ] Content: `mva-whiplash` *(draft — publish when ready)*
 
 ### Utility
@@ -184,3 +185,6 @@
 | 2026-05-12 | Conditions Content — low-back-pain, disc-herniation, neck-pain, headaches-migraines | conditionPages: 4 stubs fully populated from uploaded source docs; each entry has meta (SEO title/desc/keywords), hero (H1+subheadline verbatim from source), overview, 9–11 symptoms, 6–9 causes, 5 treatments (Exam→Cox→Adjustments→Exercises→Lifestyle), 3 benefits (35yrs/Cox/personalized), 4-step howItWorks, 9–14 FAQs verbatim from source, CTA, relatedConditions, structuredData; 0 TS errors, 0 console errors, all 4 routes verified in browser. Arthritis.txt noted — maps to back-pain (next session). |
 | 2026-05-12 | Footer — real clinic data + Google Maps embed | types/content.ts: added hours2?: string to ContactInfo.hours[] item for split-session days; content/pages.ts: CLINIC_INFO fully populated (214 Main St N, Airdrie AB T4B 0R6, 403-948-4440, info@summitspine.ca, all 7 days — Mon/Wed two-slot); Footer.tsx: Hours of Operation heading added, hours2 rendered when present, Google Maps iframe embed added below 4-col grid (lazy-loaded, accessible title, no API key); 0 TS errors, 0 console errors. |
 | 2026-05-12 | Feature — StickyBookingBar | components/ui/StickyBookingBar.tsx: new 'use client' component, IntersectionObserver on #hero-cta sentinel, opacity+translate transition (300ms), dark eerie-black/95 bar with cerulean pill button, CalendarCheck icon, pointer-events-none when hidden, aria-hidden synced to visibility; Hero.tsx: id="hero-cta" added to CTA row div (Server Component, no interactivity added); app/layout.tsx: StickyBookingBar mounted once in root layout, label+href from navConfig.cta; 0 TS errors, 0 console errors, verified in browser — hidden at top of page, visible and correctly positioned below navbar after scrolling past hero. |
+| 2026-05-13 | Service Hub — Summits of Recovery | summitsPage fully populated: meta, hero, featureHighlight, featuresList (4 pillars), howItWorks (4 steps), faqs (5 items), cta; 0 TS errors, all 6 sections verified in browser. |
+| 2026-05-13 | Conditions Content — 7 stubs populated | back-pain (Arthritis/DDD/DJD), tech-neck, whiplash, upper-back-shoulder-pain, sports-injuries, postpartum-back-pain, chronic-pain — all fully populated from source docs (meta, hero, overview, symptoms, causes, 5 treatments, 3 benefits, 4 howItWorks steps, 6 FAQs, CTA, relatedConditions, structuredData); 0 TS errors, routes verified in browser. Remaining stubs: tmj (no source doc), mva-whiplash (draft). Disc Bulge.txt and Summits of Recovery.txt flagged for separate sessions. |
+| 2026-05-13 | Lighthouse Performance Pass | Navbar.tsx: replaced window.scrollY scroll listener with IntersectionObserver on #nav-scroll-sentinel (eliminates scroll event overhead, fixes forced reflow flag); app/layout.tsx: added 1×1px aria-hidden sentinel div #nav-scroll-sentinel at top of body; Hero.tsx: added sizes="(max-width: 768px) 100vw, 50vw" to right-column image for correct srcset generation; confirmed Google Maps iframe already had loading="lazy" and GA4 already used strategy="afterInteractive" — no changes needed there; 0 TS errors, 0 console errors, IntersectionObserver verified in browser (header class confirms bg-neutral-0 shadow-md h-16 at scrollY=15). |
