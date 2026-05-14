@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { ColorScheme, FeatureItem } from '@/types/content'
+import FadeIn from '@/components/ui/FadeIn'
 
 // ── Icon registry ─────────────────────────────────────────────
 
@@ -116,27 +117,30 @@ export default function FeaturesListSection({
 
         {/* ── Optional section header ──────────────────────── */}
         {(headline || subheadline) && (
-          <div className="mb-10 max-w-2xl lg:mb-14">
-            {headline && (
-              <h2
-                className={cn(
-                  'font-heading font-bold leading-tight tracking-tighter',
-                  'text-3xl md:text-4xl lg:text-h2',
-                  cfg.headline,
-                )}
-              >
-                {headline}
-              </h2>
-            )}
-            {subheadline && (
-              <p className={cn('mt-4 text-lg leading-relaxed', cfg.subheadline)}>
-                {subheadline}
-              </p>
-            )}
-          </div>
+          <FadeIn>
+            <div className="mb-10 max-w-2xl lg:mb-14">
+              {headline && (
+                <h2
+                  className={cn(
+                    'font-heading font-bold leading-tight tracking-tighter',
+                    'text-3xl md:text-4xl lg:text-h2',
+                    cfg.headline,
+                  )}
+                >
+                  {headline}
+                </h2>
+              )}
+              {subheadline && (
+                <p className={cn('mt-4 text-lg leading-relaxed', cfg.subheadline)}>
+                  {subheadline}
+                </p>
+              )}
+            </div>
+          </FadeIn>
         )}
 
         {/* ── Feature list ─────────────────────────────────── */}
+        <FadeIn delay={0.15}>
         <ul
           role="list"
           className={cn('grid grid-cols-1 gap-8', columnsMap[columns])}
@@ -174,6 +178,7 @@ export default function FeaturesListSection({
             )
           })}
         </ul>
+        </FadeIn>
 
       </div>
     </section>

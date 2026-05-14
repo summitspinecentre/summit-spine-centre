@@ -9,6 +9,7 @@ import Image from 'next/image'
 import { Quote, Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { TestimonialsSection as TestimonialsSectionData, ColorScheme } from '@/types/content'
+import FadeIn from '@/components/ui/FadeIn'
 
 // ── Types ────────────────────────────────────────────────────
 
@@ -143,20 +144,23 @@ export default function TestimonialsSection({ data, className }: TestimonialsSec
 
         {/* ── Optional headline ─────────────────────────────── */}
         {headline && (
-          <div className="mb-10 max-w-2xl lg:mb-14">
-            <h2
-              className={cn(
-                'font-heading font-bold leading-tight tracking-tighter',
-                'text-3xl md:text-4xl lg:text-h2',
-                cfg.headline,
-              )}
-            >
-              {headline}
-            </h2>
-          </div>
+          <FadeIn>
+            <div className="mb-10 max-w-2xl lg:mb-14">
+              <h2
+                className={cn(
+                  'font-heading font-bold leading-tight tracking-tighter',
+                  'text-3xl md:text-4xl lg:text-h2',
+                  cfg.headline,
+                )}
+              >
+                {headline}
+              </h2>
+            </div>
+          </FadeIn>
         )}
 
         {/* ── Testimonial grid ──────────────────────────────── */}
+        <FadeIn delay={0.15}>
         <ul role="list" className={cn('grid grid-cols-1 gap-6 md:gap-8', cols)}>
           {items.map((testimonial, index) => (
             <li
@@ -253,6 +257,7 @@ export default function TestimonialsSection({ data, className }: TestimonialsSec
             </li>
           ))}
         </ul>
+        </FadeIn>
 
       </div>
     </section>

@@ -138,6 +138,41 @@
   to   { opacity: 1; }
 }
 
+/* ── Hero text entrance — staggered CSS animation ──────────
+   Applied as class names directly in Hero.tsx (Server Component).
+   fill-mode: both keeps elements invisible during the delay then
+   holds the final state. prefers-reduced-motion disables all.    */
+
+.hero-eyebrow,
+.hero-headline,
+.hero-sub,
+.hero-body,
+.hero-cta-row,
+.hero-stats {
+  animation-name:            fade-up;
+  animation-duration:        700ms;
+  animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+  animation-fill-mode:       both;
+}
+
+.hero-eyebrow  { animation-delay:  80ms; }
+.hero-headline { animation-delay: 260ms; }
+.hero-sub      { animation-delay: 440ms; }
+.hero-body     { animation-delay: 580ms; }
+.hero-cta-row  { animation-delay: 720ms; }
+.hero-stats    { animation-delay: 900ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow,
+  .hero-headline,
+  .hero-sub,
+  .hero-body,
+  .hero-cta-row,
+  .hero-stats {
+    animation: none;
+  }
+}
+
 /* ── Base styles ──────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;

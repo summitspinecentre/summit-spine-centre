@@ -276,11 +276,11 @@ export const aboutPage: AboutPage = {
   hero: {
     headline:    'Two Doctors. One Focused Mission.',
     subheadline: 'We left the generalist model behind. Summit Spine Centre exists because back pain deserves more than a rushed visit and a generic adjustment.',
-    scheme:      1,
+    scheme:      4,
     cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-    pullQuote: {
-      text:        'The spine is the architecture of everything you do. We treat it like it.',
-      attribution: 'Dr. Louder & Dr. Lawrence',
+    bgImage: {
+      src: '/images/about/hero.jpg',
+      alt: 'Summit Spine Centre clinic interior in Airdrie, Alberta',
     },
   },
 
@@ -478,7 +478,11 @@ export const contactPage: ContactPage = {
     subheadline: 'Walk-ins welcome. No referral needed.',
     body:        "We're located in the heart of Airdrie at 214 Main St N. Come in and see us — or give us a call and we'll help you figure out the next step.",
     cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
-    scheme:      1,
+    scheme:      4,
+    bgImage: {
+      src: '/images/contact/hero.jpg',
+      alt: 'Summit Spine Centre exterior on Main Street North, Airdrie, Alberta',
+    },
   },
   contact: CLINIC_INFO,
   cta: {
@@ -597,7 +601,11 @@ export const servicesPage: ServicesHubPage = {
     body:         'At Summit Spine Centre, every service starts with one thing: a thorough understanding of what\'s actually going on with you. We don\'t apply generic treatments. We build a plan around your specific diagnosis, history, and goals.',
     cta:          { label: 'Book Your Assessment', href: 'https://summitspine.ca/booking/' },
     secondaryCta: { label: 'See Conditions We Treat', href: '/conditions', variant: 'ghost' },
-    scheme:       1,
+    scheme:       4,
+    bgImage: {
+      src: '/images/services/hero.jpg',
+      alt: 'Chiropractic treatment session at Summit Spine Centre in Airdrie',
+    },
   },
   featuresList: {
     headline:    'What Makes Summit Spine Different',
@@ -734,8 +742,12 @@ export const chiropracticPage: ServicePage = {
   hero: {
     headline:    'Chiropractic Adjustments in Airdrie',
     subheadline: 'Targeted, hands-on care that addresses the root cause of your pain — not just the symptoms.',
-    scheme:      1,
+    scheme:      4,
     cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
+    bgImage: {
+      src: '/images/services/chiropractic-adjustments/hero.jpg',
+      alt: 'Chiropractor performing a spinal adjustment at Summit Spine Centre in Airdrie',
+    },
   },
   featureHighlight: {
     title: 'Sound Familiar?',
@@ -1074,7 +1086,11 @@ export const conditionsPage: ConditionsHubPage = {
     body:         'Pain and dysfunction show up in different ways for different people. We take the time to figure out what\'s actually driving yours — then build a treatment plan around that.',
     cta:          { label: 'Book Your Assessment', href: 'https://summitspine.ca/booking/' },
     secondaryCta: { label: 'See Our Services', href: '/services', variant: 'ghost' },
-    scheme:       1,
+    scheme:       4,
+    bgImage: {
+      src: '/images/conditions/hero.jpg',
+      alt: 'Patient consultation at Summit Spine Centre, Airdrie chiropractor',
+    },
   },
   conditionsList: {
     headline:    'Conditions We Treat',

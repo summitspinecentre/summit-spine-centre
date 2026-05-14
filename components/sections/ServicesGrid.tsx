@@ -8,6 +8,7 @@
 //          Condition pages (treatments section)
 
 import Link from 'next/link'
+import FadeIn from '@/components/ui/FadeIn'
 import {
   Activity, HandHeart, Dumbbell, Armchair,
   DoorOpen, CreditCard, Heart, Zap, TrendingUp,
@@ -221,27 +222,30 @@ export default function ServicesGrid({
 
         {/* ── Optional section header ──────────────────────── */}
         {(headline || subheadline) && (
-          <div className="mb-10 max-w-2xl lg:mb-14">
-            {headline && (
-              <h2
-                className={cn(
-                  'font-heading font-bold leading-tight tracking-tighter',
-                  'text-3xl md:text-4xl lg:text-h2',
-                  cfg.headline,
-                )}
-              >
-                {headline}
-              </h2>
-            )}
-            {subheadline && (
-              <p className={cn('mt-4 text-lg leading-relaxed', cfg.subheadline)}>
-                {subheadline}
-              </p>
-            )}
-          </div>
+          <FadeIn>
+            <div className="mb-10 max-w-2xl lg:mb-14">
+              {headline && (
+                <h2
+                  className={cn(
+                    'font-heading font-bold leading-tight tracking-tighter',
+                    'text-3xl md:text-4xl lg:text-h2',
+                    cfg.headline,
+                  )}
+                >
+                  {headline}
+                </h2>
+              )}
+              {subheadline && (
+                <p className={cn('mt-4 text-lg leading-relaxed', cfg.subheadline)}>
+                  {subheadline}
+                </p>
+              )}
+            </div>
+          </FadeIn>
         )}
 
         {/* ── Card grid ────────────────────────────────────── */}
+        <FadeIn delay={0.15}>
         <ul
           role="list"
           className={cn(
@@ -271,6 +275,7 @@ export default function ServicesGrid({
             )
           })}
         </ul>
+        </FadeIn>
 
       </div>
     </section>

@@ -1,5 +1,6 @@
 import type { WhySummitSection as WhySummitSectionData, ColorScheme, TreatmentBox } from '@/types/content'
 import { cn } from '@/lib/utils'
+import FadeIn from '@/components/ui/FadeIn'
 
 interface Props {
   data: WhySummitSectionData
@@ -106,31 +107,35 @@ export default function WhySummitSection({ data }: Props) {
     >
       <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-20">
 
-        <div className="mx-auto max-w-2xl text-center">
-          <p className={cn(
-            'mb-4 text-xs font-semibold uppercase tracking-wider',
-            colors.eyebrow,
-          )}>
-            {sectionLabel}
-          </p>
+        <FadeIn>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className={cn(
+              'mb-4 text-xs font-semibold uppercase tracking-wider',
+              colors.eyebrow,
+            )}>
+              {sectionLabel}
+            </p>
 
-          <h2 className={cn(
-            'font-heading text-h3 font-bold leading-tight tracking-tight md:text-h2',
-            colors.headline,
-          )}>
-            {headline}
-          </h2>
+            <h2 className={cn(
+              'font-heading text-h3 font-bold leading-tight tracking-tight md:text-h2',
+              colors.headline,
+            )}>
+              {headline}
+            </h2>
 
-          <p className={cn('mt-6 text-lg leading-relaxed', colors.body)}>
-            {body}
-          </p>
-        </div>
+            <p className={cn('mt-6 text-lg leading-relaxed', colors.body)}>
+              {body}
+            </p>
+          </div>
+        </FadeIn>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
-          {boxes.map((box) => (
-            <TreatmentBoxCard key={box.label} box={box} colors={colors} />
-          ))}
-        </div>
+        <FadeIn delay={0.15}>
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+            {boxes.map((box) => (
+              <TreatmentBoxCard key={box.label} box={box} colors={colors} />
+            ))}
+          </div>
+        </FadeIn>
 
       </div>
     </section>

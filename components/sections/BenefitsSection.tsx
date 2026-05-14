@@ -15,6 +15,7 @@ import {
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import type { BenefitsSection as BenefitsSectionData, ColorScheme } from '@/types/content'
+import FadeIn from '@/components/ui/FadeIn'
 
 // ── Icon registry ─────────────────────────────────────────────
 
@@ -149,21 +150,52 @@ export default function BenefitsSection({ data, className }: BenefitsSectionProp
 
         {image ? (
           /* ── Two-column: image left, header + cards right ── */
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <FadeIn>
+            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority={image.priority}
-              />
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority={image.priority}
+                />
+              </div>
+
+              <div>
+                <div className="mb-8">
+                  <h2
+                    className={cn(
+                      'font-heading font-bold leading-tight tracking-tighter',
+                      'text-3xl md:text-4xl lg:text-h2',
+                      cfg.headline,
+                    )}
+                  >
+                    {headline}
+                  </h2>
+                  {subheadline && (
+                    <p className={cn('mt-4 text-lg leading-relaxed', cfg.subheadline)}>
+                      {subheadline}
+                    </p>
+                  )}
+                </div>
+
+                <ul role="list" className={cn('grid grid-cols-1 gap-4', gridCols)}>
+                  {items.map((item) => (
+                    <BenefitCard key={item.title} {...item} cfg={cfg} />
+                  ))}
+                </ul>
+              </div>
+
             </div>
-
-            <div>
-              <div className="mb-8">
+          </FadeIn>
+        ) : (
+          /* ── No image: header left-aligned + full-width grid ── */
+          <>
+            <FadeIn>
+              <div className="mb-10 max-w-2xl lg:mb-14">
                 <h2
                   className={cn(
                     'font-heading font-bold leading-tight tracking-tighter',
@@ -179,40 +211,15 @@ export default function BenefitsSection({ data, className }: BenefitsSectionProp
                   </p>
                 )}
               </div>
+            </FadeIn>
 
-              <ul role="list" className={cn('grid grid-cols-1 gap-4', gridCols)}>
+            <FadeIn delay={0.15}>
+              <ul role="list" className={cn('grid grid-cols-1 gap-6 md:gap-8', gridCols)}>
                 {items.map((item) => (
                   <BenefitCard key={item.title} {...item} cfg={cfg} />
                 ))}
               </ul>
-            </div>
-
-          </div>
-        ) : (
-          /* ── No image: header left-aligned + full-width grid ── */
-          <>
-            <div className="mb-10 max-w-2xl lg:mb-14">
-              <h2
-                className={cn(
-                  'font-heading font-bold leading-tight tracking-tighter',
-                  'text-3xl md:text-4xl lg:text-h2',
-                  cfg.headline,
-                )}
-              >
-                {headline}
-              </h2>
-              {subheadline && (
-                <p className={cn('mt-4 text-lg leading-relaxed', cfg.subheadline)}>
-                  {subheadline}
-                </p>
-              )}
-            </div>
-
-            <ul role="list" className={cn('grid grid-cols-1 gap-6 md:gap-8', gridCols)}>
-              {items.map((item) => (
-                <BenefitCard key={item.title} {...item} cfg={cfg} />
-              ))}
-            </ul>
+            </FadeIn>
           </>
         )}
 

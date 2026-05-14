@@ -113,7 +113,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
         'relative overflow-hidden',
         'pt-nav',
         cfg.section,
-        hasBgImage && 'min-h-screen',
+        hasBgImage && 'min-h-screen bg-eerie-black',
         className,
       )}
     >
@@ -216,12 +216,12 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
         <div className={cn(hasImage || hasPullQuote ? '' : hasBgImage ? 'max-w-2xl' : 'max-w-3xl')}>
           {eyebrow && (
             hasBgImage ? (
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-0/25 bg-eerie-black/30 px-4 py-1.5 backdrop-blur-sm">
+              <div className="hero-eyebrow mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-0/25 bg-eerie-black/30 px-4 py-1.5 backdrop-blur-sm">
                 <span className="h-1.5 w-1.5 rounded-full bg-cerulean flex-shrink-0" aria-hidden="true" />
                 <span className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-0/90">{eyebrow}</span>
               </div>
             ) : (
-              <p className={cn('mb-4 text-sm font-semibold uppercase tracking-wider', cfg.eyebrow)}>
+              <p className={cn('hero-eyebrow mb-4 text-sm font-semibold uppercase tracking-wider', cfg.eyebrow)}>
                 {eyebrow}
               </p>
             )
@@ -229,7 +229,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
 
           <h1
             className={cn(
-              'mb-6 font-heading font-bold leading-tight tracking-tighter',
+              'hero-headline mb-6 font-heading font-bold leading-tight tracking-tighter',
               'text-[2.5rem] md:text-[3.25rem] lg:text-hero',
               cfg.headline,
             )}
@@ -240,7 +240,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
           {subheadline && (
             <p
               className={cn(
-                'mb-4 leading-snug',
+                'hero-sub mb-4 leading-snug',
                 hasBgImage ? 'text-2xl md:text-3xl font-medium' : 'text-xl font-medium',
                 cfg.subheadline,
               )}
@@ -252,7 +252,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
           {body && (
             <p
               className={cn(
-                'mb-8 text-base leading-relaxed md:text-lg',
+                'hero-body mb-8 text-base leading-relaxed md:text-lg',
                 cfg.body,
               )}
             >
@@ -264,7 +264,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
           <div
             id="hero-cta"
             className={cn(
-              'flex flex-wrap gap-4',
+              'hero-cta-row flex flex-wrap gap-4',
               !hasImage && !hasPullQuote && 'justify-center',
             )}
           >
@@ -340,7 +340,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
         {hasStatsBar && statsBar && (
           <div
             className={cn(
-              'mt-auto border-t pt-12',
+              'hero-stats mt-auto border-t pt-12',
               cfg.statsDivider,
             )}
           >

@@ -9,6 +9,7 @@
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { FAQSection as FAQSectionData, ColorScheme } from '@/types/content'
+import FadeIn from '@/components/ui/FadeIn'
 
 // ── Types ────────────────────────────────────────────────────
 
@@ -92,19 +93,22 @@ export default function FAQSection({ data, className }: FAQSectionProps) {
         >
 
           {headline && (
-            <div className="lg:pt-1">
-              <h2
-                className={cn(
-                  'font-heading font-bold leading-tight tracking-tighter',
-                  'text-3xl md:text-4xl lg:text-h2',
-                  cfg.headline,
-                )}
-              >
-                {headline}
-              </h2>
-            </div>
+            <FadeIn>
+              <div className="lg:pt-1">
+                <h2
+                  className={cn(
+                    'font-heading font-bold leading-tight tracking-tighter',
+                    'text-3xl md:text-4xl lg:text-h2',
+                    cfg.headline,
+                  )}
+                >
+                  {headline}
+                </h2>
+              </div>
+            </FadeIn>
           )}
 
+          <FadeIn delay={headline ? 0.1 : 0}>
           <dl className={cn(cfg.listBorder, cfg.divide)}>
             {items.map((item, index) => (
               <details
@@ -135,6 +139,7 @@ export default function FAQSection({ data, className }: FAQSectionProps) {
               </details>
             ))}
           </dl>
+          </FadeIn>
 
         </div>
       </div>

@@ -1,6 +1,7 @@
 import type { CTASection, ColorScheme } from '@/types/content'
 import Button from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
+import FadeIn from '@/components/ui/FadeIn'
 
 interface CTASectionProps {
   data: CTASection
@@ -39,6 +40,7 @@ export default function CTASection({ data }: CTASectionProps) {
       className={cn(schemeBg[scheme], 'py-section lg:py-section-lg')}
     >
       <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-20">
+        <FadeIn>
         <div className="mx-auto max-w-2xl text-center">
 
           <h2 className={cn(
@@ -76,6 +78,7 @@ export default function CTASection({ data }: CTASectionProps) {
           </div>
 
         </div>
+        </FadeIn>
       </div>
     </section>
   )

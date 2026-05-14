@@ -129,10 +129,12 @@
 - [ ] `/public/logo/logo-dark.svg` — uploaded
 - [ ] `/public/placeholders/` — placeholder images added
 - [ ] `/public/images/home/` — real images added
-- [ ] `/public/images/about/` — real images added
+- [x] `/public/images/about/hero.jpg` — added (4928×3264)
 - [ ] `/public/images/team/` — real images added
-- [ ] `/public/images/services/` — real images added
-- [ ] `/public/images/conditions/` — real images added
+- [x] `/public/images/services/hero.jpg` — added (3840×2160)
+- [x] `/public/images/services/chiropractic-adjustments/hero.jpg` — added (6016×4016)
+- [x] `/public/images/conditions/hero.jpg` — added (6000×3376)
+- [x] `/public/images/contact/hero.jpg` — added (6720×4480)
 
 ---
 
@@ -146,6 +148,15 @@
 - [ ] All forms validated with zod
 - [ ] robots.txt configured correctly
 - [ ] sitemap.xml submitted to Google Search Console
+
+---
+
+## Animation System
+- [x] `framer-motion` v12 installed
+- [x] `components/ui/FadeIn.tsx` — 'use client' viewport-triggered fade + slide-up wrapper (whileInView, once, prefers-reduced-motion safe)
+- [x] `app/globals.css` — hero text entrance CSS animation sequence (eyebrow 80ms → headline 260ms → subheadline 440ms → body 580ms → CTAs 720ms → stats 900ms; fill-mode: both; reduced-motion override)
+- [x] `components/sections/Hero.tsx` — hero-eyebrow / hero-headline / hero-sub / hero-body / hero-cta-row / hero-stats classes applied; Hero stays pure Server Component
+- [x] `app/page.tsx` — all 10 below-fold sections wrapped in FadeIn; 0 TS errors, 0 console errors
 
 ---
 
@@ -193,3 +204,5 @@
 | 2026-05-13 | Page — Contact | contactPage stub fully populated (meta, hero, cta, 6 contact FAQs); app/contact/page.tsx: generateMetadata (title.absolute), LocalBusiness JSON-LD, Hero (scheme 1, eyebrow "Airdrie, Alberta"), two-col contact info section (Phone/Email/Address/Hours cards + Google Maps iframe with aria-label), FAQSection (scheme 2, 6 questions: referral, walk-ins, parking, first visit prep, appointment length, cancellation), CTASection (scheme 4, dual CTAs: Book + Call); 0 TS errors, all 4 sections verified in browser accessibility tree. |
 | 2026-05-13 | Page — Book Your Visit | bookPage stub fully populated (meta, hero with dual CTAs, 5 booking FAQs, cta); app/book/page.tsx: generateMetadata (title.absolute), LocalBusiness JSON-LD, Hero (scheme 1, "Book Your Visit.", Book Online Now + Call ghost CTA), booking section (scheme neutral-100) — 2-col lg: left=AtlasHub iframe in rounded card with header bar + "open in new tab" + fallback text, right=Phone card + Hours table + walk-in notice; FAQSection (scheme 2, 5 Qs: speed, AHC coverage, cancellation, first visit prep, direct billing); CTASection (scheme 4, Book + Contact Us); 0 TS errors, all sections verified in browser accessibility tree. |
 | 2026-05-13 | Pages — Utility (Privacy, Terms, Accessibility) | privacyPage (9 sections: PIPA/PIPEDA), termsPage (10 sections: Alberta law), accessibilityPage (6 sections: WCAG 2.1 AA) — all stubs fully populated; components/templates/UtilityPageTemplate.tsx: Server Component, centered max-w-3xl prose layout, H1 + last-updated <time>, section list (h2 + \n\n-split paragraphs, dividers); app/privacy, /terms, /accessibility: generateMetadata (title.absolute), each wraps UtilityPageTemplate; 0 TS errors, all 3 routes verified in browser. |
+| 2026-05-14 | Animation System — FadeIn + Hero entrance | framer-motion v12 installed; FadeIn.tsx (whileInView fade+slide-up, useReducedMotion, viewport once); hero CSS stagger sequence (6 elements, 80ms–900ms delays, fill-mode:both, reduced-motion override); Hero.tsx: hero-* classes applied, stays pure Server Component; app/page.tsx: all 10 below-fold sections wrapped in FadeIn; 0 TS errors, 0 console errors, verified in browser. |
+| 2026-05-14 | Hero images — 5 pages | Copied 5 real photos into public/images/[page]/hero.jpg (about, services, services/chiropractic-adjustments, conditions, contact); updated content/pages.ts hero.bgImage + scheme:4 for all 5 pages; full-bleed dark-overlay layout matches homepage; 0 TS errors, 0 console errors, all 5 pages verified in browser. |
