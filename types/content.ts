@@ -217,11 +217,13 @@ export interface DemographicCondition {
   label: string       // e.g. "Low Back Pain"
   slug?: string       // if present, renders as Link to /conditions/[slug]
   description: string // 1–2 sentences explaining why this demographic gets this condition
+  icon?: string       // lucide-react icon name, e.g. "Brain"
 }
 
 export interface DemographicTab {
   id: string
   label: string               // e.g. "Desk Worker"
+  image?: string              // path to demographic photo, e.g. /images/home/demographics/desk-worker.jpg
   empathyStatement: string    // 1–2 sentence intro shown when tab is active
   conditions: DemographicCondition[]  // 5–6 conditions + 1 "other" (no slug)
   cta: CTAButton

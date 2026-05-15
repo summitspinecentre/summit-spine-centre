@@ -1,16 +1,51 @@
 'use client'
 
 // components/sections/DemographicTabBar.tsx
-// "Sound Familiar?" — 6 large demographic selector buttons, each revealing
-// a panel of condition cards that link to the conditions pages.
+// "Sound Familiar?" — 3-col layout: vertical pill selector | demographic photo | condition list
 // Client Component: active-tab state + ARIA keyboard navigation.
 
 import { useState, useRef, useCallback } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, ChevronRight } from 'lucide-react'
+import {
+  Activity,
+  ArrowDown,
+  Baby,
+  Brain,
+  ChevronRight,
+  Dumbbell,
+  HelpCircle,
+  Layers,
+  Minimize2,
+  Monitor,
+  Trophy,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Button from '@/components/ui/Button'
 import type { ColorScheme, DemographicTabBarSection } from '@/types/content'
+
+// ── Icon map ─────────────────────────────────────────────────
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  Activity,
+  ArrowDown,
+  Baby,
+  Brain,
+  Dumbbell,
+  HelpCircle,
+  Layers,
+  Minimize2,
+  Monitor,
+  Trophy,
+  Zap,
+}
+
+function getIcon(name: string | undefined): LucideIcon | null {
+  if (!name) return null
+  return ICON_MAP[name] ?? null
+}
 
 // ── Props ────────────────────────────────────────────────────
 
@@ -22,111 +57,151 @@ interface DemographicTabBarProps {
 // ── Scheme tokens ────────────────────────────────────────────
 
 interface SchemeTokens {
-  section:         string
-  heading:         string
-  // Inactive selector button
-  btnBase:         string
-  btnHover:        string
-  // Active selector button
-  btnActive:       string
-  // Panel
-  panelBg:         string
-  empathy:         string
-  // Condition card — standard
-  cardBg:          string
-  cardBorder:      string
-  cardHoverBorder: string
-  cardLabel:       string
-  cardBody:        string
-  cardArrow:       string
-  // "Other" condition card
-  otherBg:         string
-  otherBorder:     string
-  otherLabel:      string
-  otherBody:       string
-  darkMode:        boolean
+  section:           string
+  heading:           string
+  containerBorder:   string
+  sidebarBg:         string
+  sidebarLabel:      string
+  sidebarDivider:    string
+  btnBase:           string
+  btnHover:          string
+  btnActive:         string
+  imageFallbackBg:   string
+  imageFallbackText: string
+  panelBg:           string
+  empathy:           string
+  rowBg:             string
+  rowBorder:         string
+  rowHover:          string
+  rowLabel:          string
+  rowDesc:           string
+  rowArrow:          string
+  iconBg:            string
+  iconColor:         string
+  otherRowBg:        string
+  otherRowBorder:    string
+  otherLabel:        string
+  otherIconBg:       string
+  otherIconColor:    string
+  darkMode:          boolean
 }
 
 const schemeTokens: Record<ColorScheme, SchemeTokens> = {
   1: {
-    section:         'bg-neutral-0',
-    heading:         'text-eerie-black',
-    btnBase:         'bg-hemlock-50 border border-dun text-eerie-black',
-    btnHover:        'hover:bg-cerulean/8 hover:border-cerulean hover:text-cerulean hover:shadow-sm',
-    btnActive:       'bg-cerulean border border-cerulean text-neutral-0 shadow-lg',
-    panelBg:         'bg-neutral-100',
-    empathy:         'text-text-muted',
-    cardBg:          'bg-neutral-0',
-    cardBorder:      'border-border',
-    cardHoverBorder: 'hover:border-cerulean',
-    cardLabel:       'text-eerie-black',
-    cardBody:        'text-text-muted',
-    cardArrow:       'text-cerulean',
-    otherBg:         'bg-cerulean/5',
-    otherBorder:     'border-cerulean/40',
-    otherLabel:      'text-cerulean',
-    otherBody:       'text-text-muted',
-    darkMode:        false,
+    section:           'bg-neutral-0',
+    heading:           'text-eerie-black',
+    containerBorder:   'border border-border-subtle shadow-card',
+    sidebarBg:         'bg-hemlock-50',
+    sidebarLabel:      'text-text-muted',
+    sidebarDivider:    'border-border-subtle',
+    btnBase:           'bg-neutral-0 border border-border text-eerie-black',
+    btnHover:          'hover:bg-cerulean/8 hover:border-cerulean hover:text-cerulean',
+    btnActive:         'bg-cerulean border-cerulean text-neutral-0 shadow-md',
+    imageFallbackBg:   'bg-hemlock-100',
+    imageFallbackText: 'text-hemlock-400',
+    panelBg:           'bg-neutral-100',
+    empathy:           'text-text-muted',
+    rowBg:             'bg-neutral-0',
+    rowBorder:         'border border-border',
+    rowHover:          'hover:border-cerulean hover:shadow-sm',
+    rowLabel:          'text-eerie-black',
+    rowDesc:           'text-text-muted',
+    rowArrow:          'text-cerulean',
+    iconBg:            'bg-cerulean/10',
+    iconColor:         'text-cerulean',
+    otherRowBg:        'bg-cerulean/5',
+    otherRowBorder:    'border border-dashed border-cerulean/30',
+    otherLabel:        'text-cerulean',
+    otherIconBg:       'bg-cerulean/10',
+    otherIconColor:    'text-cerulean',
+    darkMode:          false,
   },
   2: {
-    section:         'bg-neutral-100',
-    heading:         'text-eerie-black',
-    btnBase:         'bg-hemlock-50 border border-dun text-eerie-black',
-    btnHover:        'hover:bg-cerulean/8 hover:border-cerulean hover:text-cerulean hover:shadow-sm',
-    btnActive:       'bg-cerulean border border-cerulean text-neutral-0 shadow-lg',
-    panelBg:         'bg-neutral-0',
-    empathy:         'text-text-muted',
-    cardBg:          'bg-neutral-100',
-    cardBorder:      'border-border',
-    cardHoverBorder: 'hover:border-cerulean',
-    cardLabel:       'text-eerie-black',
-    cardBody:        'text-text-muted',
-    cardArrow:       'text-cerulean',
-    otherBg:         'bg-cerulean/5',
-    otherBorder:     'border-cerulean/40',
-    otherLabel:      'text-cerulean',
-    otherBody:       'text-text-muted',
-    darkMode:        false,
+    section:           'bg-neutral-100',
+    heading:           'text-eerie-black',
+    containerBorder:   'border border-border-subtle shadow-card',
+    sidebarBg:         'bg-neutral-0',
+    sidebarLabel:      'text-text-muted',
+    sidebarDivider:    'border-border-subtle',
+    btnBase:           'bg-neutral-100 border border-border text-eerie-black',
+    btnHover:          'hover:bg-cerulean/8 hover:border-cerulean hover:text-cerulean',
+    btnActive:         'bg-cerulean border-cerulean text-neutral-0 shadow-md',
+    imageFallbackBg:   'bg-hemlock-100',
+    imageFallbackText: 'text-hemlock-400',
+    panelBg:           'bg-neutral-0',
+    empathy:           'text-text-muted',
+    rowBg:             'bg-neutral-100',
+    rowBorder:         'border border-border',
+    rowHover:          'hover:border-cerulean hover:shadow-sm',
+    rowLabel:          'text-eerie-black',
+    rowDesc:           'text-text-muted',
+    rowArrow:          'text-cerulean',
+    iconBg:            'bg-cerulean/10',
+    iconColor:         'text-cerulean',
+    otherRowBg:        'bg-cerulean/5',
+    otherRowBorder:    'border border-dashed border-cerulean/30',
+    otherLabel:        'text-cerulean',
+    otherIconBg:       'bg-cerulean/10',
+    otherIconColor:    'text-cerulean',
+    darkMode:          false,
   },
   3: {
-    section:         'bg-hemlock-50',
-    heading:         'text-eerie-black',
-    btnBase:         'bg-neutral-0 border border-dun text-eerie-black',
-    btnHover:        'hover:bg-cerulean/8 hover:border-cerulean hover:text-cerulean hover:shadow-sm',
-    btnActive:       'bg-cerulean border border-cerulean text-neutral-0 shadow-lg',
-    panelBg:         'bg-neutral-0',
-    empathy:         'text-text-muted',
-    cardBg:          'bg-hemlock-50',
-    cardBorder:      'border-border',
-    cardHoverBorder: 'hover:border-cerulean',
-    cardLabel:       'text-eerie-black',
-    cardBody:        'text-text-muted',
-    cardArrow:       'text-cerulean',
-    otherBg:         'bg-cerulean/5',
-    otherBorder:     'border-cerulean/40',
-    otherLabel:      'text-cerulean',
-    otherBody:       'text-text-muted',
-    darkMode:        false,
+    section:           'bg-hemlock-50',
+    heading:           'text-eerie-black',
+    containerBorder:   'border border-border-subtle shadow-card',
+    sidebarBg:         'bg-neutral-0',
+    sidebarLabel:      'text-text-muted',
+    sidebarDivider:    'border-border-subtle',
+    btnBase:           'bg-hemlock-50 border border-border text-eerie-black',
+    btnHover:          'hover:bg-cerulean/8 hover:border-cerulean hover:text-cerulean',
+    btnActive:         'bg-cerulean border-cerulean text-neutral-0 shadow-md',
+    imageFallbackBg:   'bg-hemlock-100',
+    imageFallbackText: 'text-hemlock-400',
+    panelBg:           'bg-neutral-0',
+    empathy:           'text-text-muted',
+    rowBg:             'bg-hemlock-50',
+    rowBorder:         'border border-border',
+    rowHover:          'hover:border-cerulean hover:shadow-sm',
+    rowLabel:          'text-eerie-black',
+    rowDesc:           'text-text-muted',
+    rowArrow:          'text-cerulean',
+    iconBg:            'bg-cerulean/10',
+    iconColor:         'text-cerulean',
+    otherRowBg:        'bg-cerulean/5',
+    otherRowBorder:    'border border-dashed border-cerulean/30',
+    otherLabel:        'text-cerulean',
+    otherIconBg:       'bg-cerulean/10',
+    otherIconColor:    'text-cerulean',
+    darkMode:          false,
   },
   4: {
-    section:         'bg-hemlock-400',
-    heading:         'text-neutral-0',
-    btnBase:         'bg-hemlock-500/40 border border-neutral-0/20 text-neutral-0/80',
-    btnHover:        'hover:border-cerulean hover:bg-cerulean/20 hover:text-neutral-0',
-    btnActive:       'bg-cerulean border border-cerulean text-neutral-0 shadow-lg',
-    panelBg:         'bg-hemlock-500',
-    empathy:         'text-neutral-0/80',
-    cardBg:          'bg-hemlock-400/60',
-    cardBorder:      'border-neutral-0/20',
-    cardHoverBorder: 'hover:border-neutral-0/60',
-    cardLabel:       'text-neutral-0',
-    cardBody:        'text-neutral-0/70',
-    cardArrow:       'text-neutral-0/60',
-    otherBg:         'bg-neutral-0/10',
-    otherBorder:     'border-neutral-0/30',
-    otherLabel:      'text-neutral-0',
-    otherBody:       'text-neutral-0/70',
-    darkMode:        true,
+    section:           'bg-hemlock-400',
+    heading:           'text-neutral-0',
+    containerBorder:   'border border-neutral-0/10 shadow-lg',
+    sidebarBg:         'bg-hemlock-600',
+    sidebarLabel:      'text-neutral-0/50',
+    sidebarDivider:    'border-neutral-0/10',
+    btnBase:           'bg-hemlock-500/40 border border-neutral-0/20 text-neutral-0/80',
+    btnHover:          'hover:border-cerulean hover:bg-cerulean/20 hover:text-neutral-0',
+    btnActive:         'bg-cerulean border-cerulean text-neutral-0 shadow-md',
+    imageFallbackBg:   'bg-hemlock-600',
+    imageFallbackText: 'text-neutral-0/30',
+    panelBg:           'bg-hemlock-500',
+    empathy:           'text-neutral-0/80',
+    rowBg:             'bg-hemlock-400/60',
+    rowBorder:         'border border-neutral-0/20',
+    rowHover:          'hover:border-neutral-0/50',
+    rowLabel:          'text-neutral-0',
+    rowDesc:           'text-neutral-0/70',
+    rowArrow:          'text-neutral-0/60',
+    iconBg:            'bg-neutral-0/15',
+    iconColor:         'text-neutral-0',
+    otherRowBg:        'bg-neutral-0/8',
+    otherRowBorder:    'border border-dashed border-neutral-0/25',
+    otherLabel:        'text-neutral-0',
+    otherIconBg:       'bg-neutral-0/15',
+    otherIconColor:    'text-neutral-0/70',
+    darkMode:          true,
   },
 }
 
@@ -135,19 +210,19 @@ const schemeTokens: Record<ColorScheme, SchemeTokens> = {
 export default function DemographicTabBar({ data, className }: DemographicTabBarProps) {
   const { headline, tabs, scheme } = data
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number>(0)
   const btnRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   const cfg = schemeTokens[scheme]
+  const activeTab = tabs[activeIndex]
 
-  // ARIA keyboard navigation
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
       let next: number | null = null
-      if (e.key === 'ArrowRight') next = (index + 1) % tabs.length
-      if (e.key === 'ArrowLeft')  next = (index - 1 + tabs.length) % tabs.length
-      if (e.key === 'Home')       next = 0
-      if (e.key === 'End')        next = tabs.length - 1
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (index + 1) % tabs.length
+      if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft')  next = (index - 1 + tabs.length) % tabs.length
+      if (e.key === 'Home') next = 0
+      if (e.key === 'End')  next = tabs.length - 1
       if (next !== null) {
         e.preventDefault()
         setActiveIndex(next)
@@ -177,117 +252,205 @@ export default function DemographicTabBar({ data, className }: DemographicTabBar
           </h2>
         )}
 
-        {/* ── Demographic selector buttons ─────────────────── */}
+        {/* ── 3-col grid container ──────────────────────────── */}
         <div
-          role="tablist"
-          aria-label="Patient demographics"
-          className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-3"
+          className={cn(
+            'grid grid-cols-1 lg:grid-cols-[210px_1fr_340px]',
+            'rounded-2xl overflow-hidden',
+            cfg.containerBorder,
+          )}
         >
-          {tabs.map((tab, i) => {
-            const isActive = i === activeIndex
-            return (
-              <button
-                key={tab.id}
-                id={`tab-${tab.id}`}
-                role="tab"
-                aria-selected={isActive}
-                aria-controls={`panel-${tab.id}`}
-                tabIndex={isActive || activeIndex === null ? 0 : -1}
-                ref={el => { btnRefs.current[i] = el }}
-                onClick={() => setActiveIndex(isActive ? null : i)}
-                onKeyDown={e => handleKeyDown(e, i)}
-                className={cn(
-                  'group rounded-xl px-6 py-5 text-left text-lg font-semibold',
-                  'transition-colors duration-200 outline-none',
-                  'focus-visible:ring-2 focus-visible:ring-cerulean focus-visible:ring-offset-2',
-                  isActive
-                    ? cfg.btnActive
-                    : cn(cfg.btnBase, cfg.btnHover),
-                )}
-              >
-                <span className="flex items-center justify-between gap-3">
-                  {tab.label}
-                  <ChevronRight
-                    size={18}
-                    aria-hidden="true"
-                    className={cn(
-                      'shrink-0 transition-[transform,opacity] duration-200',
-                      isActive
-                        ? 'rotate-90 opacity-100'
-                        : 'opacity-40 group-hover:opacity-80 group-hover:translate-x-0.5',
-                    )}
-                  />
-                </span>
-              </button>
-            )
-          })}
-        </div>
 
-        {/* ── Tab panels ────────────────────────────────────── */}
-        {tabs.map((tab, i) => {
-          const isActive = i === activeIndex
-          return (
-            <div
-              key={tab.id}
-              id={`panel-${tab.id}`}
-              role="tabpanel"
-              aria-labelledby={`tab-${tab.id}`}
-              hidden={!isActive}
+          {/* ── Left: Vertical pill selector ──────────────── */}
+          <div
+            role="tablist"
+            aria-label="Patient demographics"
+            aria-orientation="vertical"
+            className={cn(
+              'flex flex-row lg:flex-col',
+              'gap-2 p-4 lg:p-5',
+              'overflow-x-auto lg:overflow-x-visible',
+              cfg.sidebarBg,
+              'border-b lg:border-b-0 lg:border-r',
+              cfg.sidebarDivider,
+            )}
+          >
+            <p
+              aria-hidden="true"
               className={cn(
-                'rounded-2xl p-6 md:p-8 lg:p-10',
-                cfg.panelBg,
+                'hidden lg:block mb-2 text-[10px] font-semibold uppercase tracking-wider',
+                cfg.sidebarLabel,
               )}
             >
-              {/* Empathy statement */}
-              {tab.empathyStatement && (
-                <p className={cn('mb-8 max-w-2xl text-lg leading-relaxed', cfg.empathy)}>
-                  {tab.empathyStatement}
-                </p>
-              )}
+              I am a…
+            </p>
 
-              {/* Condition cards — 2-col grid */}
-              {tab.conditions.length > 0 && (
+            {tabs.map((tab, i) => {
+              const isActive = i === activeIndex
+              return (
+                <button
+                  key={tab.id}
+                  id={`dtab-${tab.id}`}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls={`dpanel-${tab.id}`}
+                  tabIndex={isActive ? 0 : -1}
+                  ref={el => { btnRefs.current[i] = el }}
+                  onClick={() => setActiveIndex(i)}
+                  onKeyDown={e => handleKeyDown(e, i)}
+                  className={cn(
+                    'shrink-0 lg:shrink rounded-xl px-4 py-3',
+                    'text-sm font-semibold text-left whitespace-nowrap lg:whitespace-normal',
+                    'transition-colors duration-200 outline-none',
+                    'focus-visible:ring-2 focus-visible:ring-cerulean focus-visible:ring-offset-2',
+                    isActive
+                      ? cfg.btnActive
+                      : cn(cfg.btnBase, cfg.btnHover),
+                  )}
+                >
+                  <span className="flex items-center justify-between gap-2">
+                    {tab.label}
+                    <ChevronRight
+                      size={14}
+                      aria-hidden="true"
+                      className={cn(
+                        'shrink-0 transition-[transform,opacity] duration-200',
+                        isActive ? 'opacity-100' : 'opacity-0 lg:opacity-25',
+                      )}
+                    />
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+
+          {/* ── Middle: Demographic photo (opacity crossfade) ── */}
+          <div className="relative min-h-[260px] lg:min-h-[560px]">
+            {tabs.map((tab, i) => (
+              <div
+                key={i}
+                aria-hidden="true"
+                className={cn(
+                  'absolute inset-0 transition-opacity duration-500',
+                  i === activeIndex ? 'opacity-100 z-10' : 'opacity-0 z-0',
+                )}
+              >
+                {tab.image ? (
+                  <Image
+                    src={tab.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover object-top"
+                  />
+                ) : (
+                  <div
+                    className={cn(
+                      'h-full w-full flex items-center justify-center',
+                      cfg.imageFallbackBg,
+                    )}
+                  >
+                    <span
+                      className={cn(
+                        'font-heading font-bold text-6xl opacity-20',
+                        cfg.imageFallbackText,
+                      )}
+                    >
+                      {tab.label.charAt(0)}
+                    </span>
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Bottom gradient so label badge is legible */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-t from-eerie-black/50 via-transparent to-transparent"
+            />
+
+            {/* Active tab label badge */}
+            <div aria-hidden="true" className="absolute bottom-4 left-4 z-30 pointer-events-none">
+              <span className="text-xs font-semibold text-neutral-0 bg-eerie-black/60 backdrop-blur-sm rounded-full px-3 py-1.5">
+                {activeTab.label}
+              </span>
+            </div>
+          </div>
+
+          {/* ── Right: Conditions panel wrapper (always 3rd column) ── */}
+          <div className={cn(cfg.panelBg)}>
+            {tabs.map((tab, i) => (
+              <div
+                key={tab.id}
+                id={`dpanel-${tab.id}`}
+                role="tabpanel"
+                aria-labelledby={`dtab-${tab.id}`}
+                className={cn(
+                  'flex flex-col gap-5 p-6 lg:p-7 h-full',
+                  'overflow-y-auto',
+                  i !== activeIndex && 'hidden',
+                )}
+              >
+                {/* Empathy statement */}
+                {tab.empathyStatement && (
+                  <p className={cn('text-sm leading-relaxed', cfg.empathy)}>
+                    {tab.empathyStatement}
+                  </p>
+                )}
+
+                {/* Condition rows */}
                 <ul
                   aria-label={`Common conditions for ${tab.label}`}
-                  className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2"
+                  className="flex flex-col gap-2"
                 >
                   {tab.conditions.map((condition, j) => {
                     const isOther = !condition.slug
-                    const cardInner = (
+                    const Icon = getIcon(condition.icon)
+
+                    const rowInner = (
                       <div
                         className={cn(
-                          'flex h-full flex-col gap-2 rounded-xl border p-5 transition-colors duration-150',
+                          'flex items-start gap-3 rounded-xl px-4 py-3',
+                          'transition-[border-color,box-shadow] duration-150',
                           isOther
-                            ? cn('border-dashed', cfg.otherBg, cfg.otherBorder)
-                            : cn(cfg.cardBg, cfg.cardBorder, condition.slug && cfg.cardHoverBorder),
+                            ? cn(cfg.otherRowBg, cfg.otherRowBorder)
+                            : cn(cfg.rowBg, cfg.rowBorder, cfg.rowHover),
                         )}
                       >
-                        <p
+                        {/* Icon circle */}
+                        <div
                           className={cn(
-                            'text-sm font-semibold',
-                            isOther ? cfg.otherLabel : cfg.cardLabel,
+                            'mt-0.5 flex shrink-0 items-center justify-center',
+                            'w-7 h-7 rounded-full',
+                            isOther ? cfg.otherIconBg : cfg.iconBg,
                           )}
                         >
-                          {condition.label}
-                        </p>
-                        <p
-                          className={cn(
-                            'text-sm leading-relaxed',
-                            isOther ? cfg.otherBody : cfg.cardBody,
+                          {Icon && (
+                            <Icon
+                              size={13}
+                              aria-hidden="true"
+                              className={isOther ? cfg.otherIconColor : cfg.iconColor}
+                            />
                           )}
-                        >
-                          {condition.description}
-                        </p>
-                        {condition.slug && (
-                          <span
+                        </div>
+
+                        {/* Text */}
+                        <div className="min-w-0 flex-1">
+                          <p className={cn('text-sm font-semibold leading-snug', isOther ? cfg.otherLabel : cfg.rowLabel)}>
+                            {condition.label}
+                          </p>
+                          <p className={cn('mt-0.5 text-xs leading-relaxed', cfg.rowDesc)}>
+                            {condition.description}
+                          </p>
+                        </div>
+
+                        {/* Arrow (linked rows only) */}
+                        {!isOther && (
+                          <ChevronRight
+                            size={14}
                             aria-hidden="true"
-                            className={cn(
-                              'mt-auto flex items-center gap-1 text-xs font-semibold',
-                              cfg.cardArrow,
-                            )}
-                          >
-                            Learn more <ArrowRight size={12} />
-                          </span>
+                            className={cn('mt-1 shrink-0', cfg.rowArrow)}
+                          />
                         )}
                       </div>
                     )
@@ -298,43 +461,35 @@ export default function DemographicTabBar({ data, className }: DemographicTabBar
                           <Link
                             href={`/conditions/${condition.slug}`}
                             aria-label={`Learn about ${condition.label}`}
-                            className="block h-full"
+                            className="block"
                           >
-                            {cardInner}
+                            {rowInner}
                           </Link>
                         ) : (
-                          cardInner
+                          rowInner
                         )}
                       </li>
                     )
                   })}
                 </ul>
-              )}
 
-              {/* CTA */}
-              <Button
-                label={tab.cta.label}
-                href={tab.cta.href}
-                external={tab.cta.external ?? true}
-                variant={tab.cta.variant ?? (cfg.darkMode ? 'secondary' : 'primary')}
-                size="md"
-                className={
-                  cfg.darkMode
-                    ? 'border-neutral-0 text-neutral-0 hover:bg-neutral-0/10'
-                    : undefined
-                }
-              />
-            </div>
-          )
-        })}
+                {/* CTA */}
+                <Button
+                  label={tab.cta.label}
+                  href={tab.cta.href}
+                  external={tab.cta.external ?? true}
+                  variant={tab.cta.variant ?? (cfg.darkMode ? 'secondary' : 'primary')}
+                  size="md"
+                  className={cn(
+                    'mt-auto',
+                    cfg.darkMode ? 'border-neutral-0 text-neutral-0 hover:bg-neutral-0/10' : undefined,
+                  )}
+                />
+              </div>
+            ))}
+          </div>
 
-        {/* Prompt shown when no demographic is selected */}
-        {activeIndex === null && (
-          <p className={cn('text-sm', cfg.empathy)}>
-            Select a category above to see common conditions we treat.
-          </p>
-        )}
-
+        </div>
       </div>
     </section>
   )
