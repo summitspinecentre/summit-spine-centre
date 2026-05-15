@@ -17,7 +17,20 @@ export default function Navbar() {
   const [activeMobileSection, setActiveMobileSection] = useState<string | null>(null)
   const [logoError, setLogoError]             = useState(false)
   const { variant } = useNavTheme()
-  const navRef = useRef<HTMLDivElement>(null)
+  const navRef          = useRef<HTMLDivElement>(null)
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const openDropdown = (href: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
+    setActiveDropdown(href)
+  }
+
+  const scheduleCloseDropdown = () => {
+    closeTimeoutRef.current = setTimeout(() => setActiveDropdown(null), 150)
+  }
 
   const isHero = variant === 'hero'
 
@@ -68,7 +81,7 @@ export default function Navbar() {
       <div className="max-w-[1200px] mx-auto px-6 h-full flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" aria-label={`${LOGO.alt} — Home`} className="flex-shrink-0">
+        <Link href="/" aria-label={`${LOGO.alt} — Home`} className="flex-shrink-0" onClick={() => { setMobileOpen(false); setActiveMobileSection(null) }}>
           {logoError ? (
             <span className="font-heading font-bold text-xl text-text">
               {LOGO.alt}
@@ -94,8 +107,8 @@ export default function Navbar() {
             <div
               key={item.href}
               className="relative"
-              onMouseEnter={() => item.children ? setActiveDropdown(item.href) : undefined}
-              onMouseLeave={() => item.children ? setActiveDropdown(null) : undefined}
+              onMouseEnter={() => item.children ? openDropdown(item.href) : undefined}
+              onMouseLeave={() => item.children ? scheduleCloseDropdown() : undefined}
             >
               {item.children ? (
                 <>
@@ -125,6 +138,8 @@ export default function Navbar() {
                     <div
                       role="menu"
                       aria-label={`${item.label} submenu`}
+                      onMouseEnter={() => openDropdown(item.href)}
+                      onMouseLeave={scheduleCloseDropdown}
                       className="absolute top-full left-0 mt-1 py-2 bg-neutral-0 rounded-lg shadow-lg border border-border min-w-[240px] z-20"
                     >
                       {item.children.map((child) => (

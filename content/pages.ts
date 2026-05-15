@@ -63,7 +63,7 @@ export const homePage: HomePage = {
     body:         'Pain has a way of shrinking your world. We help you get it back. Specialized, gentle care in Airdrie — built around the life you actually want to be living.',
     cta:          { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
     secondaryCta: { label: 'Learn About Cox FD', href: '/services/cox-flexion-distraction', variant: 'ghost' },
-    bgImage:      { src: '/devon-hawkins-_v0LMRZAtAo-unsplash-scaled.jpeg', alt: 'Summit Spine Centre chiropractic clinic in Airdrie, Alberta' },
+    bgImage:      { src: '/devon-hawkins-_v0LMRZAtAo-unsplash-scaled.jpeg', alt: 'Summit Spine Centre chiropractic clinic in Airdrie, Alberta', blurDataURL: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAADwAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgADwAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfY+m/LUpX7wYfn8nLT/2gAIAQEAAQUCsd72K4XHcbHI7mDZjNHOpyTShkkn/9oACAEDEQE/Af1Mn9Yfyf/aAAgBAhEBPwH2g/pB+b//2gAIAQEABj8CKo7uIqeAuo/8IM1v4D81f6L9qjqlZdS//8QAMxABAAMAAgICAgIDAQEAAAILAREAITFBUWFxgZGhscHw0RDh8SAwQFBgcICQoLDA0OD/2gAIAQEAAT8h8lIrD9SFcjmFj9lUW/KzRckDxcYZ7mvllb//2gAMAwEAAhEDEQAAEOiv/8QAMxEBAQEAAwABAgUFAQEAAQEJAQARITEQQVFhIHHwkYGhsdHB4fEwQFBgcICQoLDA0OD/2gAIAQMRAT8Q0DTT83/DGHW//9oACAECEQE/EMl5z+P/ACUe9//aAAgBAQABPxAQhFg8EqGuPR/FPr6gUMTIic5r7EzLSdesbLHVKDK3H/tmVsglmuT3Ksrf/9k=' },
     scheme:       4,
   },
   conditionsBar: {
@@ -279,8 +279,9 @@ export const aboutPage: AboutPage = {
     scheme:      4,
     cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
     bgImage: {
-      src: '/images/about/hero.jpg',
-      alt: 'Summit Spine Centre clinic interior in Airdrie, Alberta',
+      src:          '/images/about/hero.jpg',
+      alt:          'Summit Spine Centre clinic interior in Airdrie, Alberta',
+      blurDataURL:  'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAA0AAAAA/8IAEQgADQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAeF9F+Tbj0fnvqBPy4nHb//aAAgBAQABBQKy25JcW0JWDsBLjnlU03c8APjjxHC//9oACAEDEQE/AT0yPj5P/9oACAECEQE/Afdf1D//2gAIAQEABj8CFfN0TrR+ywVLV+LKo1qH2vlQ3SkoTw83/8QAMxABAAMAAgICAgIDAQEAAAILAREAITFBUWFxgZGhscHw0RDh8SAwQFBgcICQoLDA0OD/2gAIAQEAAT8hicB4TVkCwx1UpplUnDSgB53thQhAY/ZL/9oADAMBAAIRAxEAABAgL//EADMRAQEBAAMAAQIFBQEBAAEBCQEAESExEEFRYSBx8JGBobHRweHxMEBQYHCAkKCwwNDg/9oACAEDEQE/EG3lll//2gAIAQIRAT8QV8S7/9oACAEBAAE/EHpUQECvrzXgfhQqNRDjmxF+n/l78HmSPDFICLkNczHmjFKmoD5F/9k=',
     },
   },
 
@@ -480,8 +481,9 @@ export const contactPage: ContactPage = {
     cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
     scheme:      4,
     bgImage: {
-      src: '/images/contact/hero.jpg',
-      alt: 'Summit Spine Centre exterior on Main Street North, Airdrie, Alberta',
+      src:         '/images/contact/hero.jpg',
+      alt:         'Summit Spine Centre exterior on Main Street North, Airdrie, Alberta',
+      blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAA0AAAAA/8IAEQgADQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAbHkfml15h9aR5Wlh//aAAgBAQABBQL9PbEtN1vdglq8TUKJpITzV4GVYf8A/9oACAEDEQE/Af02A/2X9Nj/ACf/2gAIAQIRAT8BHU9XE/xLD/eOZ//aAAgBAQAGPwIUtlUPxDrDYKX/AJQdBtf6yzGDUcGgk1qCxQv/xAAzEAEAAwACAgICAgMBAQAAAgsBEQAhMUFRYXGBkaGxwfDREOHxIDBAUGBwgJCgsMDQ4P/aAAgBAQABPyEewGRsmwW0iKDz/qupBVPiaKpEwfS3SIQd3//aAAwDAQACEQMRAAAQd7//xAAzEQEBAQADAAECBQUBAQABAQkBABEhMRBBUWEgcfCRgaGx0cHh8TBAUGBwgJCgsMDQ4P/aAAgBAxEBPxD4GW/QC//aAAgBAhEBPxDSP5gP9ZPzJ/W//9oACAEBAAE/EF4cdyOd16s0oZJSKkoE2CCkaH9QpYoiPP8AB9UhwTJGMQ8mBRA0YNRkct//2Q==',
     },
   },
   contact: CLINIC_INFO,
@@ -603,8 +605,9 @@ export const servicesPage: ServicesHubPage = {
     secondaryCta: { label: 'See Conditions We Treat', href: '/conditions', variant: 'ghost' },
     scheme:       4,
     bgImage: {
-      src: '/images/services/hero.jpg',
-      alt: 'Chiropractic treatment session at Summit Spine Centre in Airdrie',
+      src:         '/images/services/hero.jpg',
+      alt:         'Chiropractic treatment session at Summit Spine Centre in Airdrie',
+      blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAAsAAAAA/8IAEQgACwAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfU/FOL57JvvS08Ne2f/2gAIAQEAAQUCn3oe7btu822u1FteRiRcex7pIuWzgUrD/9oACAEDEQE/AY5hMykRykP/2gAIAQIRAT8BHSnGIjdwEZH/2gAIAQEABj8CilQmMRVUivpTzdtcpCRAZ+unFSXzEcAafqacDTGtPtLsxIcgZE9v/8QAMxABAAMAAgICAgIDAQEAAAILAREAITFBUWFxgZGhscHw0RDh8SAwQFBgcICQoLDA0OD/2gAIAQEAAT8hKubOiA8WMOqtAeh07+yfxWkfafB/uz7/AIiSal9Ij6/+2c3l/q//2gAMAwEAAhEDEQAAEP5P/8QAMxEBAQEAAwABAgUFAQEAAQEJAQARITEQQVFhIHHwkYGhsdHB4fEwQFBgcICQoLDA0OD/2gAIAQMRAT8QIDpw+2POfnvP8fS5L//aAAgBAhEBPxAip7N5Xjjn6nH6dmwv/9oACAEBAAE/EIkCugkQhCMCRfGTtJT2MV9qZIZAdy5pA8EsNB3g88OUcwCG+wdsG+qzXBVFAH4l+aBBiq+2F//Z',
     },
   },
   featuresList: {
@@ -745,8 +748,9 @@ export const chiropracticPage: ServicePage = {
     scheme:      4,
     cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
     bgImage: {
-      src: '/images/services/chiropractic-adjustments/hero.jpg',
-      alt: 'Chiropractor performing a spinal adjustment at Summit Spine Centre in Airdrie',
+      src:         '/images/services/chiropractic-adjustments/hero.jpg',
+      alt:         'Chiropractor performing a spinal adjustment at Summit Spine Centre in Airdrie',
+      blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAA0AAAAA/8IAEQgADQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAe74TtbDHb4kqvd+VDf/2gAIAQEAAQUC/TO1bftFxv8AY3N5e2S4rmbb7XeIRsW2baiedvXeX3//2gAIAQMRAT8Bx5CJXJOz83//2gAIAQIRAT8B2RrhuX5P/9oACAEBAAY/AtsjvskrWvJSvVORqHMdmqZZhghPw9T8mtNwSldfRot7tJxBr0mjVJt0XIWpISVDUkfa1TSTa/2X/8QAMxABAAMAAgICAgIDAQEAAAILAREAITFBUWFxgZGhscHw0RDh8SAwQFBgcICQoLDA0OD/2gAIAQEAAT8hId61QPYcxFZhi04zP5FkSg6pd5sWhx4HUxMPcNFTy5A71YZqAwcH3f/aAAwDAQACEQMRAAAQF3//xAAzEQEBAQADAAECBQUBAQABAQkBABEhMRBBUWEgcfCRgaGx0cHh8TBAUGBwgJCgsMDQ4P/aAAgBAxEBPxDsTv8A7BK6/X8X/9oACAECEQE/EEMHEj6b9fzf/9oACAEBAAE/EJ2a4RJ1kwqAwTdqp8bIqkjwsE7JvdkWwDgVCgjfWUqwSBGhMgZkBKFQrxyUmExzv1s1ecKp1Q/C/wD/2Q==',
     },
   },
   featureHighlight: {
@@ -835,8 +839,13 @@ export const summitsPage: ServicePage = {
   hero: {
     headline:    'Your Path to Lasting Relief: The Summit Spine Recovery Guide',
     subheadline: 'The work we do in our Airdrie clinic is only half the equation. Getting you to 100% — and keeping you there — means focusing on what happens outside the clinic too.',
-    scheme:      1,
+    scheme:      4,
     cta:         { label: 'Book Your Visit', href: 'https://summitspine.ca/booking/' },
+    bgImage: {
+      src:         '/images/services/summits-of-recovery/hero.jpg',
+      alt:         'Patient recovery session at Summit Spine Centre, Airdrie',
+      blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAAsAAAAA/8IAEQgACwAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAeUB47Vepxe5MeCRjr//2gAIAQEAAQUC/o2IEWe1Wd8m48LYS7vfXdwjbpZImvedy5n/2gAIAQMRAT8BHweC/V/ufB/V/9oACAECEQE/AZfvL1Nej/f3U/0f/9oACAEBAAY/AspZUIA9VBk29zGrWnGjoqRLpLJkCC4TGoiqi1jm1of2U/3H/8QAMxABAAMAAgICAgIDAQEAAAILAREAITFBUWFxgZGhscHw0RDh8SAwQFBgcICQoLDA0OD/2gAIAQEAAT8hz7EvCodAWpP3FNpj5myBJEwM9Fm8ZMPiI/mysMZLMQdtf//aAAwDAQACEQMRAAAQHu//xAAzEQEBAQADAAECBQUBAQABAQkBABEhMRBBUWEgcfCRgaGx0cHh8TBAUGBwgJCgsMDQ4P/aAAgBAxEBPxD/AKD/AJJcf3X/2gAIAQIRAT8Q4I/o/wC2/P8AZf/aAAgBAQABPxBel0MA5WG7AwNIOIHDGNKfiLHZ7C4jwFCGGACPRYw3EkpEN8CPc7UFySixNSvPK3//2Q==',
+    },
   },
 
   featureHighlight: {
@@ -1088,8 +1097,9 @@ export const conditionsPage: ConditionsHubPage = {
     secondaryCta: { label: 'See Our Services', href: '/services', variant: 'ghost' },
     scheme:       4,
     bgImage: {
-      src: '/images/conditions/hero.jpg',
-      alt: 'Patient consultation at Summit Spine Centre, Airdrie chiropractor',
+      src:         '/images/conditions/hero.jpg',
+      alt:         'Patient consultation at Summit Spine Centre, Airdrie chiropractor',
+      blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAAsAAAAA/8IAEQgACwAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAeO774xAjfbpfkdxlf/aAAgBAQABBQLbr3bIbG18V2tzZI3mxuE3KQm9uelUciyn/9oACAEDEQE/AcWQfk+//R//2gAIAQIRAT8BzYSfBp/Rj8z/AK5f/9oACAEBAAY/Al7hui+XLnSFA1UrTjT0qwFrTHLw6j8XzJdw93V5oSjQMU8mJh7deLqS/wD/xAAzEAEAAwACAgICAgMBAQAAAgsBEQAhMUFRYXGBkaGxwfDREOHxIDBAUGBwgJCgsMDQ4P/aAAgBAQABPyGb+pSQfgFy+L5w/WsCQ5aEmuJLHhjugk+ESrH5s1bERPaTarf/2gAMAwEAAhEDEQAAEBn/AP/EADMRAQEBAAMAAQIFBQEBAAEBCQEAESExEEFRYSBx8JGBobHRweHxMEBQYHCAkKCwwNDg/9oACAEDEQE/EADpfz/5L+B+x/i//9oACAECEQE/EFOX8n/S+vt+j5v/2gAIAQEAAT8QaiQo574AC5dJan5hJ00FgJqxECJNiFLh8LIllqz3BkXOJFlRwEnPVg9LIkQ9St39Gvu//9k=',
     },
   },
   conditionsList: {
@@ -1335,7 +1345,12 @@ export const conditionPages: Record<string, ConditionPage> = {
       headline:    'Sciatica and Low Back Pain Relief in Airdrie',
       subheadline: 'Non-surgical treatment for sciatica, nerve pain, or any pain radiating from the low back.',
       cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-      scheme:      1,
+      scheme:      4,
+      bgImage: {
+        src:         '/images/conditions/sciatica/hero.jpg',
+        alt:         'Person experiencing sciatica and low back pain',
+        blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAYABgAAD/4QDcRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUAAAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAGAAAAcgE7AAIAAAANAAAAeIdpAAQAAAABAAAAhgAAAAAAAABgAAAAAQAAAGAAAAABQ2FudmEAVGhyaXZlIEFkbWluAAAABpAAAAcAAAAEMDIxMJEBAAcAAAAEAQIDAKAAAAcAAAAEMDEwMKABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAADQAAAAD/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAeF9F+Tbj0fnvqBPy4nHb//aAAgBAQABBQKy25JcW0JWDsBLjnlU03c8APjjxHC//9oACAEDEQE/AT0yPj5P/9oACAECEQE/Afdf1D//2gAIAQEABj8CFfN0TrR+ywVLV+LKo1qH2vlQ3SkoTw83/8QAMxABAAMAAgICAgIDAQEAAAILAREAITFBUWFxgZGhscHw0RDh8SAwQFBgcICQoLDA0OD/2gAIAQEAAT8hicB4TVkCwx1UpplUnDSgB53thQhAY/ZL/9oADAMBAAIRAxEAABAgL//EADMRAQEBAAMAAQIFBQEBAAEBCQEAESExEEFRYSBx8JGBobHRweHxMEBQYHCAkKCwwNDg/9oACAEDEQE/EG3lll//2gAIAQIRAT8QV8S7/9oACAEBAAE/EHpUQECvrzXgfhQqNRDjmxF+n/l78HmSPDFICLkNczHmjFKmoD5F/9k=',
+      },
     },
 
     overview:
@@ -1484,7 +1499,12 @@ export const conditionPages: Record<string, ConditionPage> = {
       headline:    'Disc Bulge & Herniation Treatment in Airdrie',
       subheadline: 'Non-surgical treatment for disc bulges, herniations, and pain, numbness or tingling radiating from your back or neck.',
       cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-      scheme:      1,
+      scheme:      4,
+      bgImage: {
+        src:         '/images/conditions/disc-herniation/hero.jpg',
+        alt:         'Illustration of a spinal disc bulge and herniation',
+        blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAADAAAAAD/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfhj2DgPcw3zLk4r/9oACAEBAAEFAoqrXucZh2fIvYqfpfxHirwu/wD/2gAIAQMRAT8BFVp//9oACAECEQE/AdP/2gAIAQEABj8CSnjUhyCKpQlUSST8cj/V2tKiv0gcU6ECLnyDJKfZ6Sadv//EADMQAQADAAICAgICAwEBAAACCwERACExQVFhcYGRobHB8NEQ4fEgMEBQYHCAkKCwwNDg/9oACAEBAAE/IQVmEg3lv0et8/4X2UYQmbpUxrQTHgKxHz3Yv//aAAwDAQACEQMRAAAQE2//xAAzEQEBAQADAAECBQUBAQABAQkBABEhMRBBUWEgcfCRgaGx0cHh8TBAUGBwgJCgsMDQ4P/aAAgBAxEBPxBaac/Hn//aAAgBAhEBPxBebb//2gAIAQEAAT8QmstUTAQHd2CziRAfRAX2vzZGwMckMknZPVfqOAG/qAqGCQAYQv8A/9k=',
+      },
     },
 
     overview:
@@ -1655,7 +1675,12 @@ export const conditionPages: Record<string, ConditionPage> = {
       headline:    'Neck Pain Care in Airdrie',
       subheadline: 'Hours of desk work or driving causing your neck to hurt? Maybe it\'s getting harder to shoulder check. You don\'t have to live with it — we assess and treat neck pain with different approaches.',
       cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-      scheme:      1,
+      scheme:      4,
+      bgImage: {
+        src:         '/images/conditions/neck-pain/hero.jpg',
+        alt:         'Person experiencing neck pain and stiffness',
+        blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAA0AAAAA/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAffjX2zy73CZ/f+s9S+X/2gAIAQEAAQUC9ynSkXUu22O2+F499t03MtpFt9x+kNp2jZbOC0//2gAIAQMRAT8B4p3P/9oACAECEQE/AefTT//aAAgBAQAGPwLmBGQQeI4fa7REYwknXqqn5P2R+L9+XLRWSkn7GREac9ND8nY210gLSmv6uDxhzSCa+0//xAAzEAEAAwACAgICAgMBAQAAAgsBEQAhMUFRYXGBkaGxwfDREOHxIDBAUGBwgJCgsMDQ4P/aAAgBAQABPyFlH5rQ8UxMaUgZX7KR87vZXz+GyXk34nMR9c2YJuXPWCaJHNmgtQLlC//aAAwDAQACEQMRAAAQ0D//xAAzEQEBAQADAAECBQUBAQABAQkBABEhMRBBUWEgcfCRgaGx0cHh8TBAUGBwgJCgsMDQ4P/aAAgBAxEBPxANt7mf/9oACAECEQE/EOx8LL//2gAIAQEAAT8Q0JM6Z0uTwWGJIgBgmPYbBztkZ+ATqfgH1VHq9RAhwlR6dRSJsXuFNAEwHuKlINMJa5GwF//Z',
+      },
     },
 
     overview:
@@ -1835,7 +1860,12 @@ export const conditionPages: Record<string, ConditionPage> = {
       headline:    'Arthritis & Degenerative Disc Disease Treatment in Airdrie',
       subheadline: 'Arthritis and age-related spinal changes are extremely common and often become more noticeable over time. While these terms can sound scary, these problems can be well-managed — you can stay active, mobile, and independent.',
       cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-      scheme:      1,
+      scheme:      4,
+      bgImage: {
+        src:         '/images/conditions/back-pain/hero.jpg',
+        alt:         'Person managing back pain and arthritis',
+        blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAA0AAAAA/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfjX2zy73CZ/f+s9S+X/2gAIAQEAAQUC9ynSkXUu22O2+F499t03MtpFt9x+kNp2jZbOC0//2gAIAQMRAT8B4p3P/9oACAECEQE/AefTT//aAAgBAQAGPwLmBGQQeI4fa7REYwknXqqn5P2R+L9+XLRWSkn7GREac9ND8nY210gLSmv6uDxhzSCa+0//xAAzEAEAAwACAgICAgMBAQAAAgsBEQAhMUFRYXGBkaGxwfDREOHxIDBAUGBwgJCgsMDQ4P/aAAgBAQABPyFlH5rQ8UxMaUgZX7KR87vZXz+GyXk34nMR9c2YJuXPWCaJHNmgtQLlC//aAAwDAQACEQMRAAAQ0D//xAAzEQEBAQADAAECBQUBAQABAQkBABEhMRBBUWEgcfCRgaGx0cHh8TBAUGBwgJCgsMDQ4P/aAAgBAxEBPxANt7mf/9oACAECEQE/EOx8LL//2gAIAQEAAT8Q0JM6Z0uTwWGJIgBgmPYbBztkZ+ATqfgH1VHq9RAhwlR6dRSJsXuFNAEwHuKlINMJa5GwF//Z',
+      },
     },
 
     overview:
@@ -2009,7 +2039,12 @@ export const conditionPages: Record<string, ConditionPage> = {
       headline:    'Headache and Migraine Treatment in Airdrie',
       subheadline: 'Stop dealing with headaches or migraines and treat the cause. We provide safe and effective treatment for many types of headaches, migraines, and neck-related pain.',
       cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-      scheme:      1,
+      scheme:      4,
+      bgImage: {
+        src:         '/images/conditions/headaches-migraines/hero.jpg',
+        alt:         'Person experiencing a headache or migraine',
+        blurDataURL: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABSgAwAEAAAAAQAAAA0AAAAA/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfkrr/GnZTuWjWwI/9oACAEBAAEFAtou0Wkcd5bLM0YVIk6RSYC2nkRH/9oACAEDEQE/AdgPl2B//9oACAECEQE/Ad1eG3//2gAIAQEABj8CmKvzPo1QBqfiWSB2X5g+TxD/AP/EADMQAQADAAICAgICAwEBAAACCwERACExQVFhcYGRobHB8NEQ4fEgMEBQYHCAkKCwwNDg/9oACAEBAAE/IefrFQCjccGAn1zZqR8VpFTJAJ6O2UmDf//aAAwDAQACEQMRAAAQNI//xAAzEQEBAQADAAECBQUBAQABAQkBABEhMRBBUWEgcfCRgaGx0cHh8TBAUGBwgJCgsMDQ4P/aAAgBAxEBPxDT+VgOOb//2gAIAQIRAT8Q0Jp5v//aAAgBAQABPxDjNAHaRH92AazAJKfDTGZtfTJAiR+Hv5oOqtPgnGUAD0j1zQUlESD0eZv/2Q==',
+      },
     },
 
     overview:
@@ -2188,7 +2223,12 @@ export const conditionPages: Record<string, ConditionPage> = {
       headline:    'Spinal Stenosis Treatment in Airdrie',
       subheadline: 'Do you find that you can only walk so far before your back or legs start to ache, and when you sit down it goes away quite quickly? Don\'t let stenosis get in the way of living your life.',
       cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-      scheme:      1,
+      scheme:      4,
+      bgImage: {
+        src:         '/images/conditions/spinal-stenosis/hero.webp',
+        alt:         'Illustration of spinal stenosis and nerve compression',
+        blurDataURL: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAADQAAAAD/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAeF9F+Tbj0fnvqBPy4nHb//aAAgBAQABBQKy25JcW0JWDsBLjnlU03c8APjjxHC//9oACAEDEQE/AT0yPj5P/9oACAECEQE/Afdf1D//2gAIAQEABj8CFfN0TrR+ywVLV+LKo1qH2vlQ3SkoTw83/8QAMxABAAMAAgICAgIDAQEAAAILAREAITFBUWFxgZGhscHw0RDh8SAwQFBgcICQoLDA0OD/2gAIAQEAAT8hicB4TVkCwx1UpplUnDSgB53thQhAY/ZL/9oADAMBAAIRAxEAABAgL//EADMRAQEBAAMAAQIFBQEBAAEBCQEAESExEEFRYSBx8JGBobHRweHxMEBQYHCAkKCwwNDg/9oACAEDEQE/EG3lll//2gAIAQIRAT8QV8S7/9oACAEBAAE/EHpUQECvrzXgfhQqNRDjmxF+n/l78HmSPDFICLkNczHmjFKmoD5F/9k=',
+      },
     },
 
     overview:

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { CalendarCheck } from 'lucide-react'
+import { fireGAEvent } from '@/lib/analytics'
 
 interface StickyBookingBarProps {
   label: string
@@ -46,6 +47,7 @@ export default function StickyBookingBar({ label, href }: StickyBookingBarProps)
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => fireGAEvent('booking_cta_click', { label, source: 'sticky_bar' })}
         className={[
           'inline-flex items-center gap-2 rounded-full',
           'bg-cerulean px-6 py-2',

@@ -117,10 +117,12 @@
 ---
 
 ## Analytics
-- [ ] GA4 via `next-gtag` installed
-- [ ] GA4 wired in `app/layout.tsx`
-- [ ] Booking CTA click events firing
-- [ ] Server-side tracking configured
+- [x] GA4 script loaded in `app/layout.tsx` (conditional on `NEXT_PUBLIC_GA_ID`, `strategy="afterInteractive"`)
+- [x] Pageview tracking auto-fires on every route change
+- [x] `lib/analytics.ts` — typed `fireGAEvent()` safe wrapper; `isBookingHref()` helper
+- [x] `components/ui/Button.tsx` — auto-fires `booking_cta_click` (`source: 'cta_button'`) on any href containing `/booking/`
+- [x] `components/ui/StickyBookingBar.tsx` — fires `booking_cta_click` (`source: 'sticky_bar'`) on click
+- [x] Server-side tracking — N/A (Measurement Protocol overkill for clinic site; all meaningful events covered client-side)
 
 ---
 
@@ -132,9 +134,18 @@
 - [x] `/public/images/about/hero.jpg` — added (4928×3264)
 - [ ] `/public/images/team/` — real images added
 - [x] `/public/images/services/hero.jpg` — added (3840×2160)
-- [x] `/public/images/services/chiropractic-adjustments/hero.jpg` — added (6016×4016)
+- [x] `/public/images/services/chiropractic-adjustments/hero.jpg` — added, replaced with new photo
+- [x] `/public/images/services/summits-of-recovery/hero.jpg` — added
 - [x] `/public/images/conditions/hero.jpg` — added (6000×3376)
-- [x] `/public/images/contact/hero.jpg` — added (6720×4480)
+- [x] `/public/images/conditions/back-pain/hero.jpg` — added
+- [x] `/public/images/conditions/disc-herniation/hero.jpg` — added
+- [x] `/public/images/conditions/headaches-migraines/hero.jpg` — added
+- [x] `/public/images/conditions/neck-pain/hero.jpg` — added
+- [x] `/public/images/conditions/sciatica/hero.jpg` — added
+- [x] `/public/images/conditions/spinal-stenosis/hero.webp` — added
+- [x] `/public/images/contact/hero.jpg` — replaced with new photo
+- [ ] `/public/images/conditions/tech-neck/` — needs higher-res photo (current: 300×168px)
+- [ ] `/public/images/conditions/whiplash/` — needs higher-res photo (current: 624×351px)
 
 ---
 
@@ -206,3 +217,5 @@
 | 2026-05-13 | Pages — Utility (Privacy, Terms, Accessibility) | privacyPage (9 sections: PIPA/PIPEDA), termsPage (10 sections: Alberta law), accessibilityPage (6 sections: WCAG 2.1 AA) — all stubs fully populated; components/templates/UtilityPageTemplate.tsx: Server Component, centered max-w-3xl prose layout, H1 + last-updated <time>, section list (h2 + \n\n-split paragraphs, dividers); app/privacy, /terms, /accessibility: generateMetadata (title.absolute), each wraps UtilityPageTemplate; 0 TS errors, all 3 routes verified in browser. |
 | 2026-05-14 | Animation System — FadeIn + Hero entrance | framer-motion v12 installed; FadeIn.tsx (whileInView fade+slide-up, useReducedMotion, viewport once); hero CSS stagger sequence (6 elements, 80ms–900ms delays, fill-mode:both, reduced-motion override); Hero.tsx: hero-* classes applied, stays pure Server Component; app/page.tsx: all 10 below-fold sections wrapped in FadeIn; 0 TS errors, 0 console errors, verified in browser. |
 | 2026-05-14 | Hero images — 5 pages | Copied 5 real photos into public/images/[page]/hero.jpg (about, services, services/chiropractic-adjustments, conditions, contact); updated content/pages.ts hero.bgImage + scheme:4 for all 5 pages; full-bleed dark-overlay layout matches homepage; 0 TS errors, 0 console errors, all 5 pages verified in browser. |
+| 2026-05-15 | Analytics — GA4 booking CTA tracking | lib/analytics.ts: typed fireGAEvent() safe wrapper + isBookingHref() helper; Button.tsx: auto-fires booking_cta_click (source: cta_button) on any href containing /booking/ — zero call-site changes needed; StickyBookingBar.tsx: fires booking_cta_click (source: sticky_bar) on click; server-side tracking marked N/A; 0 TS errors, dev server clean. |
+| 2026-05-15 | Navbar UX — dropdown sensitivity + adaptive text colour | Navbar.tsx: added closeTimeoutRef + openDropdown/scheduleCloseDropdown (150ms delay) so diagonal mouse movement from trigger to dropdown no longer dismisses the menu; dropdown panel also gets onMouseEnter/onMouseLeave to keep it open; Hero.tsx: added SetNavVariant rendered inside the section — variant='hero' (white text) when hasBgImage or cfg.darkMode, variant='page' (dark text) otherwise; all dark-hero pages now auto-set white nav text with zero per-page wiring; removed redundant manual SetNavVariant from app/page.tsx; 0 TS errors, 0 console errors, verified home (white text on dark), team (dark text on white), neck-pain condition (white text on dark). |

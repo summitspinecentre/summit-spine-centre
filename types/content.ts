@@ -93,7 +93,7 @@ export interface HeroSection {
   secondaryCta?: CTAButton
   image?: ImageAsset
   videoUrl?: string     // ambient background video (muted, looping)
-  bgImage?: { src: string; alt: string }  // full-bleed background image with zoom effect
+  bgImage?: { src: string; alt: string; blurDataURL?: string }  // full-bleed background image with zoom effect
   pullQuote?: { text: string; attribution: string }  // right-panel quote card (two-col, no image)
   scheme: ColorScheme
 }

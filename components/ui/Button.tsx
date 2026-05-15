@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { fireGAEvent, isBookingHref } from '@/lib/analytics'
 
 interface ButtonProps {
   label: string
@@ -52,7 +53,14 @@ export default function Button({
   )
 
   if (href) {
-    const sharedAttrs = { className: base, 'aria-label': ariaLabel ?? label }
+    const handleBookingClick = isBookingHref(href)
+      ? () => fireGAEvent('booking_cta_click', { label, source: 'cta_button' })
+      : undefined
+    const sharedAttrs = {
+      className:   base,
+      'aria-label': ariaLabel ?? label,
+      onClick:     handleBookingClick,
+    }
     return external ? (
       <a href={href} target="_blank" rel="noopener noreferrer" {...sharedAttrs}>
         {label}

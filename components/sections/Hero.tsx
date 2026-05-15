@@ -7,6 +7,7 @@
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import Button from '@/components/ui/Button'
+import SetNavVariant from '@/components/layout/SetNavVariant'
 import type { ColorScheme, HeroSection, StatItem } from '@/types/content'
 
 // ── Props ────────────────────────────────────────────────────
@@ -117,6 +118,7 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
         className,
       )}
     >
+      <SetNavVariant variant={hasBgImage || cfg.darkMode ? 'hero' : 'page'} />
       {/* ── Full-bleed background image with zoom effect ──── */}
       {hasBgImage && bgImage && (
         <>
@@ -126,6 +128,8 @@ export default function Hero({ data, eyebrow, statsBar, bottomFade, scrollFade, 
             fill
             priority
             sizes="100vw"
+            placeholder={bgImage.blurDataURL ? 'blur' : 'empty'}
+            blurDataURL={bgImage.blurDataURL}
             className="object-cover animate-hero-zoom"
           />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-eerie-black/65 via-eerie-black/55 to-eerie-black/10" />

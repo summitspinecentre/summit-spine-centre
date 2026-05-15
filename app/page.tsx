@@ -15,7 +15,6 @@ import FAQSection from '@/components/sections/FAQSection'
 import CTASection from '@/components/sections/CTASection'
 import WhySummitSection from '@/components/sections/WhySummitSection'
 import { homePage } from '@/content/pages'
-import SetNavVariant from '@/components/layout/SetNavVariant'
 
 // ── Metadata ─────────────────────────────────────────────────
 
@@ -55,8 +54,6 @@ const serviceItems = homePage.services.items.map((item, i) => ({
 export default function HomePage() {
   return (
     <main>
-
-      <SetNavVariant variant="hero" />
 
       {/* ✅ Hero — scheme 4 (dark) */}
       <Hero
