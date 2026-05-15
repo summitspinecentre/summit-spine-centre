@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" aria-label={`${LOGO.alt} — Home`}>
-              <Image src={LOGO.darkSrc} alt={LOGO.alt} width={160} height={36} />
+              <Image src={LOGO.colourSrc} alt={LOGO.alt} width={160} height={36} />
             </Link>
             <p className="mt-3 text-sm text-text-muted leading-relaxed italic">
               {TAGLINE}

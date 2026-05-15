@@ -89,13 +89,16 @@ export default function Navbar() {
           ) : (
             <div className="relative h-12 w-60">
               <Image
-                src={LOGO.darkSrc}
+                src={scrolled ? LOGO.colourSrc : LOGO.invertedSrc}
                 alt={LOGO.alt}
                 fill
                 sizes="240px"
                 priority
                 onError={() => setLogoError(true)}
-                className="object-contain object-left"
+                className={cn(
+                  'object-contain object-left',
+                  !scrolled && 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]',
+                )}
               />
             </div>
           )}

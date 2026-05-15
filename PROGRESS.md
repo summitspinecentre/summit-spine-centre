@@ -127,8 +127,10 @@
 ---
 
 ## Assets
-- [ ] `/public/logo/logo-light.svg` — uploaded
-- [ ] `/public/logo/logo-dark.svg` — uploaded
+- [x] `/public/logo/logo-colour-primary.png` — real logo, light backgrounds (nav scrolled, footer)
+- [x] `/public/logo/logo-inverted-primary.png` — real logo, dark backgrounds (nav on hero)
+- [x] `/public/logo/logo-colour-secondary.png` — real secondary logo, light backgrounds
+- [x] `/public/logo/logo-inverted-secondary.png` — real secondary logo, dark backgrounds
 - [ ] `/public/placeholders/` — placeholder images added
 - [ ] `/public/images/home/` — real images added
 - [x] `/public/images/about/hero.jpg` — added (4928×3264)
@@ -220,3 +222,4 @@
 | 2026-05-15 | Analytics — GA4 booking CTA tracking | lib/analytics.ts: typed fireGAEvent() safe wrapper + isBookingHref() helper; Button.tsx: auto-fires booking_cta_click (source: cta_button) on any href containing /booking/ — zero call-site changes needed; StickyBookingBar.tsx: fires booking_cta_click (source: sticky_bar) on click; server-side tracking marked N/A; 0 TS errors, dev server clean. |
 | 2026-05-15 | Lighthouse performance — image delivery + non-composited animations | next.config.ts: added images.formats ['image/avif','image/webp'] + minimumCacheTTL:60 (addresses 72 KiB image delivery saving); scoped transition-all → specific properties in 5 components (7 instances total): Navbar transition-[background-color,box-shadow] duration-300 (was transition-all duration-700 — height was forcing layout); StickyBookingBar transition-[opacity,transform]; ConditionsGrid + ServicesGrid cards transition-[transform,box-shadow,border-color]; DemographicTabBar buttons transition-colors, chevron transition-[transform,opacity], condition cards transition-colors; 0 TS errors, 0 console errors, verified in browser. |
 | 2026-05-15 | Navbar UX — dropdown sensitivity + adaptive text colour | Navbar.tsx: added closeTimeoutRef + openDropdown/scheduleCloseDropdown (150ms delay) so diagonal mouse movement from trigger to dropdown no longer dismisses the menu; dropdown panel also gets onMouseEnter/onMouseLeave to keep it open; Hero.tsx: added SetNavVariant rendered inside the section — variant='hero' (white text) when hasBgImage or cfg.darkMode, variant='page' (dark text) otherwise; all dark-hero pages now auto-set white nav text with zero per-page wiring; removed redundant manual SetNavVariant from app/page.tsx; 0 TS errors, 0 console errors, verified home (white text on dark), team (dark text on white), neck-pain condition (white text on dark). |
+| 2026-05-15 | Logo integration — real brand PNGs | 4 PNGs copied to public/logo/ (colour-primary, colour-secondary, inverted-primary, inverted-secondary); styles/tokens.ts: LOGO.lightSrc/darkSrc replaced with colourSrc/invertedSrc/colourSecondarySrc/invertedSecondarySrc; Navbar.tsx: logo src switches on isHero && !scrolled — invertedSrc on dark hero, colourSrc on white scrolled nav; Footer.tsx: updated to colourSrc (light hemlock-50 background); 0 TS errors, verified in browser — inverted logo on homepage hero, colour logo on /team light nav and in footer. |

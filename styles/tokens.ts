@@ -241,10 +241,12 @@ export const Z = {
 
 // ── LOGO ─────────────────────────────────────────────────────
 export const LOGO = {
-  minSizePx: 20,                    // Brand Kit: minimum 20px screen size
-  lightSrc:  '/logo/Logomark_1-Summit-Spine-Centre-289x300.png', // Icon mark — transparent bg, for dark/transparent nav
-  darkSrc:   '/logo/logo-wordmark.png',  // Full wordmark — white bg, for scrolled white nav
-  alt:       'Summit Spine Centre',
+  minSizePx:            20,
+  colourSrc:            '/logo/logo-colour-primary.png',
+  invertedSrc:          '/logo/logo-inverted-primary.png',
+  colourSecondarySrc:   '/logo/logo-colour-secondary.png',
+  invertedSecondarySrc: '/logo/logo-inverted-secondary.png',
+  alt:                  'Summit Spine Centre',
 } as const
 
 // ── CTA ──────────────────────────────────────────────────────
