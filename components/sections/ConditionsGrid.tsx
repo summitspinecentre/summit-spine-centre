@@ -8,13 +8,15 @@ import { ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { ColorScheme } from '@/types/content'
 import FadeIn from '@/components/ui/FadeIn'
+import ConditionPillGrid from '@/components/ui/ConditionPillGrid'
 
 // ── Types ────────────────────────────────────────────────────
 
 export interface ConditionCardItem {
-  label: string   // display name — e.g. "Sciatica"
-  slug:  string   // URL slug     — e.g. "sciatica"
-  body?: string   // optional teaser shown on Hub page; omitted on Home bar
+  label:  string   // display name — e.g. "Sciatica"
+  slug:   string   // URL slug     — e.g. "sciatica"
+  body?:  string   // optional teaser shown on Hub page; omitted on Home bar
+  image?: string   // hero image path — enables photo-pill mode on the home bar
 }
 
 export interface ConditionsGridProps {
@@ -23,6 +25,7 @@ export interface ConditionsGridProps {
   conditions:   ConditionCardItem[]
   scheme?:      ColorScheme   // defaults to 1
   columns?:     2 | 3 | 4    // columns at lg breakpoint; defaults to 3
+  pillMode?:    boolean       // render photo pills with stagger (home page only)
   className?:   string
 }
 
@@ -106,6 +109,7 @@ export default function ConditionsGrid({
   conditions,
   scheme = 1,
   columns = 3,
+  pillMode = false,
   className,
 }: ConditionsGridProps) {
   const cfg = schemeMap[scheme]
@@ -142,64 +146,60 @@ export default function ConditionsGrid({
         )}
 
         {/* ── Card grid ─────────────────────────────────────── */}
-        <FadeIn delay={0.15}>
-        <ul
-          role="list"
-          className={cn(
-            'grid grid-cols-1 gap-4 sm:grid-cols-2',
-            columnsMap[columns],
-          )}
-        >
-          {conditions.map(({ label, slug, body }) => (
-            <li key={slug}>
-              <Link
-                href={`/conditions/${slug}`}
-                aria-label={`Learn about ${label}`}
-                className={cn(
-                  // Layout
-                  'group flex h-full flex-col justify-between gap-6 rounded-lg border p-6',
-                  // Colours
-                  cfg.card,
-                  cfg.border,
-                  // Hover: border colour + card lift + shadow
-                  cfg.borderHover,
-                  'hover:-translate-y-1 hover:shadow-card-hover',
-                  // Transition
-                  'transition-[transform,box-shadow,border-color] duration-300',
-                  // Focus
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-                  cfg.ring,
-                )}
-              >
-                {/* Card content */}
-                <div>
-                  <p className={cn('text-lg font-semibold leading-snug', cfg.label)}>
-                    {label}
-                  </p>
-                  {body && (
-                    <p className={cn('mt-2 text-sm leading-relaxed', cfg.body)}>
-                      {body}
-                    </p>
-                  )}
-                </div>
-
-                {/* Arrow affordance — slides right on hover */}
-                <div
-                  aria-hidden="true"
-                  className={cn(
-                    'flex items-center gap-1 text-sm font-medium',
-                    'transition-transform duration-300 group-hover:translate-x-1',
-                    cfg.arrow,
-                  )}
-                >
-                  <span>Learn more</span>
-                  <ArrowRight size={16} strokeWidth={2} />
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        </FadeIn>
+        {pillMode ? (
+          <ConditionPillGrid conditions={conditions} columns={columns} />
+        ) : (
+          <FadeIn delay={0.15}>
+            <ul
+              role="list"
+              className={cn(
+                'grid grid-cols-1 gap-4 sm:grid-cols-2',
+                columnsMap[columns],
+              )}
+            >
+              {conditions.map(({ label, slug, body }) => (
+                <li key={slug}>
+                  <Link
+                    href={`/conditions/${slug}`}
+                    aria-label={`Learn about ${label}`}
+                    className={cn(
+                      'group flex h-full flex-col justify-between gap-6 rounded-lg border p-6',
+                      cfg.card,
+                      cfg.border,
+                      cfg.borderHover,
+                      'hover:-translate-y-1 hover:shadow-card-hover',
+                      'transition-[transform,box-shadow,border-color] duration-300',
+                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+                      cfg.ring,
+                    )}
+                  >
+                    <div>
+                      <p className={cn('text-lg font-semibold leading-snug', cfg.label)}>
+                        {label}
+                      </p>
+                      {body && (
+                        <p className={cn('mt-2 text-sm leading-relaxed', cfg.body)}>
+                          {body}
+                        </p>
+                      )}
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      className={cn(
+                        'flex items-center gap-1 text-sm font-medium',
+                        'transition-transform duration-300 group-hover:translate-x-1',
+                        cfg.arrow,
+                      )}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight size={16} strokeWidth={2} />
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </FadeIn>
+        )}
 
       </div>
     </section>

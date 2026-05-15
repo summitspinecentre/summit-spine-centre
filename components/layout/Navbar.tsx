@@ -110,10 +110,10 @@ export default function Navbar() {
             <div
               key={item.href}
               className="relative"
-              onMouseEnter={() => item.children ? openDropdown(item.href) : undefined}
-              onMouseLeave={() => item.children ? scheduleCloseDropdown() : undefined}
+              onMouseEnter={() => (item.children || item.groups) ? openDropdown(item.href) : undefined}
+              onMouseLeave={() => (item.children || item.groups) ? scheduleCloseDropdown() : undefined}
             >
-              {item.children ? (
+              {(item.children || item.groups) ? (
                 <>
                   <Link
                     href={item.href}
@@ -143,19 +143,62 @@ export default function Navbar() {
                       aria-label={`${item.label} submenu`}
                       onMouseEnter={() => openDropdown(item.href)}
                       onMouseLeave={scheduleCloseDropdown}
-                      className="absolute top-full left-0 mt-1 py-2 bg-neutral-0 rounded-lg shadow-lg border border-border min-w-[240px] z-20"
+                      className={cn(
+                        'absolute top-full mt-1 bg-neutral-0 rounded-lg shadow-lg border border-border z-20',
+                        item.groups
+                          ? 'min-w-[600px] p-4 left-1/2 -translate-x-1/2'
+                          : 'min-w-[240px] py-2 left-0',
+                      )}
                     >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          role="menuitem"
-                          onClick={() => setActiveDropdown(null)}
-                          className="block px-4 py-2 text-sm text-text hover:bg-hemlock-50 hover:text-accent transition-colors duration-150 outline-none focus-visible:bg-hemlock-50 focus-visible:text-accent"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {item.groups ? (
+                        <>
+                          <div className="grid grid-cols-3 gap-x-6">
+                            {item.groups.map((group) => (
+                              <div key={group.heading}>
+                                <p className="px-2 pb-2 text-xs font-semibold tracking-widest uppercase text-text-muted border-b border-border mb-1">
+                                  {group.heading}
+                                </p>
+                                {group.items.map((child) => (
+                                  <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    role="menuitem"
+                                    onClick={() => setActiveDropdown(null)}
+                                    className="block px-2 py-1.5 text-sm text-text border-l-2 border-transparent hover:border-cerulean hover:text-cerulean hover:bg-cerulean/5 transition-colors duration-150 outline-none focus-visible:border-cerulean focus-visible:text-cerulean focus-visible:bg-cerulean/5"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            ))}
+                          </div>
+                          {item.viewAllHref && (
+                            <div className="mt-3 pt-3 border-t border-border">
+                              <Link
+                                href={item.viewAllHref}
+                                role="menuitem"
+                                onClick={() => setActiveDropdown(null)}
+                                className="flex items-center gap-1 px-2 text-sm font-medium text-cerulean hover:text-cerulean/75 transition-colors duration-150 outline-none focus-visible:text-cerulean/75"
+                              >
+                                {item.viewAllLabel ?? 'View all'}
+                                <span aria-hidden="true">→</span>
+                              </Link>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        item.children?.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            role="menuitem"
+                            onClick={() => setActiveDropdown(null)}
+                            className="block px-4 py-2 text-sm text-text border-l-2 border-transparent hover:border-cerulean hover:text-cerulean hover:bg-cerulean/5 transition-colors duration-150 outline-none focus-visible:border-cerulean focus-visible:text-cerulean focus-visible:bg-cerulean/5"
+                          >
+                            {child.label}
+                          </Link>
+                        ))
+                      )}
                     </div>
                   )}
                 </>
@@ -220,7 +263,7 @@ export default function Navbar() {
           <nav aria-label="Mobile navigation" className="px-6 py-8 flex flex-col gap-1">
             {navConfig.items.map((item) => (
               <div key={item.href}>
-                {item.children ? (
+                {(item.children || item.groups) ? (
                   <>
                     <button
                       type="button"
@@ -245,16 +288,47 @@ export default function Navbar() {
                         id={`mobile-section-${item.href.replace(/\//g, '-')}`}
                         className="pl-4 py-2 flex flex-col gap-1 border-b border-border/40"
                       >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            onClick={() => { setMobileOpen(false); setActiveMobileSection(null) }}
-                            className="block py-2 text-base text-text-muted hover:text-accent transition-colors duration-150"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                        {item.groups ? (
+                          <>
+                            {item.groups.map((group) => (
+                              <div key={group.heading} className="mb-2">
+                                <p className="py-1.5 text-xs font-semibold tracking-widest uppercase text-text-muted">
+                                  {group.heading}
+                                </p>
+                                {group.items.map((child) => (
+                                  <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    onClick={() => { setMobileOpen(false); setActiveMobileSection(null) }}
+                                    className="block py-2 pl-2 text-base text-text-muted border-l-2 border-transparent hover:border-cerulean hover:text-cerulean transition-colors duration-150"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            ))}
+                            {item.viewAllHref && (
+                              <Link
+                                href={item.viewAllHref}
+                                onClick={() => { setMobileOpen(false); setActiveMobileSection(null) }}
+                                className="block py-2 text-sm font-medium text-cerulean hover:text-cerulean/75 transition-colors duration-150"
+                              >
+                                {item.viewAllLabel ?? 'View all'} →
+                              </Link>
+                            )}
+                          </>
+                        ) : (
+                          item.children?.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              onClick={() => { setMobileOpen(false); setActiveMobileSection(null) }}
+                              className="block py-2 text-base text-text-muted hover:text-accent transition-colors duration-150"
+                            >
+                              {child.label}
+                            </Link>
+                          ))
+                        )}
                       </div>
                     )}
                   </>

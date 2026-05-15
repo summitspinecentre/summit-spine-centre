@@ -69,12 +69,12 @@ export const homePage: HomePage = {
   conditionsBar: {
     headline:   'What brings you in?',
     conditions: [
-      { label: 'Low Back Pain',   slug: 'low-back-pain' },
-      { label: 'Sciatica',        slug: 'sciatica' },
-      { label: 'Neck Pain',       slug: 'neck-pain' },
-      { label: 'Headaches',       slug: 'headaches-migraines' },
-      { label: 'Disc Herniation', slug: 'disc-herniation' },
-      { label: 'Tech Neck',       slug: 'tech-neck' },
+      { label: 'Low Back Pain',   slug: 'low-back-pain',      image: '/images/conditions/low-back-pain/hero.jpg' },
+      { label: 'Sciatica',        slug: 'sciatica',            image: '/images/conditions/sciatica/hero.jpg' },
+      { label: 'Neck Pain',       slug: 'neck-pain',           image: '/images/conditions/neck-pain/hero.jpg' },
+      { label: 'Headaches',       slug: 'headaches-migraines', image: '/images/conditions/headaches-migraines/hero.jpg' },
+      { label: 'Disc Herniation', slug: 'disc-herniation',     image: '/images/conditions/disc-herniation/hero.jpg' },
+      { label: 'Tech Neck',       slug: 'tech-neck',           image: '/images/conditions/tech-neck/hero.png' },
     ],
   },
   demographicTabBar: {
@@ -2400,7 +2400,8 @@ export const conditionPages: Record<string, ConditionPage> = {
       headline:    'Tech Neck Treatment in Airdrie',
       subheadline: 'Your devices shouldn\'t dictate your posture. Whether scrolling your phone, working from home, or catching up on emails — let\'s un-hunch your spine.',
       cta:         { label: 'Get My Personalized Plan', href: 'https://summitspine.ca/booking/' },
-      scheme:      1,
+      scheme:      4,
+      bgImage:     { src: '/images/conditions/tech-neck/hero.png', alt: 'Office worker at desk experiencing tech neck posture strain' },
     },
 
     overview:
@@ -3567,22 +3568,39 @@ export const navConfig: NavConfig = {
     {
       label: 'Conditions',
       href: '/conditions',
-      children: [
-        { label: 'Low Back Pain',              href: '/conditions/low-back-pain' },
-        { label: 'Sciatica',                   href: '/conditions/sciatica' },
-        { label: 'Disc Herniation',            href: '/conditions/disc-herniation' },
-        { label: 'Neck Pain',                  href: '/conditions/neck-pain' },
-        { label: 'Back Pain',                  href: '/conditions/back-pain' },
-        { label: 'Headaches & Migraines',      href: '/conditions/headaches-migraines' },
-        { label: 'Spinal Stenosis',            href: '/conditions/spinal-stenosis' },
-        { label: 'Tech Neck',                  href: '/conditions/tech-neck' },
-        { label: 'Whiplash',                   href: '/conditions/whiplash' },
-        { label: 'Upper Back & Shoulder Pain', href: '/conditions/upper-back-shoulder-pain' },
-        { label: 'TMJ',                        href: '/conditions/tmj' },
-        { label: 'Sports Injuries',            href: '/conditions/sports-injuries' },
-        { label: 'Postpartum Back Pain',       href: '/conditions/postpartum-back-pain' },
-        { label: 'Chronic Pain',               href: '/conditions/chronic-pain' },
+      groups: [
+        {
+          heading: 'Head & Neck',
+          items: [
+            { label: 'Headaches & Migraines',      href: '/conditions/headaches-migraines' },
+            { label: 'TMJ',                        href: '/conditions/tmj' },
+            { label: 'Tech Neck',                  href: '/conditions/tech-neck' },
+            { label: 'Neck Pain',                  href: '/conditions/neck-pain' },
+            { label: 'Whiplash',                   href: '/conditions/whiplash' },
+          ],
+        },
+        {
+          heading: 'Back & Spine',
+          items: [
+            { label: 'Upper Back & Shoulder Pain', href: '/conditions/upper-back-shoulder-pain' },
+            { label: 'Disc Herniation',            href: '/conditions/disc-herniation' },
+            { label: 'Spinal Stenosis',            href: '/conditions/spinal-stenosis' },
+            { label: 'Low Back Pain',              href: '/conditions/low-back-pain' },
+            { label: 'Sciatica',                   href: '/conditions/sciatica' },
+          ],
+        },
+        {
+          heading: 'Whole Body',
+          items: [
+            { label: 'Sports Injuries',            href: '/conditions/sports-injuries' },
+            { label: 'Postpartum Back Pain',       href: '/conditions/postpartum-back-pain' },
+            { label: 'Chronic Pain',               href: '/conditions/chronic-pain' },
+            { label: 'Arthritis & Disc Degeneration', href: '/conditions/back-pain' },
+          ],
+        },
       ],
+      viewAllHref:  '/conditions',
+      viewAllLabel: 'View all conditions',
     },
     { label: 'Team',    href: '/team' },
     { label: 'Contact', href: '/contact' },

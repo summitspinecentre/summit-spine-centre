@@ -284,7 +284,7 @@ export interface HomePage {
   hero: HeroSection
   conditionsBar: {
     headline: string
-    conditions: Array<{ label: string; slug: string }>
+    conditions: Array<{ label: string; slug: string; image?: string }>
   }
   demographicTabBar: DemographicTabBarSection
   stats: StatsSection
@@ -448,10 +448,23 @@ export interface SitemapEntry {
 
 // ── NAV STRUCTURE ────────────────────────────────────────────
 
+export interface NavLink {
+  label: string
+  href: string
+}
+
+export interface NavGroup {
+  heading: string
+  items: NavLink[]
+}
+
 export interface NavItem {
   label: string
   href: string
-  children?: NavItem[]
+  children?: NavLink[]
+  groups?: NavGroup[]
+  viewAllHref?: string
+  viewAllLabel?: string
 }
 
 export interface NavConfig {

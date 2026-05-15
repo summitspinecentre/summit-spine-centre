@@ -66,12 +66,13 @@ export default function HomePage() {
       {/* ✅ Why Summit — scheme 2 (light grey) */}
       <WhySummitSection data={homePage.whySummit} />
 
-      {/* ✅ Conditions bar — scheme 1 (white) */}
+      {/* ✅ Conditions bar — scheme 1 (white) — photo pill mode */}
       <ConditionsGrid
         headline={homePage.conditionsBar.headline}
         conditions={homePage.conditionsBar.conditions}
         scheme={1}
         columns={3}
+        pillMode
       />
 
       {/* ✅ Who we help — scheme 1 (white) */}
