@@ -37,7 +37,7 @@ export default function StickyBookingBar({ label, href }: StickyBookingBarProps)
       className={[
         'fixed left-0 right-0 z-40 top-nav',
         'flex items-center justify-center px-6 py-3',
-        'transition-all duration-300 ease-out',
+        'transition-[opacity,transform] duration-300 ease-out',
         visible
           ? 'opacity-100 translate-y-0 pointer-events-auto'
           : 'opacity-0 -translate-y-1 pointer-events-none',

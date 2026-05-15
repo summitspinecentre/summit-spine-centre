@@ -198,7 +198,7 @@ export default function DemographicTabBar({ data, className }: DemographicTabBar
                 onKeyDown={e => handleKeyDown(e, i)}
                 className={cn(
                   'group rounded-xl px-6 py-5 text-left text-lg font-semibold',
-                  'transition-all duration-200 outline-none',
+                  'transition-colors duration-200 outline-none',
                   'focus-visible:ring-2 focus-visible:ring-cerulean focus-visible:ring-offset-2',
                   isActive
                     ? cfg.btnActive
@@ -211,7 +211,7 @@ export default function DemographicTabBar({ data, className }: DemographicTabBar
                     size={18}
                     aria-hidden="true"
                     className={cn(
-                      'shrink-0 transition-all duration-200',
+                      'shrink-0 transition-[transform,opacity] duration-200',
                       isActive
                         ? 'rotate-90 opacity-100'
                         : 'opacity-40 group-hover:opacity-80 group-hover:translate-x-0.5',
@@ -256,7 +256,7 @@ export default function DemographicTabBar({ data, className }: DemographicTabBar
                     const cardInner = (
                       <div
                         className={cn(
-                          'flex h-full flex-col gap-2 rounded-xl border p-5 transition-all duration-150',
+                          'flex h-full flex-col gap-2 rounded-xl border p-5 transition-colors duration-150',
                           isOther
                             ? cn('border-dashed', cfg.otherBg, cfg.otherBorder)
                             : cn(cfg.cardBg, cfg.cardBorder, condition.slug && cfg.cardHoverBorder),

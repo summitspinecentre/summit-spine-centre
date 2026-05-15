@@ -194,7 +194,7 @@ function cardShell(cfg: SchemeTokens, linked: boolean): string {
       'group',
       cfg.borderHover,
       'hover:-translate-y-1 hover:shadow-card-hover',
-      'transition-all duration-300',
+      'transition-[transform,box-shadow,border-color] duration-300',
       'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
       cfg.ring,
     ],

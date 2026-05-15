@@ -72,7 +72,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-700',
+        'fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow] duration-300',
         scrolled
           ? 'bg-neutral-0 shadow-md h-16'
           : 'bg-transparent h-20',
